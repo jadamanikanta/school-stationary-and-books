@@ -1,0 +1,2981 @@
+/*=========================================================
+                    PRICING HERO
+=========================================================*/
+
+.pricing-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:80px 8%;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.20),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.08),
+    transparent 45%),
+
+    var(--primary-light);
+
+}
+
+/*=========================================================*/
+
+.pricing-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.20),
+    rgba(255,255,255,.20));
+
+    pointer-events:none;
+
+}
+
+/*=========================================================*/
+
+.pricing-hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                    CONTENT
+=========================================================*/
+
+.pricing-hero-content{
+
+    max-width:650px;
+
+}
+
+.pricing-badge{
+
+   display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 20px;
+    border-radius:50px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:25px;
+
+}
+
+.pricing-badge i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.pricing-hero-content h1{
+
+    font-size:50px;
+
+    line-height:1.15;
+
+    color:var(--text-color);
+
+    margin-bottom:24px;
+
+}
+
+.pricing-hero-content h1 span{
+
+    display:block;
+
+    color:var(--primary);
+
+}
+
+.pricing-hero-content p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================================
+                    BUTTONS
+=========================================================*/
+
+.pricing-hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:45px;
+
+}
+
+.pricing-btn-primary,
+
+.pricing-btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.pricing-btn-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.pricing-btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(245,158,11,.35);
+    background: var(--secondary);
+    color:black;
+
+}
+
+.pricing-btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    background:transparent;
+
+}
+
+.pricing-btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.pricing-btn-primary i,
+
+.pricing-btn-outline i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/*=========================================================
+                    HIGHLIGHTS
+=========================================================*/
+
+.pricing-highlights{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.pricing-highlight{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    background:#fff;
+
+    border-radius:50px;
+
+    border:0.5px solid var(--primary);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.pricing-highlight svg{
+
+    width:18px;
+
+    height:18px;
+
+    color:var(--primary);
+
+}
+
+.pricing-highlight span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text-color);
+
+}
+
+/*=========================================================
+                    HERO IMAGE
+=========================================================*/
+
+.pricing-hero-image{
+
+    position:relative;
+
+}
+
+.pricing-hero-image img{
+
+    width:100%;
+
+    border-radius:32px;
+
+    display:block;
+
+    object-fit:cover;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+    transition:.5s;
+
+}
+
+.pricing-hero-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/*=========================================================
+                DECORATIVE ELEMENT
+=========================================================*/
+
+.pricing-hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:30px;
+
+    background:rgba(245,158,11,.12);
+
+    top:-25px;
+
+    left:-25px;
+
+    z-index:-1;
+
+}
+
+.pricing-hero-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:30px;
+
+    background:rgba(245,158,11,.10);
+
+    bottom:-25px;
+
+    right:-25px;
+
+    z-index:-1;
+
+}
+
+/*=========================================================
+                    DARK MODE
+=========================================================*/
+
+.dark .pricing-hero{
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.05),
+    transparent 45%),
+
+    #0f172a;
+
+}
+
+.dark .pricing-hero-overlay{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.20));
+
+}
+
+.dark .pricing-hero-content h1{
+
+    color:#fff;
+
+}
+
+.dark .pricing-hero-content p{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .pricing-badge{
+
+    background:rgba(245,158,11,.15);
+
+}
+
+.dark .pricing-highlight{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:none;
+
+}
+
+.dark .pricing-highlight span{
+
+    color:#fff;
+
+}
+
+.dark .pricing-btn-outline{
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+}
+
+.dark .pricing-btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+
+
+/*=========================================================
+                        RTL
+=========================================================*/
+
+html[dir="rtl"] .pricing-badge{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-hero-buttons{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-btn-primary,
+
+html[dir="rtl"] .pricing-btn-outline{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-highlights{
+
+    justify-content:flex-end;
+
+}
+
+html[dir="rtl"] .pricing-highlight{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-hero-image::before{
+
+    left:auto;
+
+    right:-25px;
+
+}
+
+html[dir="rtl"] .pricing-hero-image::after{
+
+    right:auto;
+
+    left:-25px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    1024px
+=========================================================*/
+
+@media (max-width:1024px){
+
+.pricing-hero{
+
+    padding:90px 6%;
+
+}
+
+.pricing-hero-container{
+
+    gap:50px;
+
+}
+
+.pricing-hero-content h1{
+
+    font-size:46px;
+
+}
+
+.pricing-hero-content p{
+
+    font-size:17px;
+
+}
+
+.pricing-highlight{
+
+    padding:12px 18px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    768px
+=========================================================*/
+
+@media (max-width:768px){
+
+.pricing-hero{
+
+    padding:80px 5%;
+
+}
+
+.pricing-hero-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:50px;
+
+}
+
+.pricing-hero-content{
+
+    max-width:100%;
+
+}
+
+.pricing-hero-content h1{
+
+    font-size:38px;
+
+}
+
+.pricing-hero-content p{
+
+    font-size:16px;
+
+}
+
+.pricing-hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.pricing-btn-primary,
+
+.pricing-btn-outline{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
+.pricing-highlights{
+
+    justify-content:center;
+
+}
+
+.pricing-hero-image{
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    360px
+=========================================================*/
+
+@media (max-width:360px){
+
+.pricing-hero{
+
+    padding:65px 16px;
+
+}
+
+.pricing-badge{
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+}
+
+.pricing-badge i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.pricing-hero-content h1{
+
+    font-size:30px;
+
+}
+
+.pricing-hero-content p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.pricing-btn-primary,
+
+.pricing-btn-outline{
+
+    padding:14px 18px;
+
+    font-size:14px;
+
+}
+
+.pricing-btn-primary i,
+
+.pricing-btn-outline i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.pricing-highlights{
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.pricing-highlight{
+
+    justify-content:center;
+
+    width:100%;
+
+    padding:14px;
+
+}
+
+.pricing-highlight span{
+
+    font-size:14px;
+
+}
+
+.pricing-hero-image img{
+
+    border-radius:24px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                RTL MOBILE FIX
+=========================================================*/
+
+@media (max-width:768px){
+
+html[dir="rtl"] .pricing-hero-container{
+
+    text-align:center;
+
+}
+
+html[dir="rtl"] .pricing-hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+html[dir="rtl"] .pricing-highlights{
+
+    justify-content:center;
+
+}
+
+html[dir="rtl"] .pricing-highlight{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                PRICING PACKAGES
+=========================================================*/
+
+.pricing-packages-section{
+
+    padding:80px 8%;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.08),
+    transparent 45%),
+
+    #fffdf7;
+
+}
+
+.pricing-packages-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/*=========================================================
+                    HEADING
+=========================================================*/
+
+.pricing-packages-heading{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.pricing-packages-badge{
+
+     display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 20px;
+    border-radius:50px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:25px;
+
+}
+
+.pricing-packages-badge i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.pricing-packages-heading h2{
+
+    font-size:48px;
+
+    color:var(--text-color);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.pricing-packages-heading h2 span{
+
+    display:block;
+
+    color:var(--primary);
+
+}
+
+.pricing-packages-heading p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+}
+
+
+
+
+
+/*=========================================================
+                    GRID
+=========================================================*/
+
+.pricing-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/*=========================================================
+                    CARD
+=========================================================*/
+
+.pricing-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:40px 35px;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.pricing-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 35px 70px rgba(0,0,0,.12);
+    border:1px solid var(--primary);
+
+}
+
+
+
+
+
+/*=========================================================
+                POPULAR CARD
+=========================================================*/
+
+.pricing-card.popular{
+
+    transform:scale(1.05);
+
+    border:2px solid var(--primary);
+
+    box-shadow:
+
+    0 30px 70px rgba(245,158,11,.20);
+
+}
+
+.pricing-card.popular:hover{
+
+    transform:scale(1.05) translateY(-10px);
+
+}
+
+
+
+
+
+/*=========================================================
+                POPULAR BADGE
+=========================================================*/
+
+.popular-badge{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.popular-badge i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    ICON
+=========================================================*/
+
+.plan-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(245,158,11,.10);
+
+}
+
+.plan-icon svg{
+
+    width:38px;
+
+    height:38px;
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+/*=========================================================
+                    CONTENT
+=========================================================*/
+
+.pricing-card h3{
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:var(--text-color);
+
+    margin-bottom:10px;
+
+}
+
+.price{
+
+    text-align:center;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.price span{
+
+    display:block;
+
+    font-size:16px;
+
+    color:rgba(var(--text-color-rgb),.70);
+
+    font-weight:500;
+
+}
+
+.plan-desc{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+    min-height:45px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    FEATURES
+=========================================================*/
+
+.pricing-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 35px;
+
+    flex:1;
+
+}
+
+.pricing-card ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 0;
+
+    border-bottom:1px dashed rgba(0,0,0,.08);
+
+    color:var(--text-color);
+
+}
+
+.pricing-card ul li:last-child{
+
+    border:none;
+
+}
+
+.pricing-card ul li svg{
+
+    width:18px;
+
+    height:18px;
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+
+
+.primary-plan-btn,
+
+.secondary-plan-btn{
+
+    width:100%;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.primary-plan-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.primary-plan-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 18px 35px rgba(245,158,11,.35);
+    background-color: var(--secondary);
+    color:black;
+
+}
+
+.secondary-plan-btn{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    background:transparent;
+
+}
+
+.secondary-plan-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+/*=========================================================
+                    DARK MODE
+=========================================================*/
+
+.dark .pricing-packages-section{
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.05),
+    transparent 45%),
+
+    #0f172a;
+
+}
+
+.dark .pricing-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.dark .pricing-card.popular{
+
+    border:2px solid var(--primary);
+
+    box-shadow:0 30px 70px rgba(245,158,11,.18);
+
+}
+
+.dark .pricing-card h3{
+
+    color:#fff;
+
+}
+
+.dark .plan-desc{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .price span{
+
+    color:rgba(255,255,255,.65);
+
+}
+
+.dark .pricing-card ul li{
+
+    color:#fff;
+
+    border-bottom:1px dashed rgba(255,255,255,.08);
+
+}
+
+.dark .secondary-plan-btn{
+
+    border-color:var(--primary);
+
+    color:#fff;
+
+}
+
+.dark .secondary-plan-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.dark .pricing-packages-heading p{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .pricing-packages-badge{
+
+    background:rgba(245,158,11,.15);
+
+}
+
+
+
+
+
+/*=========================================================
+                        RTL
+=========================================================*/
+
+html[dir="rtl"] .pricing-packages-badge{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-card{
+
+    text-align:right;
+
+}
+
+html[dir="rtl"] .pricing-card h3,
+
+html[dir="rtl"] .price,
+
+html[dir="rtl"] .plan-desc{
+
+    text-align:center;
+
+}
+
+html[dir="rtl"] .pricing-card ul li{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .pricing-card ul li i{
+
+    margin-left:0;
+
+    margin-right:0;
+
+}
+
+
+
+
+
+/*=========================================================
+                    1024px
+=========================================================*/
+
+@media (max-width:1024px){
+
+.pricing-packages-section{
+
+    padding:90px 6%;
+
+}
+
+.pricing-packages-heading{
+
+    margin-bottom:55px;
+
+}
+
+.pricing-packages-heading h2{
+
+    font-size:40px;
+
+}
+
+.pricing-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.pricing-card.popular{
+
+    transform:none;
+
+}
+
+.pricing-card.popular:hover{
+
+    transform:translateY(-10px);
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    768px
+=========================================================*/
+
+@media (max-width:768px){
+
+.pricing-packages-section{
+
+    padding:80px 5%;
+
+}
+
+.pricing-packages-heading{
+
+    margin-bottom:45px;
+
+}
+
+.pricing-packages-heading h2{
+
+    font-size:34px;
+
+}
+
+.pricing-packages-heading p{
+
+    font-size:16px;
+
+}
+
+.pricing-cards{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+/* Popular card first */
+
+.pricing-card.popular{
+
+    order:-1;
+
+}
+
+.pricing-card{
+
+    padding:35px 28px;
+
+}
+
+.price{
+
+    font-size:46px;
+
+}
+
+.plan-icon{
+
+    width:72px;
+
+    height:72px;
+
+}
+
+.plan-icon i{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    360px
+=========================================================*/
+
+@media (max-width:360px){
+
+.pricing-packages-section{
+
+    padding:65px 16px;
+
+}
+
+.pricing-packages-badge{
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+}
+
+.pricing-packages-badge i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.pricing-packages-heading{
+
+    margin-bottom:35px;
+
+}
+
+.pricing-packages-heading h2{
+
+    font-size:28px;
+
+}
+
+.pricing-packages-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.pricing-card{
+
+    padding:30px 20px;
+
+    border-radius:22px;
+
+}
+
+.popular-badge{
+
+    font-size:12px;
+
+    padding:8px 16px;
+
+}
+
+.plan-icon{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+.plan-icon i{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+.pricing-card h3{
+
+    font-size:24px;
+
+}
+
+.price{
+
+    font-size:40px;
+
+}
+
+.price span{
+
+    font-size:14px;
+
+}
+
+.plan-desc{
+
+    font-size:14px;
+
+    min-height:auto;
+
+}
+
+.pricing-card ul li{
+
+    font-size:14px;
+
+    gap:10px;
+
+}
+
+.pricing-card ul li i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.primary-plan-btn,
+
+.secondary-plan-btn{
+
+    padding:14px 18px;
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                RTL MOBILE FIX
+=========================================================*/
+
+@media (max-width:768px){
+
+html[dir="rtl"] .pricing-card{
+
+    text-align:center;
+
+}
+
+html[dir="rtl"] .pricing-card ul li{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                COMPARE PACKAGES
+=========================================================*/
+
+.compare-packages-section{
+
+    padding:70px 8%;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.08),
+    transparent 45%),
+
+    #fffdf7;
+
+}
+
+.compare-packages-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/*=========================================================
+                    HEADING
+=========================================================*/
+
+.compare-heading{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.compare-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 20px;
+    border-radius:50px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:25px;
+
+}
+
+.compare-badge i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.compare-heading h2{
+
+    font-size:48px;
+
+    color:var(--text-color);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.compare-heading h2 span{
+
+    display:block;
+
+    color:var(--primary);
+
+}
+
+.compare-heading p{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+}
+
+
+
+
+
+/*=========================================================
+                TABLE WRAPPER
+=========================================================*/
+
+.compare-table-wrapper{
+
+    overflow-x:auto;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    border:1px solid var(--primary);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+/*=========================================================
+                    TABLE
+=========================================================*/
+
+.compare-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:900px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    HEADER
+=========================================================*/
+
+.compare-table thead th{
+
+    padding:24px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--text-color);
+
+    background:#fff;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:5;
+
+}
+
+.compare-table thead th:first-child{
+
+    text-align:left;
+
+}
+
+
+
+
+
+/*=========================================================
+                POPULAR COLUMN
+=========================================================*/
+
+.compare-table .popular-column{
+
+    background:rgba(245,158,11,.08);
+
+}
+
+.compare-table thead .popular-column{
+
+    background:rgba(245,158,11,.14);
+
+}
+
+.compare-table thead .popular-column span{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+}
+
+.compare-table thead .popular-column i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    BODY
+=========================================================*/
+
+.compare-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.compare-table tbody tr:hover{
+
+    background:rgba(245,158,11,.05);
+
+}
+
+.compare-table tbody td{
+
+    padding:22px;
+
+    text-align:center;
+
+    border-bottom:1px solid  rgba(255,255,255,.08);
+
+    color:var(--text-color);
+
+    font-size:16px;
+
+}
+
+.compare-table tbody td:first-child{
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+
+.compare-table tbody td svg{
+
+    width:22px;
+
+    height:22px;
+   
+
+   
+
+}
+
+.compare-table tbody td .lucide-check{
+
+    color:#22c55e;
+
+}
+
+.compare-table tbody td .lucide-x{
+
+    color:#ef4444;
+
+}
+
+
+
+
+
+/*=========================================================
+                LAST ROW
+=========================================================*/
+
+.compare-table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+/*=========================================================
+                    DARK MODE
+=========================================================*/
+
+.dark .compare-packages-section{
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.05),
+    transparent 45%),
+
+    #0f172a;
+
+}
+
+.dark .compare-table-wrapper{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.40);
+
+}
+
+.dark .compare-table thead th{
+
+    background:#111827;
+
+    color:#fff;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.dark .compare-table tbody td{
+
+    color:#fff;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.dark .compare-table .popular-column{
+
+    background:rgba(245,158,11,.12);
+
+}
+
+.dark .compare-table thead .popular-column{
+
+    background:rgba(245,158,11,.18);
+
+}
+
+.dark .compare-table tbody tr:hover{
+
+    background:rgba(245,158,11,.08);
+
+}
+
+.dark .compare-heading p{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .compare-badge{
+
+    background:rgba(245,158,11,.15);
+
+}
+
+
+
+
+
+/*=========================================================
+                        RTL
+=========================================================*/
+
+html[dir="rtl"] .compare-badge{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .compare-table{
+
+    direction:rtl;
+
+}
+
+html[dir="rtl"] .compare-table thead th:first-child,
+
+html[dir="rtl"] .compare-table tbody td:first-child{
+
+    text-align:right;
+
+}
+
+html[dir="rtl"] .compare-table thead .popular-column span{
+
+    flex-direction:row-reverse;
+
+}
+
+
+
+
+
+/*=========================================================
+                    1024px
+=========================================================*/
+
+@media (max-width:1024px){
+
+.compare-packages-section{
+
+    padding:90px 6%;
+
+}
+
+.compare-heading{
+
+    margin-bottom:55px;
+
+}
+
+.compare-heading h2{
+
+    font-size:40px;
+
+}
+
+.compare-table{
+
+    min-width:900px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    768px
+=========================================================*/
+
+@media (max-width:768px){
+
+.compare-packages-section{
+
+    padding:80px 5%;
+
+}
+
+.compare-heading{
+
+    margin-bottom:45px;
+
+}
+
+.compare-heading h2{
+
+    font-size:34px;
+
+}
+
+.compare-heading p{
+
+    font-size:16px;
+
+}
+
+.compare-table-wrapper{
+
+    overflow-x:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.compare-table{
+
+    min-width:850px;
+
+}
+
+.compare-table thead th{
+
+    padding:18px;
+
+    font-size:16px;
+
+}
+
+.compare-table tbody td{
+
+    padding:18px;
+
+    font-size:15px;
+
+}
+
+.compare-table tbody td i{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                    360px
+=========================================================*/
+
+@media (max-width:360px){
+
+.compare-packages-section{
+
+    padding:65px 16px;
+
+}
+
+.compare-badge{
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+}
+
+.compare-badge i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.compare-heading{
+
+    margin-bottom:35px;
+
+}
+
+.compare-heading h2{
+
+    font-size:28px;
+
+}
+
+.compare-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.compare-table{
+
+    min-width:700px;
+
+}
+
+.compare-table thead th{
+
+    padding:16px;
+
+    font-size:14px;
+
+}
+
+.compare-table tbody td{
+
+    padding:16px;
+
+    font-size:14px;
+
+}
+
+.compare-table tbody td i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+}
+
+
+
+
+
+/*=========================================================
+                CUSTOM SCROLLBAR
+=========================================================*/
+
+.compare-table-wrapper::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.compare-table-wrapper::-webkit-scrollbar-track{
+
+    background:rgba(0,0,0,.08);
+
+    border-radius:20px;
+
+}
+
+.compare-table-wrapper::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+.dark .compare-table-wrapper::-webkit-scrollbar-track{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+
+
+
+/*=========================================================
+                RTL MOBILE FIX
+=========================================================*/
+
+@media (max-width:768px){
+
+html[dir="rtl"] .compare-table{
+
+    direction:rtl;
+
+}
+
+}
+
+/*=========================================================
+                    FAQ SECTION
+=========================================================*/
+
+.faq-section{
+
+    padding:85px 8%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.08),
+    transparent 45%),
+
+    #fffdf7;
+
+}
+
+.faq-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/*=========================================================
+                    HEADING
+=========================================================*/
+
+.faq-heading{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+}
+
+.faq-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 20px;
+    border-radius:50px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:25px;
+
+}
+
+.faq-badge i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.faq-heading h2{
+
+    font-size:48px;
+
+    color:var(--text-color);
+
+    margin-bottom:18px;
+
+}
+
+.faq-heading h2 span{
+
+    display:block;
+
+    color:var(--primary);
+
+}
+
+.faq-heading p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+}
+
+
+
+
+
+/*=========================================================
+                    FAQ LIST
+=========================================================*/
+
+.faq-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+
+
+/*=========================================================
+                    FAQ CARD
+=========================================================*/
+
+.faq-item{
+
+    width:100%;
+
+    border:2px solid var(--primary);
+
+    border-radius:18px;
+
+    background:#fff;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 40px rgba(245,158,11,.15);
+
+}
+
+
+
+
+
+/*=========================================================
+                    QUESTION
+=========================================================*/
+
+.faq-question{
+
+    width:100%;
+
+    min-height:78px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:22px 28px;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.faq-question span{
+
+    flex:1;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--text-color);
+
+    text-align:left;
+
+    line-height:1.5;
+
+}
+
+
+
+
+
+/*=========================================================
+                    ICON
+=========================================================*/
+
+.faq-icon{
+
+    width:24px;
+
+    height:24px;
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+/*=========================================================
+                    ACTIVE
+=========================================================*/
+
+.faq-item.active{
+
+    box-shadow:
+
+    0 20px 45px rgba(245,158,11,.15);
+
+}
+
+.faq-item.active .faq-question{
+
+    background:rgba(245,158,11,.06);
+
+}
+
+.faq-item.active .faq-icon{
+
+    transform:rotate(45deg);
+
+}
+
+
+
+
+
+/*=========================================================
+                    ANSWER
+=========================================================*/
+
+.faq-answer{
+
+    display:none;
+
+    padding:0 28px 24px;
+
+}
+
+.faq-answer p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+}
+
+
+
+
+
+/*=========================================================
+            FIRST FAQ OPEN
+=========================================================*/
+
+.faq-item.active .faq-answer{
+
+    display:block;
+
+}
+
+/*=========================================================
+                    DARK MODE
+=========================================================*/
+
+.dark .faq-section{
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(37,99,235,.05),
+    transparent 45%),
+
+    #0f172a;
+
+}
+
+.dark .faq-item{
+
+    background:#111827;
+
+    border-color:var(--primary);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.dark .faq-question span{
+
+    color:#fff;
+
+}
+
+.dark .faq-answer p{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .faq-item.active .faq-question{
+
+    background:rgba(245,158,11,.10);
+
+}
+
+.dark .faq-heading p{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.dark .faq-badge{
+
+    background:rgba(245,158,11,.15);
+
+}
+/*=========================================================
+                        RTL
+=========================================================*/
+
+html[dir="rtl"] .faq-badge{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .faq-question{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .faq-question span{
+
+    text-align:right;
+
+}
+
+html[dir="rtl"] .faq-answer{
+
+    text-align:right;
+
+}
+/*=========================================================
+                    1024px
+=========================================================*/
+
+@media (max-width:1024px){
+
+.faq-section{
+
+    padding:90px 6%;
+
+}
+
+.faq-heading h2{
+
+    font-size:40px;
+
+}
+
+}
+/*=========================================================
+                    768px
+=========================================================*/
+
+@media (max-width:768px){
+
+.faq-section{
+
+    padding:80px 5%;
+
+}
+
+.faq-heading{
+
+    margin-bottom:45px;
+
+}
+
+.faq-heading h2{
+
+    font-size:34px;
+
+}
+
+.faq-heading p{
+
+    font-size:16px;
+
+}
+
+.faq-question{
+
+    padding:20px 22px;
+
+    min-height:72px;
+
+}
+
+.faq-question span{
+
+    font-size:16px;
+
+}
+
+.faq-answer{
+
+    padding:0 22px 20px;
+
+}
+
+.faq-answer p{
+
+    font-size:15px;
+
+}
+
+}
+/*=========================================================
+                    360px
+=========================================================*/
+
+@media (max-width:360px){
+
+.faq-section{
+
+    padding:65px 16px;
+
+}
+
+.faq-badge{
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+}
+
+.faq-badge i{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.faq-heading{
+
+    margin-bottom:35px;
+
+}
+
+.faq-heading h2{
+
+    font-size:28px;
+
+}
+
+.faq-heading p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.faq-item{
+
+    border-radius:16px;
+
+}
+
+.faq-question{
+
+    padding:18px;
+
+    min-height:68px;
+
+    gap:16px;
+
+}
+
+.faq-question span{
+
+    font-size:15px;
+
+}
+
+.faq-icon{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+.faq-answer{
+
+    padding:0 18px 18px;
+
+}
+
+.faq-answer p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+}
+
+/*=====================================
+            SIMPLE CTA
+======================================*/
+
+.pricing-cta{
+
+    padding:50px 8%;
+
+    background:var(--primary-light);
+
+}
+/*=====================================
+        CTA - DARK MODE
+======================================*/
+
+.dark .pricing-cta{
+
+    padding:50px 8%;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(245,158,11,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(245,158,11,.08),
+    transparent 45%),
+
+    #111111;
+
+}
+
+.pricing-cta-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.pricing-cta-content h2{
+
+    font-size:48px;
+
+    color:var(--text-color);
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.pricing-cta-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:rgba(var(--text-color-rgb),.72);
+
+    margin-bottom:35px;
+
+}
+
+.pricing-cta-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.pricing-cta-btn i{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+.pricing-cta-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(245,158,11,.30);
+
+    background-color: var(--secondary);
+    color:black;
+
+}
+@media(max-width:768px){
+
+.pricing-cta{
+
+    padding:80px 5%;
+
+}
+
+.pricing-cta-content h2{
+
+    font-size:36px;
+
+}
+
+}
+
+@media(max-width:360px){
+
+.pricing-cta{
+
+    padding:65px 16px;
+
+}
+
+.pricing-cta-content h2{
+
+    font-size:28px;
+
+}
+
+.pricing-cta-content p{
+
+    font-size:15px;
+
+}
+
+.pricing-cta-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}

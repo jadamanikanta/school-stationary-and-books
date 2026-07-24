@@ -1,0 +1,1661 @@
+/*=========================================================
+                    GOOGLE FONT
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================================
+                    RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+     --primary:#2563EB;
+    --secondary:#FBBF24;
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+
+    --text:#111827;
+    --text-light:#6b7280;
+
+    --border:#dbe4f0;
+
+}
+
+body.dark{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+
+    --border:#334155;
+
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+
+
+/*=========================================================
+                    PAGE
+=========================================================*/
+
+.login-page{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+/*=========================================================
+                BACKGROUND
+=========================================================*/
+
+.login-bg-shapes{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+
+/*=========================================================
+                    SHAPES
+=========================================================*/
+
+.shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(2px);
+
+}
+
+.shape-one{
+
+    width:360px;
+    height:360px;
+
+    background:rgba(37,99,235,.12);
+
+    top:-100px;
+    left:-100px;
+
+    animation:floatOne 8s ease-in-out infinite;
+
+}
+
+.shape-two{
+
+    width:240px;
+    height:240px;
+
+    background:rgba(251,191,36,.18);
+
+    top:120px;
+    right:-70px;
+
+    animation:floatTwo 10s ease-in-out infinite;
+
+}
+
+.shape-three{
+
+    width:180px;
+    height:180px;
+
+    background:rgba(37,99,235,.08);
+
+    bottom:70px;
+    left:140px;
+
+    animation:floatThree 9s ease-in-out infinite;
+
+}
+
+.shape-four{
+
+    width:260px;
+    height:260px;
+
+    background:rgba(251,191,36,.12);
+
+    bottom:-70px;
+    right:150px;
+
+    animation:floatTwo 8s ease-in-out infinite;
+
+}
+
+
+
+/*=========================================================
+                FLOATING STATIONERY
+=========================================================*/
+
+.floating-item{
+
+    position:absolute;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+.float-one{
+
+    width:90px;
+
+    top:120px;
+    left:120px;
+
+    animation:bookFloat1 8s ease-in-out infinite;
+
+}
+
+.float-two{
+
+    width:75px;
+
+    right:170px;
+    top:190px;
+
+    animation:bookFloat2 7s ease-in-out infinite;
+
+}
+
+.float-three{
+
+    width:70px;
+
+    left:220px;
+    bottom:120px;
+
+    animation:bookFloat3 9s ease-in-out infinite;
+
+}
+
+.float-four{
+
+    width:60px;
+
+    right:220px;
+    bottom:140px;
+
+    animation:bookFloat2 8s ease-in-out infinite;
+
+}
+
+
+
+/*=========================================================
+                RTL / DARK MODE BUTTONS
+=========================================================*/
+
+.login-top-actions{
+
+    position:absolute;
+
+    top:25px;
+    right:30px;
+
+    display:flex;
+
+    gap:14px;
+
+    z-index:100;
+
+}
+
+.action-btn{
+
+    width:46px;
+    height:46px;
+
+    border:1px solid var(--primary);
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.action-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+                    ANIMATIONS
+=========================================================*/
+
+@keyframes floatOne{
+
+    50%{
+
+        transform:translateY(35px);
+
+    }
+
+}
+
+@keyframes floatTwo{
+
+    50%{
+
+        transform:translateX(-25px);
+
+    }
+
+}
+
+@keyframes floatThree{
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+}
+
+@keyframes bookFloat1{
+
+    50%{
+
+        transform:translateY(-20px) rotate(8deg);
+
+    }
+
+}
+
+@keyframes bookFloat2{
+
+    50%{
+
+        transform:translateY(18px);
+
+    }
+
+}
+
+@keyframes bookFloat3{
+
+    50%{
+
+        transform:translateX(20px);
+
+    }
+
+}
+
+/*=========================================================
+                    SIGNUP CARD
+=========================================================*/
+
+.login-card{
+
+    position:relative;
+
+    width:100%;
+    max-width:470px;
+    height:620px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:2px solid var(--primary);
+
+    border-radius:28px;
+
+    padding:10px 28px;
+
+    box-shadow:0 25px 60px rgba(37,99,235,.15);
+
+    z-index:10;
+
+}
+
+body.dark .login-card{
+
+    background:rgba(30,41,59,.92);
+
+}
+
+
+
+/*=========================================================
+                        LOGO
+=========================================================*/
+
+.login-page-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+   
+
+}
+
+.login-page-logo a{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.login-page-logo img{
+
+    width:50px;
+    height:50px;
+
+    object-fit:contain;
+    transition:.35s;
+
+}
+
+.login-page-logo span{
+
+    color:var(--secondary);
+
+}
+
+.login-page-logo a:hover img{
+
+    transform:rotate(-8deg);
+
+}
+
+
+
+/*=========================================================
+                    HEADING
+=========================================================*/
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:4px;
+
+}
+
+.login-header h2{
+
+    font-size:29px;
+
+    color:var(--primary);
+
+    
+
+    font-weight:700;
+
+}
+
+.login-header p{
+
+    color:var(--text-light);
+
+    font-size:10px;
+
+    line-height:1.1;
+
+}
+
+
+
+
+.signup-form{
+
+    width:100%;
+
+}
+
+.form-group{
+
+    margin-bottom:2px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:2px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+
+/*=========================================================
+                    INPUT BOX
+=========================================================*/
+
+.input-box{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.input-box>svg{
+
+    position:absolute;
+
+    left:18px;
+
+    width:20px;
+    height:20px;
+
+    color:var(--primary);
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:37px;
+
+    border:2px solid var(--border);
+
+    border-radius:16px;
+
+    outline:none;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    padding:0 52px;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.input-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.input-box input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
+}
+
+
+
+/*=========================================================
+                PASSWORD TOGGLE
+=========================================================*/
+
+.password-toggle{
+
+    position:absolute;
+
+    right:18px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#64748b;
+
+}
+
+.password-toggle svg{
+
+    width:20px;
+    height:20px;
+
+}
+
+
+
+/*=========================================================
+                TERMS & CONDITIONS
+=========================================================*/
+
+.remember-me{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin:4px 0;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.remember-me input{
+
+    margin-top:2px;
+
+    accent-color:var(--primary);
+
+}
+
+.remember-me label{
+
+    line-height:1.6;
+
+    cursor:pointer;
+
+}
+
+.remember-me a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.remember-me a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+                CREATE ACCOUNT BUTTON
+=========================================================*/
+
+.login-btn{
+
+    width:100%;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--secondary);
+
+    color:#111;
+
+    transform:translateY(-4px);
+
+}
+/*=========================================================
+                    SOCIAL DIVIDER
+=========================================================*/
+
+.social-divider{
+
+    position:relative;
+
+    margin:6px 0;
+
+    text-align:center;
+
+}
+
+.social-divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:50%;
+
+    width:100%;
+    height:1px;
+
+    background:var(--border);
+
+}
+
+.social-divider span{
+
+    position:relative;
+
+    background:var(--card);
+
+    padding:0 18px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+
+/*=========================================================
+                SOCIAL LOGIN
+=========================================================*/
+
+.social-login{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+    margin-bottom:10px;
+
+}
+
+.social-btn{
+
+    height:38px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:2px solid var(--primary);
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.social-btn svg{
+
+    font-size:18px;
+
+}
+
+.social-btn span{
+
+    white-space:nowrap;
+
+}
+
+.social-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 28px rgba(37,99,235,.15);
+
+}
+
+.google-btn:hover{
+
+    color:#EA4335;
+
+}
+
+.apple-btn:hover{
+
+    color:#000;
+
+}
+
+body.dark .apple-btn:hover{
+
+    color:#fff;
+
+}
+
+.facebook-btn:hover{
+
+    color:#1877F2;
+
+}
+
+
+
+/*=========================================================
+                    LOGIN LINK
+=========================================================*/
+
+.signup-area{
+
+    text-align:center;
+
+}
+
+.signup-area p{
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+.signup-area a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.signup-area a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+                        RTL
+=========================================================*/
+
+html[dir="rtl"] .login-top-actions{
+
+    right:auto;
+
+    left:30px;
+
+}
+
+html[dir="rtl"] .login-page-logo a{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .login-page-logo img{
+
+    margin-right:0;
+
+    margin-left:10px;
+
+}
+
+html[dir="rtl"] .input-box>i{
+
+    left:auto;
+
+    right:18px;
+
+}
+
+html[dir="rtl"] .password-toggle{
+
+    right:auto;
+
+    left:18px;
+
+}
+
+html[dir="rtl"] .remember-me{
+
+    flex-direction:row-reverse;
+
+}
+
+html[dir="rtl"] .social-btn{
+
+    flex-direction:row-reverse;
+
+}
+
+
+/*=========================================================
+                    1024px
+=========================================================*/
+
+@media (max-width:1024px){
+
+html,
+body{
+
+    overflow:hidden;
+
+}
+
+.login-page{
+
+    padding:25px;
+
+}
+
+.login-card{
+
+    max-width:450px;
+
+    height:560px;
+
+    padding:12px 24px;
+
+}
+
+.login-page-logo img{
+
+    width:48px;
+    height:48px;
+
+}
+
+.login-page-logo a{
+
+    font-size:21px;
+
+}
+
+.login-header h2{
+
+    font-size:25px;
+
+}
+
+.login-header p{
+
+    font-size:11px;
+
+}
+
+.form-group{
+
+    margin-bottom:1px;
+
+}
+
+.form-group label{
+
+    font-size:14px;
+
+}
+
+.input-box input{
+
+    height:30px;
+
+    font-size:14px;
+
+}
+
+.input-box>svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+.password-toggle svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+.remember-me{
+
+    font-size:13px;
+
+    margin:6px 0;
+
+}
+
+.login-btn{
+
+    height:35px;
+
+    font-size:15px;
+
+}
+
+.social-divider{
+
+    margin:7px 0;
+
+}
+
+.social-login{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+}
+
+.social-btn{
+
+    height:35px;
+
+    font-size:12px;
+
+    gap:6px;
+
+    padding:0 6px;
+
+}
+
+.social-btn svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+.signup-area p{
+
+    font-size:14px;
+
+}
+
+.login-top-actions{
+
+    top:20px;
+    right:20px;
+
+}
+
+.action-btn{
+
+    width:44px;
+    height:44px;
+
+}
+
+.float-one{
+
+    width:80px;
+
+}
+
+.float-two{
+
+    width:68px;
+
+}
+
+.float-three{
+
+    width:62px;
+
+}
+
+.float-four{
+
+    width:55px;
+
+}
+
+.shape-one{
+
+    width:300px;
+    height:300px;
+
+}
+
+.shape-two{
+
+    width:210px;
+    height:210px;
+
+}
+
+.shape-three{
+
+    width:170px;
+    height:170px;
+
+}
+
+.shape-four{
+
+    width:230px;
+    height:230px;
+
+}
+
+}
+
+
+
+
+/*=========================================================
+                    768px
+=========================================================*/
+
+@media (max-width:768px){
+
+html,
+body{
+
+    overflow:auto;
+
+}
+
+.login-page{
+
+    min-height:100vh;
+    height:auto;
+
+    padding:70px 20px 30px;
+
+}
+
+.login-card{
+
+    width:100%;
+    max-width:420px;
+    height:auto;
+
+    padding:20px;
+
+    border-radius:24px;
+
+}
+
+/*==============================
+            LOGO
+==============================*/
+
+.login-page-logo img{
+
+    width:46px;
+    height:46px;
+
+}
+
+.login-page-logo a{
+
+    font-size:20px;
+
+}
+
+/*==============================
+            HEADING
+==============================*/
+
+.login-header{
+
+    margin-bottom:10px;
+
+}
+
+.login-header h2{
+
+    font-size:26px;
+
+}
+
+.login-header p{
+
+    font-size:12px;
+
+    line-height:1.5;
+
+}
+
+/*==============================
+            FORM
+==============================*/
+
+.form-group{
+
+    margin-bottom:8px;
+
+}
+
+.form-group label{
+
+    font-size:14px;
+
+}
+
+.input-box input{
+
+    height:42px;
+
+    font-size:14px;
+
+}
+
+.input-box>svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+.password-toggle svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+/*==============================
+            TERMS
+==============================*/
+
+.remember-me{
+
+    font-size:13px;
+
+    margin:10px 0;
+
+}
+
+/*==============================
+            BUTTON
+==============================*/
+
+.login-btn{
+
+    height:42px;
+
+    font-size:15px;
+
+}
+
+/*==============================
+        SOCIAL LOGIN
+==============================*/
+
+.social-divider{
+
+    margin:14px 0;
+
+}
+
+.social-login{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+}
+
+.social-btn{
+
+    height:42px;
+
+    font-size:11px;
+
+    gap:5px;
+
+    padding:0 4px;
+
+}
+
+.social-btn i{
+
+    font-size:14px;
+
+}
+
+.social-btn span{
+
+    font-size:11px;
+
+}
+
+/*==============================
+        LOGIN LINK
+==============================*/
+
+.signup-area p{
+
+    font-size:13px;
+
+}
+
+/*==============================
+        TOP BUTTONS
+==============================*/
+
+.login-top-actions{
+
+    top:16px;
+    right:16px;
+
+}
+
+.action-btn{
+
+    width:40px;
+    height:40px;
+
+}
+
+/*==============================
+    FLOATING OBJECTS
+==============================*/
+
+.float-one,
+.float-two,
+.float-three,
+.float-four{
+
+    display:none;
+
+}
+
+.shape-one{
+
+    width:220px;
+    height:220px;
+
+}
+
+.shape-two{
+
+    width:170px;
+    height:170px;
+
+}
+
+.shape-three{
+
+    width:140px;
+    height:140px;
+
+}
+
+.shape-four{
+
+    width:180px;
+    height:180px;
+
+}
+
+}
+
+
+
+/*=========================================================
+                    360px
+=========================================================*/
+
+@media (max-width:360px){
+
+html,
+body{
+
+    overflow:auto;
+
+}
+
+.login-page{
+
+    min-height:100vh;
+
+    height:auto;
+
+    padding:60px 12px 20px;
+
+}
+
+.login-card{
+
+    width:100%;
+
+    max-width:100%;
+
+    height:auto;
+
+    padding:16px;
+
+    border-radius:20px;
+
+}
+
+/*==============================
+            LOGO
+==============================*/
+
+.login-page-logo img{
+
+    width:42px;
+    height:42px;
+
+}
+
+.login-page-logo a{
+
+    font-size:18px;
+
+}
+
+/*==============================
+            HEADING
+==============================*/
+
+.login-header{
+
+    margin-bottom:4px;
+
+}
+
+.login-header h2{
+
+    font-size:20px;
+
+}
+
+.login-header p{
+
+    font-size:9px;
+
+    line-height:1.5;
+
+}
+
+/*==============================
+            FORM
+==============================*/
+
+.form-group{
+
+    margin-bottom:4px;
+
+}
+
+.form-group label{
+
+    font-size:13px;
+
+}
+
+.input-box input{
+
+    height:35px;
+
+    padding:0 45px;
+
+    font-size:13px;
+
+}
+
+.input-box>svg{
+
+    left:14px;
+
+    width:16px;
+    height:16px;
+
+}
+
+.password-toggle{
+
+    right:14px;
+
+}
+
+.password-toggle svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+/*==============================
+            TERMS
+==============================*/
+
+.remember-me{
+
+    gap:8px;
+
+    margin:5px 0;
+
+    font-size:12px;
+
+}
+
+/*==============================
+            BUTTON
+==============================*/
+
+.login-btn{
+
+    height:32px;
+
+    font-size:14px;
+
+}
+
+/*==============================
+        SOCIAL LOGIN
+==============================*/
+
+.social-divider{
+
+    margin:8px 0;
+
+}
+
+.social-login{
+
+    grid-template-columns:1fr;
+
+    gap:5px;
+
+}
+
+.social-btn{
+
+    height:30px;
+
+    font-size:13px;
+
+    gap:8px;
+
+}
+
+.social-btn i{
+
+    font-size:15px;
+
+}
+
+/*==============================
+        LOGIN LINK
+==============================*/
+
+.signup-area p{
+
+    font-size:12px;
+
+}
+
+/*==============================
+        TOP BUTTONS
+==============================*/
+
+.login-top-actions{
+
+    top:12px;
+
+    right:12px;
+
+    gap:8px;
+
+}
+
+.action-btn{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+/*==============================
+        SHAPES
+==============================*/
+
+.float-one,
+.float-two,
+.float-three,
+.float-four{
+
+    display:none;
+
+}
+
+.shape-one{
+
+    width:150px;
+    height:150px;
+
+}
+
+.shape-two{
+
+    width:110px;
+    height:110px;
+
+}
+
+.shape-three{
+
+    width:100px;
+    height:100px;
+
+}
+
+.shape-four{
+
+    width:130px;
+    height:130px;
+
+}
+
+}

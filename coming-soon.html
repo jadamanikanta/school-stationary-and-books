@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coming Soon | SchoolBooks</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+:root{
+
+--primary:#2563EB;
+--secondary:#FBBF24;
+
+--bg:#f8fafc;
+--card:#ffffff;
+
+--text:#111827;
+--text-light:#6b7280;
+
+--border:#dbe4f0;
+
+}
+
+body.dark{
+
+--bg:#0f172a;
+--card:#1e293b;
+
+--text:#ffffff;
+--text-light:#cbd5e1;
+
+--border:#334155;
+
+}
+
+html,
+body{
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+transition:.35s;
+
+}
+
+/*=========================================
+            PAGE
+=========================================*/
+
+.coming-page{
+
+position:relative;
+
+width:100%;
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+overflow:hidden;
+
+}
+
+/*=========================================
+        BACKGROUND
+=========================================*/
+
+.background{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.blob{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(2px);
+
+}
+
+.blob.one{
+
+width:360px;
+height:360px;
+
+top:-120px;
+left:-120px;
+
+background:rgba(37,99,235,.12);
+
+animation:floatOne 8s infinite ease-in-out;
+
+}
+
+.blob.two{
+
+width:250px;
+height:250px;
+
+right:-80px;
+top:120px;
+
+background:rgba(251,191,36,.20);
+
+animation:floatTwo 10s infinite ease-in-out;
+
+}
+
+.blob.three{
+
+width:220px;
+height:220px;
+
+left:150px;
+bottom:-80px;
+
+background:rgba(37,99,235,.08);
+
+animation:floatThree 9s infinite ease-in-out;
+
+}
+
+.blob.four{
+
+width:280px;
+height:280px;
+
+right:140px;
+bottom:-120px;
+
+background:rgba(251,191,36,.14);
+
+animation:floatTwo 11s infinite ease-in-out;
+
+}
+
+/*=========================================
+        FLOATING ICONS
+=========================================*/
+
+.float-item{
+
+position:absolute;
+
+opacity:.18;
+
+}
+
+.float-one{
+
+top:100px;
+left:120px;
+
+animation:bookFloat1 8s infinite ease-in-out;
+
+}
+
+.float-two{
+
+right:170px;
+top:180px;
+
+animation:bookFloat2 7s infinite ease-in-out;
+
+}
+
+.float-three{
+
+left:220px;
+bottom:120px;
+
+animation:bookFloat3 8s infinite ease-in-out;
+
+}
+
+.float-four{
+
+right:220px;
+bottom:120px;
+
+animation:bookFloat2 9s infinite ease-in-out;
+
+}
+
+.float-item svg{
+
+width:60px;
+height:60px;
+
+color:var(--primary);
+
+}
+
+/*=========================================
+        TOP BUTTONS
+=========================================*/
+
+.top-actions{
+
+position:absolute;
+
+top:25px;
+right:25px;
+
+display:flex;
+
+gap:12px;
+
+z-index:100;
+
+}
+
+.action-btn{
+
+width:46px;
+height:46px;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--card);
+
+color:var(--primary);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+border:1px solid var(--primary);
+
+}
+
+.action-btn:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+transform:translateY(-4px);
+
+}
+
+/*=========================================
+            GLASS CARD
+=========================================*/
+
+.coming-card{
+
+position:relative;
+
+width:100%;
+max-width:760px;
+height:600px;
+
+padding:25px 45px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(18px);
+
+border:2px solid var(--primary);
+
+border-radius:32px;
+
+text-align:center;
+
+box-shadow:0 25px 60px rgba(37,99,235,.15);
+
+z-index:10;
+
+}
+
+body.dark .coming-card{
+
+background:rgba(30,41,59,.92);
+
+}
+
+/*=========================================
+            LOGO
+=========================================*/
+
+.logo{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:10px;
+
+}
+
+.logo a{
+
+display:flex;
+
+align-items:center;
+
+text-decoration:none;
+
+font-size:28px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+object-fit:contain;
+
+margin-right:10px;
+
+transition:.35s;
+
+}
+
+.logo span{
+
+color:var(--secondary);
+
+}
+
+.logo a:hover img{
+
+transform:rotate(-8deg);
+
+}
+
+/*=========================================
+            HEADING
+=========================================*/
+
+.coming-badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:rgba(37,99,235,.12);
+
+border-radius:999px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:var(--primary);
+
+margin-bottom:18px;
+
+}
+
+.coming-title{
+
+font-size :30px;
+
+font-weight:800;
+
+margin-bottom:10px;
+
+}
+
+.coming-text{
+
+font-size:13px;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+max-width:620px;
+
+margin:auto;
+
+margin-bottom:35px;
+
+}
+
+/*=========================================
+        ANIMATIONS
+=========================================*/
+
+@keyframes floatOne{
+
+50%{
+
+transform:translateY(35px);
+
+}
+
+}
+
+@keyframes floatTwo{
+
+50%{
+
+transform:translateX(-25px);
+
+}
+
+}
+
+@keyframes floatThree{
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+}
+
+@keyframes bookFloat1{
+
+50%{
+
+transform:translateY(-18px) rotate(8deg);
+
+}
+
+}
+
+@keyframes bookFloat2{
+
+50%{
+
+transform:translateY(18px);
+
+}
+
+}
+
+@keyframes bookFloat3{
+
+50%{
+
+transform:translateX(18px);
+
+}
+
+}
+
+/*=========================================================
+                    COUNTDOWN
+=========================================================*/
+
+.countdown{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+margin-bottom:10px;
+
+}
+
+.count-box{
+
+background:var(--card);
+
+border:2px solid var(--primary);
+
+border-radius:20px;
+
+padding:20px 10px;
+
+transition:.35s;
+
+}
+
+.count-box:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 30px rgba(37,99,235,.15);
+
+}
+
+.count-box h2{
+
+font-size:40px;
+
+font-weight:800;
+
+color:var(--primary);
+
+margin-bottom:8px;
+
+}
+
+.count-box span{
+
+font-size:14px;
+
+font-weight:600;
+
+color:var(--text-light);
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+
+/*=========================================================
+                SUBSCRIBE FORM
+=========================================================*/
+
+.subscribe-form{
+
+display:flex;
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+.subscribe-form input{
+
+flex:1;
+
+height:56px;
+
+padding:0 22px;
+
+border:2px solid var(--border);
+
+border-radius:16px;
+
+outline:none;
+
+background:var(--card);
+
+color:var(--text);
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+.subscribe-form input:focus{
+
+border-color:var(--primary);
+
+box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
+}
+
+.subscribe-form button{
+
+height:56px;
+
+padding:0 30px;
+
+border:none;
+
+border-radius:16px;
+
+background:var(--primary);
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.subscribe-form button:hover{
+
+background:var(--secondary);
+
+color:#111827;
+
+}
+
+/*=========================================================
+                    SOCIAL
+=========================================================*/
+
+.social-links{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+margin-bottom:30px;
+
+}
+
+.social-links a{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:var(--card);
+
+border:2px solid var(--primary);
+
+color:var(--primary);
+
+transition:.35s;
+
+text-decoration:none;
+
+}
+
+.social-links a:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+transform:translateY(-5px);
+
+}
+
+/*=========================================================
+                HOME BUTTON
+=========================================================*/
+
+.home-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 30px;
+
+border-radius:16px;
+
+background:var(--primary);
+
+color:#fff;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.home-btn:hover{
+
+background:var(--secondary);
+
+color:#111827;
+
+}
+
+/*=========================================================
+                    RTL
+=========================================================*/
+
+html[dir="rtl"] .top-actions{
+
+right:auto;
+
+left:25px;
+
+}
+
+html[dir="rtl"] .logo img{
+
+margin-right:0;
+
+margin-left:10px;
+
+}
+
+html[dir="rtl"] .subscribe-form{
+
+flex-direction:row-reverse;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:1024px){
+
+.coming-card{
+
+max-width:650px;
+
+padding:45px 35px;
+
+}
+
+.coming-title{
+
+font-size:44px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+html,
+body{
+
+overflow:auto;
+
+}
+
+.coming-page{
+
+height:auto;
+
+min-height:100vh;
+
+padding:70px 20px 30px;
+
+}
+
+.coming-card{
+
+padding:35px 25px;
+
+}
+
+.coming-title{
+
+font-size:34px;
+
+}
+
+.coming-text{
+
+font-size:15px;
+
+}
+
+.countdown{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.subscribe-form{
+
+flex-direction:column;
+
+}
+
+.subscribe-form button{
+
+width:100%;
+
+}
+
+.float-item{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:360px){
+
+.coming-page{
+
+padding:60px 12px 20px;
+
+}
+
+.coming-card{
+
+padding:25px 18px;
+
+}
+
+.logo a{
+
+font-size:22px;
+
+}
+
+.logo img{
+
+width:48px;
+
+height:48px;
+
+}
+
+.coming-title{
+
+font-size:28px;
+
+}
+
+.coming-text{
+
+font-size:14px;
+
+}
+
+.count-box h2{
+
+font-size:30px;
+
+}
+
+.count-box{
+
+padding:16px 8px;
+
+}
+
+.social-links{
+
+gap:10px;
+
+}
+
+.social-links a{
+
+width:42px;
+
+height:42px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="coming-page">
+
+<div class="background">
+
+<div class="blob one"></div>
+<div class="blob two"></div>
+<div class="blob three"></div>
+<div class="blob four"></div>
+
+<div class="float-item float-one">
+<i data-lucide="book-open"></i>
+</div>
+
+<div class="float-item float-two">
+<i data-lucide="backpack"></i>
+</div>
+
+<div class="float-item float-three">
+<i data-lucide="pencil"></i>
+</div>
+
+<div class="float-item float-four">
+<i data-lucide="graduation-cap"></i>
+</div>
+
+</div>
+
+<div class="top-actions">
+
+<button class="action-btn" id="rtlBtn">
+RTL
+</button>
+
+<button class="action-btn" id="themeBtn">
+<i data-lucide="moon"></i>
+</button>
+
+</div>
+
+<div class="coming-card">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="global-images/logo.png" alt="SchoolBooks">
+
+School<span>Books</span>
+
+</a>
+
+</div>
+
+<div class="coming-badge">
+🚀 Launching Soon
+</div>
+
+<h1 class="coming-title">
+
+We're Coming Soon!
+
+</h1>
+
+<p class="coming-text">
+
+Our new SchoolBooks experience is almost ready.
+We're preparing something amazing for students,
+teachers and parents.
+
+</p>
+
+<div class="countdown">
+
+<div class="count-box">
+<h2 id="days">00</h2>
+<span>Days</span>
+</div>
+
+<div class="count-box">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="count-box">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="count-box">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+<form class="subscribe-form">
+
+<input
+type="email"
+placeholder="Enter your email address">
+
+<button type="submit">
+
+Notify Me
+
+</button>
+
+</form>
+
+
+
+<a href="index.html" class="home-btn">
+
+<i data-lucide="house"></i>
+
+Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+    //=========================================================
+//              LUCIDE ICONS
+//=========================================================
+
+lucide.createIcons();
+
+
+
+//=========================================================
+//                  COUNTDOWN TIMER
+//=========================================================
+
+// Set Launch Date (Year, Month-1, Day, Hour, Minute, Second)
+const launchDate = new Date("December 31, 2026 23:59:59").getTime();
+
+const countdown = setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = launchDate - now;
+
+    if (distance < 0) {
+
+        clearInterval(countdown);
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        document.querySelector(".coming-badge").textContent =
+        "🎉 We're Live!";
+
+        return;
+
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+    document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+}, 1000);
+
+
+
+//=========================================================
+//                  DARK MODE
+//=========================================================
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    const icon = themeBtn.querySelector("i");
+
+    if (document.body.classList.contains("dark")) {
+
+        icon.setAttribute("data-lucide", "sun");
+
+    } else {
+
+        icon.setAttribute("data-lucide", "moon");
+
+    }
+
+    lucide.createIcons();
+
+});
+
+
+
+//=========================================================
+//                      RTL
+//=========================================================
+
+const rtlBtn = document.getElementById("rtlBtn");
+
+rtlBtn.addEventListener("click", () => {
+
+    const html = document.documentElement;
+
+    html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+
+});
+
+
+
+//=========================================================
+//          NEWSLETTER FORM
+//=========================================================
+
+const form = document.querySelector(".subscribe-form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const email = this.querySelector("input").value.trim();
+
+    if (email === "") {
+
+        alert("Please enter your email address.");
+
+        return;
+
+    }
+
+    alert("🎉 Thank you! We'll notify you when we launch.");
+
+    this.reset();
+
+});
+
+
+
+//=========================================================
+//      RELOAD LUCIDE AFTER PAGE LOAD
+//=========================================================
+
+window.addEventListener("load", () => {
+
+    lucide.createIcons();
+
+});
+
+</script>
+
+</body>
+</html>
