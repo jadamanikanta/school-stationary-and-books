@@ -660,7 +660,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-image{
 
@@ -686,7 +686,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-content{
 
@@ -708,7 +708,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-badge{
 
@@ -733,7 +733,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-content h2{
 
@@ -765,7 +765,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-features{
 
@@ -807,7 +807,7 @@ html[dir="rtl"] .school-about-badge{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-story-button{
 
@@ -1065,7 +1065,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-journey-container{
 
@@ -1075,7 +1075,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-journey-heading{
 
@@ -1153,7 +1153,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/* Center Line */
+
 
 .school-about-journey-timeline::before{
 
@@ -1203,7 +1203,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/* Left Card */
+
 
 .school-about-journey-item.left .school-about-journey-card{
 
@@ -1211,7 +1211,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/* Right Card */
+
 
 .school-about-journey-item.right .school-about-journey-card{
 
@@ -1333,7 +1333,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/*=========================================================*/
+
 
 .journey-year{
 
@@ -1354,7 +1354,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/*=========================================================*/
+
 
 .journey-icon{
 
@@ -1386,7 +1386,7 @@ html[dir="rtl"] .school-about-story-content{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-journey-card h3{
 
@@ -1487,7 +1487,7 @@ html[dir="rtl"] .school-about-journey-badge{
 
 }
 
-/* Swap Cards */
+
 
 html[dir="rtl"] .school-about-journey-item.left .school-about-journey-card{
 
@@ -1501,7 +1501,7 @@ html[dir="rtl"] .school-about-journey-item.right .school-about-journey-card{
 
 }
 
-/* Reverse Curves */
+
 
 html[dir="rtl"] .school-about-journey-item.left::after{
 
@@ -1595,7 +1595,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Left Line */
+
 
 .school-about-journey-timeline::before{
 
@@ -1603,7 +1603,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Single Column */
+
 
 .school-about-journey-item{
 
@@ -1613,7 +1613,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Dot */
+
 
 .journey-dot{
 
@@ -1621,7 +1621,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Card */
+
 
 .school-about-journey-card{
 
@@ -1633,7 +1633,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Remove Desktop Curves */
+
 
 .school-about-journey-item::after{
 
@@ -1653,7 +1653,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* RTL */
+
 
 html[dir="rtl"] .school-about-journey-timeline::before{
 
@@ -1806,7 +1806,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-values-container{
 
@@ -1896,7 +1896,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* First Row */
+
 
 .school-about-value-card:nth-child(1){
 
@@ -1916,7 +1916,7 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-/* Second Row */
+
 
 .school-about-value-card:nth-child(4){
 
@@ -1940,7 +1940,7 @@ html[dir="rtl"] .school-about-journey-card{
 
     backdrop-filter:blur(14px);
 
-    /* border:2px solid var(--primary); */
+    
 
     border-radius:28px;
 
@@ -1971,7 +1971,7 @@ html[dir="rtl"] .school-about-journey-card{
 
     border-top: 4px solid var(--primary);
 
-    /* border-bottom: 2px solid var(--primary); */
+    
 
 
 }
@@ -2197,7 +2197,7 @@ html[dir="rtl"] .school-about-value-btn{
 
 }
 
-/* Reset Grid */
+
 
 .school-about-value-card:nth-child(n){
 
@@ -2293,7 +2293,7 @@ html[dir="rtl"] .school-about-value-btn{
 
 
 
-/* RTL */
+
 
 html[dir="rtl"] .school-about-value-card{
 
@@ -2440,7 +2440,7 @@ html[dir="rtl"] .school-about-value-card{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-team-container{
 
@@ -3122,7 +3122,7 @@ html[dir="rtl"] .school-about-team-social{
 
 }
 
-/* Decorative Blobs */
+
 
 .school-about-cta-section::before{
 
@@ -3168,7 +3168,7 @@ html[dir="rtl"] .school-about-team-social{
 
 }
 
-/*=========================================================*/
+
 
 .school-about-cta-container{
 
@@ -3688,7 +3688,7 @@ html[dir="rtl"] .school-about-feature{
 
 }
 
-/* RTL Mobile */
+
 
 html[dir="rtl"] .school-about-feature{
 

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo.png">
     <link rel="stylesheet" href="../global-css/global.css">
     <link rel="stylesheet" href="../home-2/home-2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 
         <div class="school-home-two-premium-hero-content">
 
-            <!-- Badge -->
+            
 
             <span class="school-home-two-premium-hero-badge">
 
@@ -33,7 +34,7 @@
             </span>
 
 
-            <!-- Heading -->
+            
 
             <h1 class="school-home-two-premium-hero-title">
 
@@ -44,7 +45,7 @@
             </h1>
 
 
-            <!-- Description -->
+            
 
             <p class="school-home-two-premium-hero-description">
 
@@ -56,7 +57,7 @@
             </p>
 
 
-            <!-- Buttons -->
+            
 
             <div class="school-home-two-premium-hero-buttons">
 
@@ -79,7 +80,7 @@
             </div>
 
 
-            <!-- Stats -->
+            
 
             <div class="school-home-two-premium-hero-stats">
 
@@ -143,7 +144,7 @@
 
     <div class="school-home-two-premium-category-container">
 
-        <!-- Section Heading -->
+        
 
         <div class="school-home-two-premium-category-heading">
 
@@ -174,13 +175,13 @@
 
 
 
-        <!-- Category Grid -->
+        
 
         <div class="school-home-two-premium-category-grid">
 
 
 
-            <!-- Card 1 -->
+            
 
             <div class="school-home-two-premium-category-card">
 
@@ -222,7 +223,7 @@
 
 
 
-            <!-- Card 2 -->
+            
 
             <div class="school-home-two-premium-category-card">
 
@@ -264,7 +265,7 @@
 
 
 
-            <!-- Card 3 -->
+            
 
             <div class="school-home-two-premium-category-card">
 
@@ -306,7 +307,7 @@
 
 
 
-            <!-- Card 4 -->
+            
 
             <div class="school-home-two-premium-category-card">
 
@@ -929,7 +930,128 @@
 </section>
 
 
+<!-- ==========================================
+        SHOP BY GRADE SECTION
+=========================================== -->
+<section class="shop-grade-section" id="shop-by-grade">
 
+    
+    <header class="section-header">
+
+        <div class="section-badge">
+            <i class="ri-sparkles-fill"></i>
+            EXPLORE BY CLASS LEVEL
+        </div>
+
+        <h2 class="section-title">
+            Shop by <span>Grade Tiers</span>
+        </h2>
+
+        <p class="section-description">
+            Handpicked curriculum textbooks, practice notebooks,
+            precision writing instruments and art kits tailored
+            specifically for every student's learning stage.
+        </p>
+
+    </header>
+
+    
+    <div class="filter-tabs-wrapper">
+
+        <div class="filter-tabs">
+
+            <button class="tab-btn active" data-grade="all">
+                <i class="ri-apps-fill"></i>
+                All Products
+            </button>
+
+            <button class="tab-btn" data-grade="1-3">
+                <i class="ri-book-open-fill"></i>
+                Grade 1–3
+            </button>
+
+            <button class="tab-btn" data-grade="4-6">
+                <i class="ri-pencil-ruler-2-fill"></i>
+                Grade 4–6
+            </button>
+
+            <button class="tab-btn" data-grade="7-10">
+                <i class="ri-flask-fill"></i>
+                Grade 7–10
+            </button>
+
+        </div>
+
+    </div>
+
+    
+    <div class="products-grid" id="products-grid"></div>
+
+</section>
+
+
+<!-- ==========================================
+        CART SECTION
+=========================================== -->
+
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<aside class="cart-drawer" id="cart-drawer">
+
+    
+    <div class="cart-header">
+
+        <div class="cart-header-title">
+            <i class="ri-shopping-cart-2-line"></i>
+            <span>Your Shopping Cart</span>
+        </div>
+
+        <button id="close-cart-btn" class="btn-close-cart">
+            <i class="ri-close-line"></i>
+        </button>
+
+    </div>
+
+    
+    <div class="cart-body" id="cart-body"></div>
+
+    
+    <div class="cart-footer">
+
+        <div class="billing-summary">
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Tax (10%)</span>
+                <span id="cart-tax">$0.00</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="cart-shipping">$0.00</span>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+
+        </div>
+
+        <button class="btn-checkout" id="checkout-btn">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</aside>
+
+
+<div id="toast-container" class="toast-container"></div>
 
 <!--=========================================================
                 CUSTOMER TESTIMONIALS
@@ -979,7 +1101,7 @@
         <div class="school-home-two-testimonial-grid">
 
 
-            <!--================ CARD 1 ================-->
+            
 
             <div class="school-home-two-testimonial-card">
 
@@ -1044,7 +1166,7 @@
 
 
 
-            <!--================ FEATURED CARD ================-->
+            
 
             <div class="school-home-two-testimonial-card featured">
 
@@ -1117,7 +1239,7 @@
 
 
 
-            <!--================ CARD 3 ================-->
+            
 
             <div class="school-home-two-testimonial-card">
 
@@ -1475,7 +1597,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* Initial Circle State */
+    
 
     circles.forEach(function(circle){
 
@@ -1489,7 +1611,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* Observer */
+    
 
     const observer = new IntersectionObserver(function(entries){
 
@@ -1497,12 +1619,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if(entry.isIntersecting){
 
-                /* Animate Timeline */
+                
 
                 timeline.classList.add("animate");
 
 
-                /* Animate Cards */
+                
 
                 items.forEach(function(item,index){
 
@@ -1515,7 +1637,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
 
-                /* Animate Circles */
+                
 
                 circles.forEach(function(circle,index){
 
@@ -1773,9 +1895,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/*=========================================================
-        CUSTOMER TESTIMONIALS
-=========================================================*/
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -2117,6 +2237,1378 @@ document.querySelectorAll(".school-home-two-testimonial-rating svg").forEach(fun
     star.setAttribute("stroke","#fbbf24");
 
 });
+
+
+
+const SVG_FALLBACK =
+"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232563eb' opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%232563eb'%3ESchool Stationery Item%3C/text%3E%3C/svg%3E";
+
+
+const PRODUCTS = [
+
+    // ======================================================
+    // Grade 1 - 3
+    // ======================================================
+
+    {
+        id: "p1",
+        name: "Primary Textbooks",
+        grade: "1-3",
+        gradeLabel: "Grade 1–3",
+
+        price: 24.99,
+        originalPrice: 29.99,
+
+        desc: "Comprehensive early learning textbook covering phonics, mathematics, reading skills and classroom activities.",
+
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p2",
+        name: "Practice Notebook",
+        grade: "1-3",
+        gradeLabel: "Grade 1–3",
+
+        price: 4.99,
+        originalPrice: 6.50,
+
+        desc: "Four-line ruled handwriting practice notebook with thick bleed-resistant pages.",
+
+        image: "https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p3",
+        name: "Color Pencil Set",
+        grade: "1-3",
+        gradeLabel: "Grade 1–3",
+
+        price: 8.50,
+        originalPrice: 10.99,
+
+        desc: "12 vibrant non-toxic pre-sharpened colored pencils for creative school artwork.",
+
+        image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+    },
+
+    
+    {
+        id: "p4",
+        name: "Crayon Box",
+        grade: "1-3",
+        gradeLabel: "Grade 1–3",
+
+        price: 6.25,
+        originalPrice: 7.99,
+
+        desc: "24 vibrant, non-toxic wax crayons with smooth color application, specially designed for young learners and classroom creativity.",
+
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+    },
+
+    // ======================================================
+    // Grade 4 - 6
+    // ======================================================
+
+    {
+        id: "p5",
+        name: "Mathematics Book",
+        grade: "4-6",
+        gradeLabel: "Grade 4–6",
+
+        price: 29.99,
+        originalPrice: 34.99,
+
+        desc: "Comprehensive mathematics textbook covering arithmetic, geometry, fractions, measurements, and logical problem-solving skills.",
+
+        image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p6",
+        name: "Spiral Notebook",
+        grade: "4-6",
+        gradeLabel: "Grade 4–6",
+
+        price: 7.50,
+        originalPrice: 9.50,
+
+        desc: "200-page premium spiral notebook with durable laminated cover, smooth writing paper, and strong twin-wire binding.",
+
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+    },
+
+    // ========= Continue in Part 1A-2 =========
+        {
+        id: "p7",
+        name: "Gel Pen Pack",
+        grade: "4-6",
+        gradeLabel: "Grade 4–6",
+
+        price: 9.99,
+        originalPrice: 12.99,
+
+        desc: "Pack of five premium quick-dry gel pens with smooth ink flow for neat classroom writing and note-taking.",
+
+        image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p8",
+        name: "Geometry Box",
+        grade: "4-6",
+        gradeLabel: "Grade 4–6",
+
+        price: 12.00,
+        originalPrice: 15.00,
+
+        desc: "Complete geometry set including compass, divider, ruler, protractor, set squares, eraser and sharpener.",
+
+        image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80"
+    },
+
+    // ======================================================
+    // Grade 7 - 10
+    // ======================================================
+
+    {
+        id: "p9",
+        name: "Science Textbook",
+        grade: "7-10",
+        gradeLabel: "Grade 7–10",
+
+        price: 34.99,
+        originalPrice: 39.99,
+
+        desc: "Advanced science textbook covering Physics, Chemistry and Biology with colorful illustrations and practical activities.",
+
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p10",
+        name: "Premium Notebook",
+        grade: "7-10",
+        gradeLabel: "Grade 7–10",
+
+        price: 11.50,
+        originalPrice: 14.00,
+
+        desc: "Premium hardcover notebook with high-quality ruled pages, ribbon bookmark and durable binding.",
+
+        image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p11",
+        name: "Ballpoint Pen Set",
+        grade: "7-10",
+        gradeLabel: "Grade 7–10",
+
+        price: 14.99,
+        originalPrice: 18.50,
+
+        desc: "Elegant metal ballpoint pen set featuring ultra-smooth writing performance for exams and daily school work.",
+
+        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+        id: "p12",
+        name: "Watercolor Kit",
+        grade: "7-10",
+        gradeLabel: "Grade 7–10",
+
+        price: 18.75,
+        originalPrice: 22.00,
+
+        desc: "Professional watercolor paint set with 24 vibrant colors, paintbrushes and mixing palette for creative projects.",
+
+        image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+    },
+
+];
+
+
+class CartStore {
+
+    constructor() {
+
+        this.storageKey = "school_shop_cart";
+
+        this.cart = this.loadCart();
+
+        this.listeners = [];
+
+    }
+
+    // =====================================
+    // Load Cart
+    // =====================================
+
+    loadCart() {
+
+        try {
+
+            const data = localStorage.getItem(this.storageKey);
+
+            return data ? JSON.parse(data) : {};
+
+        } catch (error) {
+
+            console.error("Unable to load cart", error);
+
+            return {};
+
+        }
+
+    }
+
+    // =====================================
+    // Save Cart
+    // =====================================
+
+    saveCart() {
+
+        try {
+
+            localStorage.setItem(
+                this.storageKey,
+                JSON.stringify(this.cart)
+            );
+
+        } catch (error) {
+
+            console.error("Unable to save cart", error);
+
+        }
+
+        this.notify();
+
+    }
+
+    // =====================================
+    // Subscribe
+    // =====================================
+
+    subscribe(callback) {
+
+        this.listeners.push(callback);
+
+    }
+
+    // =====================================
+    // Notify
+    // =====================================
+
+    notify() {
+
+        this.listeners.forEach(listener => listener(this.cart));
+
+    }
+
+    // =====================================
+    // Quantity
+    // =====================================
+
+    getQty(productId) {
+
+        return this.cart[productId] || 0;
+
+    }
+
+    // =====================================
+    // Add Item
+    // =====================================
+
+    addItem(productId) {
+
+        this.cart[productId] =
+            (this.cart[productId] || 0) + 1;
+
+        this.saveCart();
+
+    }
+
+    // =====================================
+    // Update Quantity
+    // =====================================
+
+    updateQty(productId, qty) {
+
+        if (qty <= 0) {
+
+            delete this.cart[productId];
+
+        } else {
+
+            this.cart[productId] = qty;
+
+        }
+
+        this.saveCart();
+
+    }
+
+    // =====================================
+    // Remove Item
+    // =====================================
+
+    removeItem(productId) {
+
+        delete this.cart[productId];
+
+        this.saveCart();
+
+    }
+
+    // =====================================
+    // Total Cart Count
+    // =====================================
+
+    getCartCount() {
+
+        return Object.values(this.cart)
+            .reduce((sum, qty) => sum + qty, 0);
+
+    }
+
+    // =====================================
+    // Cart Items
+    // =====================================
+
+   // =====================================
+// Get Cart Items
+// =====================================
+
+getCartItems() {
+
+    return Object.entries(this.cart)
+        .map(([id, qty]) => {
+
+            const product = PRODUCTS.find(
+                p => String(p.id) === String(id)
+            );
+
+            if (!product) return null;
+
+            return {
+                product,
+                qty
+            };
+
+        })
+        .filter(item => item !== null);
+
+}
+    // =====================================
+    // Billing Totals
+    // =====================================
+
+    getTotals() {
+
+        const items = this.getCartItems();
+
+        const subtotal = items.reduce((total, item) => {
+
+            return total + (item.product.price * item.qty);
+
+        }, 0);
+
+        const tax = subtotal * 0.10;
+
+        const shipping =
+            subtotal === 0
+                ? 0
+                : subtotal >= 100
+                ? 0
+                : 8.99;
+
+        const total =
+            subtotal + tax + shipping;
+
+        return {
+
+            subtotal,
+
+            tax,
+
+            shipping,
+
+            total
+
+        };
+
+    }
+
+    // =====================================
+    // Clear Cart
+    // =====================================
+
+    clearCart() {
+
+        this.cart = {};
+
+        this.saveCart();
+
+    }
+
+}
+
+
+const cartStore = new CartStore();
+
+
+class ToastManager {
+
+    constructor(containerId = "toast-container") {
+
+        this.container = document.getElementById(containerId);
+
+    }
+
+    // =====================================
+    // Show Toast
+    // =====================================
+
+    show(message, type = "success") {
+
+        if (!this.container) return;
+
+        const toast = document.createElement("div");
+
+        toast.className = `toast toast-${type}`;
+
+        let icon = "ri-checkbox-circle-fill";
+
+        if (type === "error") {
+
+            icon = "ri-close-circle-fill";
+
+        }
+
+        if (type === "warning") {
+
+            icon = "ri-error-warning-fill";
+
+        }
+
+        if (type === "info") {
+
+            icon = "ri-information-fill";
+
+        }
+
+        toast.innerHTML = `
+
+            <div class="toast-icon">
+
+                <i class="${icon}"></i>
+
+            </div>
+
+            <div class="toast-content">
+
+                <p>${message}</p>
+
+            </div>
+
+            <button class="toast-close">
+
+                <i class="ri-close-line"></i>
+
+            </button>
+
+        `;
+
+        this.container.appendChild(toast);
+
+        requestAnimationFrame(() => {
+
+            toast.classList.add("show");
+
+        });
+
+        const timer = setTimeout(() => {
+
+            this.removeToast(toast);
+
+        }, 3500);
+
+        toast
+            .querySelector(".toast-close")
+            .addEventListener("click", () => {
+
+                clearTimeout(timer);
+
+                this.removeToast(toast);
+
+            });
+
+    }
+
+    // =====================================
+    // Remove Toast
+    // =====================================
+
+    removeToast(toast) {
+
+        if (!toast) return;
+
+        toast.classList.remove("show");
+
+        toast.classList.add("hide");
+
+        toast.addEventListener("transitionend", () => {
+
+            toast.remove();
+
+        });
+
+    }
+
+}
+
+
+
+const toastManager = new ToastManager("toast-container");
+
+class UIController {
+
+    constructor() {
+
+        // =====================================
+        // Products
+        // =====================================
+
+        this.products = PRODUCTS;
+
+        this.currentGrade = "all";
+
+
+        // =====================================
+        // Main Elements
+        // =====================================
+
+        this.productsGrid =
+            document.getElementById("products-grid");
+
+        this.cartDrawer =
+            document.getElementById("cart-drawer");
+
+        this.cartOverlay =
+            document.getElementById("cart-overlay");
+
+        this.cartBody =
+            document.getElementById("cart-body");
+
+        this.cartFooter =
+            document.getElementById("cart-footer");
+
+
+        // =====================================
+        // Billing Elements
+        // =====================================
+
+        this.cartSubtotal =
+            document.getElementById("cart-subtotal");
+
+        this.cartTax =
+            document.getElementById("cart-tax");
+
+        this.cartShipping =
+            document.getElementById("cart-shipping");
+
+        this.cartTotal =
+            document.getElementById("cart-total");
+
+
+        // =====================================
+        // Buttons
+        // =====================================
+
+        this.closeCartBtn =
+            document.getElementById("close-cart-btn");
+
+        this.checkoutBtn =
+            document.getElementById("checkout-btn");
+
+
+        // Cart Button (Already موجود in your header)
+
+        this.cartBtn =
+            document.getElementById("cart-btn");
+
+        this.cartCount =
+            document.getElementById("cart-count");
+
+
+        // =====================================
+        // Filter Buttons
+        // =====================================
+
+        this.filterButtons =
+            document.querySelectorAll(".tab-btn");
+
+
+        // =====================================
+        // Listen for Cart Changes
+        // =====================================
+
+        cartStore.subscribe(() => {
+
+            this.renderCart();
+
+            this.updateCartBadge();
+
+        });
+
+
+        // =====================================
+        // Initialize UI
+        // =====================================
+
+        this.init();
+
+    }
+
+
+
+    // ======================================================
+    // Initialize
+    // ======================================================
+
+    init() {
+
+        this.renderProducts();
+
+        this.renderCart();
+
+        this.updateCartBadge();
+
+        this.bindEvents();
+
+    }
+
+
+
+    // ======================================================
+    // Update Cart Badge
+    // ======================================================
+
+    updateCartBadge() {
+
+        if (!this.cartCount) return;
+
+        const totalItems = cartStore.getCartCount();
+
+        this.cartCount.textContent = totalItems;
+
+        this.cartCount.classList.toggle(
+            "show",
+            totalItems > 0
+        );
+
+    }
+
+// ==========================================================
+// PART 3A-2 : UI CONTROLLER
+// Event Binding + Cart Drawer + Filter Tabs
+// ==========================================================
+
+    bindEvents() {
+
+    // =====================================
+    // Grade Filter Tabs
+    // =====================================
+
+    this.filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            // Remove Active State
+
+            this.filterButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+                btn.setAttribute(
+                    "aria-selected",
+                    "false"
+                );
+
+            });
+
+            // Active Button
+
+            button.classList.add("active");
+
+            button.setAttribute(
+                "aria-selected",
+                "true"
+            );
+
+            // Filter
+
+            this.currentGrade =
+                button.dataset.grade;
+
+            this.renderProducts();
+
+        });
+
+    });
+
+
+
+    // =====================================
+    // Open Cart
+    // =====================================
+
+    if (this.cartBtn) {
+
+        this.cartBtn.addEventListener("click", () => {
+
+            this.openCart();
+
+        });
+
+    }
+
+
+
+    // =====================================
+    // Close Cart
+    // =====================================
+
+    if (this.closeCartBtn) {
+
+        this.closeCartBtn.addEventListener("click", () => {
+
+            this.closeCart();
+
+        });
+
+    }
+
+
+
+    // =====================================
+    // Overlay Click
+    // =====================================
+
+    if (this.cartOverlay) {
+
+        this.cartOverlay.addEventListener("click", () => {
+
+            this.closeCart();
+
+        });
+
+    }
+
+
+
+    // =====================================
+    // ESC Key
+    // =====================================
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            this.closeCart();
+
+        }
+
+    });
+
+
+
+    // =====================================
+    // Checkout
+    // =====================================
+
+    if (this.checkoutBtn) {
+
+        this.checkoutBtn.addEventListener("click", () => {
+
+            if (cartStore.getCartCount() === 0) {
+
+                toastManager.show(
+                    "Your shopping cart is empty.",
+                    "warning"
+                );
+
+                return;
+
+            }
+
+            toastManager.show(
+                "Proceeding to checkout...",
+                "success"
+            );
+
+            console.log(
+                "Checkout",
+                cartStore.getCartItems()
+            );
+
+        });
+
+    }
+
+}
+
+
+
+// ==========================================================
+// Open Cart
+// ==========================================================
+
+openCart() {
+
+    this.cartDrawer.classList.add("active");
+
+    this.cartOverlay.classList.add("active");
+
+    document.body.classList.add("cart-open");
+
+}
+
+
+
+// ==========================================================
+// Close Cart
+// ==========================================================
+
+closeCart() {
+
+    this.cartDrawer.classList.remove("active");
+
+    this.cartOverlay.classList.remove("active");
+
+    document.body.classList.remove("cart-open");
+
+}
+// ==========================================================
+// PART 3B : RENDER PRODUCTS
+// ==========================================================
+
+renderProducts() {
+
+    if (!this.productsGrid) return;
+
+    // =====================================
+    // Filter Products
+    // =====================================
+
+    const filteredProducts =
+        this.currentGrade === "all"
+            ? this.products
+            : this.products.filter(product =>
+                product.grade === this.currentGrade
+            );
+
+    // =====================================
+    // Empty State
+    // =====================================
+
+    if (filteredProducts.length === 0) {
+
+        this.productsGrid.innerHTML = `
+
+            <div class="empty-products">
+
+                <i class="ri-shopping-bag-3-line"></i>
+
+                <h3>No Products Found</h3>
+
+                <p>
+                    There are currently no products available
+                    for this grade level.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+    // =====================================
+    // Render Product Cards
+    // =====================================
+
+    this.productsGrid.innerHTML = filteredProducts
+        .map(product => {
+
+            const qty =
+                cartStore.getQty(product.id);
+
+            return `
+
+            <article class="product-card">
+
+                
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                        loading="lazy"
+                        onerror="this.src='${SVG_FALLBACK}'"
+                    >
+
+                    <span class="grade-badge">
+
+                        ${product.gradeLabel}
+
+                    </span>
+
+                </div>
+
+                
+
+                <div class="product-content">
+
+                    <h3 class="product-title">
+
+                        ${product.name}
+
+                    </h3>
+
+                    <p class="product-description">
+
+                        ${product.desc}
+
+                    </p>
+
+                    <div class="product-pricing">
+
+                        <span class="current-price">
+
+                            $${product.price.toFixed(2)}
+
+                        </span>
+
+                        <span class="old-price">
+
+                            $${product.originalPrice.toFixed(2)}
+
+                        </span>
+
+                    </div>
+
+                    
+
+                    <div class="product-footer">
+
+                        ${qty > 0 ? `
+
+                            <div
+                                class="quantity-box"
+                                data-id="${product.id}"
+                            >
+
+                                <button
+                                    class="qty-btn decrease"
+                                    data-id="${product.id}"
+                                >
+
+                                    <i class="ri-subtract-line"></i>
+
+                                </button>
+
+                                <span class="qty-value">
+
+                                    ${qty}
+
+                                </span>
+
+                                <button
+                                    class="qty-btn increase"
+                                    data-id="${product.id}"
+                                >
+
+                                    <i class="ri-add-line"></i>
+
+                                </button>
+
+                            </div>
+
+                        ` : `
+
+                            <button
+                                class="btn-add-cart"
+                                data-id="${product.id}"
+                            >
+
+                                <i class="ri-shopping-cart-2-line"></i>
+
+                                Add to Cart
+
+                            </button>
+
+                        `}
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            `;
+
+        })
+        .join("");
+
+    // =====================================
+    // Bind Product Events
+    // =====================================
+
+    this.bindProductEvents();
+
+}
+// ==========================================================
+// PART 3C : PRODUCT EVENTS
+// ==========================================================
+
+bindProductEvents() {
+
+    // =====================================
+    // Add To Cart
+    // =====================================
+
+    this.productsGrid
+        .querySelectorAll(".btn-add-cart")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId =
+                    button.dataset.id;
+
+                cartStore.addItem(productId);
+
+                const product =
+                    PRODUCTS.find(item => item.id === productId);
+
+                toastManager.show(
+                    `${product.name} added to cart`,
+                    "success"
+                );
+
+                this.renderProducts();
+
+                this.renderCart();
+
+            });
+
+        });
+
+
+
+    // =====================================
+    // Increase Quantity
+    // =====================================
+
+    this.productsGrid
+        .querySelectorAll(".increase")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId =
+                    button.dataset.id;
+
+                const qty =
+                    cartStore.getQty(productId);
+
+                cartStore.updateQty(
+                    productId,
+                    qty + 1
+                );
+
+                this.renderProducts();
+
+                this.renderCart();
+
+            });
+
+        });
+
+
+
+    // =====================================
+    // Decrease Quantity
+    // =====================================
+
+    this.productsGrid
+        .querySelectorAll(".decrease")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId =
+                    button.dataset.id;
+
+                const qty =
+                    cartStore.getQty(productId);
+
+                if (qty <= 1) {
+
+                    cartStore.removeItem(productId);
+
+                    toastManager.show(
+                        "Item removed from cart",
+                        "warning"
+                    );
+
+                } else {
+
+                    cartStore.updateQty(
+                        productId,
+                        qty - 1
+                    );
+
+                }
+
+                this.renderProducts();
+
+                this.renderCart();
+
+            });
+
+        });
+
+}
+// ==========================================================
+// PART 3D : RENDER CART
+// ==========================================================
+
+renderCart() {
+
+    const items = cartStore.getCartItems();
+
+    if (!items.length) {
+
+        this.cartBody.innerHTML = `
+            <div class="empty-cart">
+                <i class="ri-shopping-cart-line"></i>
+                <h3>Your cart is empty</h3>
+            </div>
+        `;
+
+        this.cartSubtotal.textContent = "$0.00";
+        this.cartTax.textContent = "$0.00";
+        this.cartShipping.textContent = "$0.00";
+        this.cartTotal.textContent = "$0.00";
+
+        return;
+    }
+
+    this.cartBody.innerHTML = "";
+
+    items.forEach(item => {
+
+        this.cartBody.innerHTML += `
+
+        <div class="cart-item">
+
+            <div class="cart-item-image">
+                <img src="${item.product.image}" alt="${item.product.name}">
+            </div>
+
+            <div class="cart-item-details">
+
+                <h4>${item.product.name}</h4>
+
+                <div class="cart-price">
+                    $${item.product.price.toFixed(2)}
+                </div>
+
+                <div class="cart-actions">
+
+                    <div class="cart-qty-box">
+
+                        <button class="cart-minus"
+                                data-id="${item.product.id}">
+                            -
+                        </button>
+
+                        <span>${item.qty}</span>
+
+                        <button class="cart-plus"
+                                data-id="${item.product.id}">
+                            +
+                        </button>
+
+                    </div>
+
+                    <button class="remove-cart-item"
+                            data-id="${item.product.id}">
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+    const totals = cartStore.getTotals();
+
+    this.cartSubtotal.textContent =
+        `$${totals.subtotal.toFixed(2)}`;
+
+    this.cartTax.textContent =
+        `$${totals.tax.toFixed(2)}`;
+
+    this.cartShipping.textContent =
+        `$${totals.shipping.toFixed(2)}`;
+
+    this.cartTotal.textContent =
+        `$${totals.total.toFixed(2)}`;
+
+    this.bindCartEvents();
+
+}
+
+bindCartEvents() {
+
+    // =====================================
+    // Increase Quantity
+    // =====================================
+
+    this.cartBody
+        .querySelectorAll(".cart-plus")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId = button.dataset.id;
+
+                const qty = cartStore.getQty(productId);
+
+                cartStore.updateQty(
+                    productId,
+                    qty + 1
+                );
+
+                this.renderProducts();
+                this.renderCart();
+
+            });
+
+        });
+
+
+
+    // =====================================
+    // Decrease Quantity
+    // =====================================
+
+    this.cartBody
+        .querySelectorAll(".cart-minus")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId = button.dataset.id;
+
+                const qty = cartStore.getQty(productId);
+
+                if (qty <= 1) {
+
+                    cartStore.removeItem(productId);
+
+                    toastManager.show(
+                        "Item removed from cart",
+                        "warning"
+                    );
+
+                } else {
+
+                    cartStore.updateQty(
+                        productId,
+                        qty - 1
+                    );
+
+                }
+
+                this.renderProducts();
+                this.renderCart();
+
+            });
+
+        });
+
+
+
+    // =====================================
+    // Remove Item
+    // =====================================
+
+    this.cartBody
+        .querySelectorAll(".remove-cart-item")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const productId = button.dataset.id;
+
+                const product = PRODUCTS.find(
+                    item => item.id === productId
+                );
+
+                cartStore.removeItem(productId);
+
+                toastManager.show(
+                    `${product.name} removed from cart`,
+                    "warning"
+                );
+
+                this.renderProducts();
+                this.renderCart();
+
+            });
+
+        });
+
+}
+
+
+
+// ==========================================================
+// CHECKOUT BUTTON
+// ==========================================================
+
+
+
+} // ===== End UIController Class =====
+
+
+
+const app = new UIController();
+
+
+
+console.log(
+    "%cPremium Shop by Grade Loaded",
+    "color:#2563EB;font-size:16px;font-weight:bold;"
+);
+
+console.log(PRODUCTS);
+
+console.log(cartStore);
 
 </script>
 

@@ -131,7 +131,7 @@
     font-weight:500;
 }
 
-/* Dark Mode */
+
 
 body.dark .hero-stats div{
     background:#1b1b1b;
@@ -223,7 +223,7 @@ body.dark .hero-stats div:hover{
 }
 
 
-/* Card Positions */
+
 
 .card1{
     top:40px;
@@ -611,7 +611,7 @@ GRID
 }
 
 
-/* Top Gradient */
+
 
 .school-home-category-card::before{
 
@@ -640,7 +640,7 @@ GRID
 }
 
 
-/* Inner Border */
+
 
 .school-home-category-card::after{
 
@@ -659,7 +659,7 @@ GRID
 }
 
 
-/* Hover */
+
 
 .school-home-category-card:hover{
 
@@ -761,7 +761,7 @@ body.dark .school-home-category-card:hover{
 }
 
 
-/* Dark Mode Icon */
+
 
 body.dark .school-home-category-icon{
 
@@ -1605,7 +1605,7 @@ CENTER CARD
 }
 
 
-/* Decorative Circles */
+
 
 .school-home-why-choose-center-card::before{
 

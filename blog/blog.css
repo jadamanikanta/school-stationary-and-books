@@ -1278,7 +1278,7 @@ html[dir="rtl"] .blog-read-btn{
 
 
 
-/* FORM */
+
 
 .newsletter-form{
 
@@ -1384,7 +1384,7 @@ html[dir="rtl"] .blog-read-btn{
 
 
 
-/* NOTE */
+
 
 .newsletter-note{
 
@@ -1411,7 +1411,7 @@ html[dir="rtl"] .blog-read-btn{
     height:18px;
 
 }
-/* DARK MODE */
+
 
 .dark .newsletter-section{
 
@@ -1452,7 +1452,7 @@ html[dir="rtl"] .blog-read-btn{
 
 
 
-/* RTL */
+
 
 html[dir="rtl"] .newsletter-badge,
 
@@ -1468,7 +1468,7 @@ html[dir="rtl"] .newsletter-note{
 
 
 
-/* 768px */
+
 
 @media(max-width:768px){
 
@@ -1500,7 +1500,7 @@ html[dir="rtl"] .newsletter-note{
 
 
 
-/* 360px */
+
 
 @media(max-width:360px){
 
@@ -1664,7 +1664,7 @@ html[dir="rtl"] .newsletter-note{
 
 }
 
-/* DARK MODE */
+
 
 .dark .blog-cta{
 
@@ -1687,7 +1687,7 @@ html[dir="rtl"] .newsletter-note{
 
 }
 
-/* RTL */
+
 
 html[dir="rtl"] .blog-cta-badge,
 html[dir="rtl"] .blog-cta-btn{
@@ -1696,7 +1696,7 @@ html[dir="rtl"] .blog-cta-btn{
 
 }
 
-/* 768px */
+
 
 @media(max-width:768px){
 
@@ -1714,7 +1714,7 @@ html[dir="rtl"] .blog-cta-btn{
 
 }
 
-/* 360px */
+
 
 @media(max-width:360px){
 
