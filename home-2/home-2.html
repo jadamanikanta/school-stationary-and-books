@@ -939,18 +939,19 @@
     <header class="section-header">
 
         <div class="section-badge">
-            <i class="ri-sparkles-fill"></i>
-            EXPLORE BY CLASS LEVEL
+            <i class="ri-graduation-cap-fill"></i>
+            SHOP BY GRADE
         </div>
 
         <h2 class="section-title">
-            Shop by <span>Grade Tiers</span>
+            Find the Perfect Supplies <span>For Your Grade</span>
         </h2>
 
         <p class="section-description">
             Handpicked curriculum textbooks, practice notebooks,
-            precision writing instruments and art kits tailored
-            specifically for every student's learning stage.
+            precision writing instruments and art kits — curated
+            specifically for every student's learning stage, from
+            early primary all the way through secondary school.
         </p>
 
     </header>
@@ -2672,7 +2673,7 @@ class ToastManager {
     // Show Toast
     // =====================================
 
-    show(message, type = "success") {
+    show(message, type = "success", productName = null, productImage = null) {
 
         if (!this.container) return;
 
@@ -2700,21 +2701,35 @@ class ToastManager {
 
         }
 
+        // =====================================
+        // Build Toast Content
+        // =====================================
+
+        const viewCartBtn = (type === "success" && productName)
+            ? `<button class="toast-view-cart" onclick="document.getElementById('cart-overlay').dispatchEvent(new MouseEvent('click'))" style="display:none">View Cart <i class="ri-arrow-right-line"></i></button>`
+            : "";
+
+        const productPreview = (type === "success" && productImage)
+            ? `<div class="toast-product-preview"><img src="${productImage}" alt="${productName}" loading="lazy"></div>`
+            : `<div class="toast-icon"><i class="${icon}"></i></div>`;
+
         toast.innerHTML = `
 
-            <div class="toast-icon">
-
-                <i class="${icon}"></i>
-
-            </div>
+            ${productPreview}
 
             <div class="toast-content">
 
-                <p>${message}</p>
+                <p class="toast-message">${message}</p>
+
+                ${type === "success" && productName ? `
+                <button class="toast-view-cart-btn" id="toast-view-cart-${Date.now()}">
+                    <i class="ri-shopping-cart-2-fill"></i>
+                    View Cart
+                </button>` : ""}
 
             </div>
 
-            <button class="toast-close">
+            <button class="toast-close" aria-label="Close notification">
 
                 <i class="ri-close-line"></i>
 
@@ -2734,8 +2749,9 @@ class ToastManager {
 
             this.removeToast(toast);
 
-        }, 3500);
+        }, 4500);
 
+        // Close button
         toast
             .querySelector(".toast-close")
             .addEventListener("click", () => {
@@ -2745,6 +2761,33 @@ class ToastManager {
                 this.removeToast(toast);
 
             });
+
+        // View Cart button
+        const viewCartBtnEl = toast.querySelector(".toast-view-cart-btn");
+
+        if (viewCartBtnEl) {
+
+            viewCartBtnEl.addEventListener("click", () => {
+
+                clearTimeout(timer);
+
+                this.removeToast(toast);
+
+                // Open cart drawer
+                const cartDrawer = document.getElementById("cart-drawer");
+                const cartOverlay = document.getElementById("cart-overlay");
+
+                if (cartDrawer && cartOverlay) {
+
+                    cartDrawer.classList.add("active");
+                    cartOverlay.classList.add("active");
+                    document.body.classList.add("cart-open");
+
+                }
+
+            });
+
+        }
 
     }
 
@@ -3143,14 +3186,22 @@ renderProducts() {
     // =====================================
 
     this.productsGrid.innerHTML = filteredProducts
-        .map(product => {
+        .map((product, index) => {
 
             const qty =
                 cartStore.getQty(product.id);
 
+            // =====================================
+            // Calculate Discount %
+            // =====================================
+
+            const discountPct = Math.round(
+                ((product.originalPrice - product.price) / product.originalPrice) * 100
+            );
+
             return `
 
-            <article class="product-card">
+            <article class="product-card" style="animation-delay:${index * 80}ms">
 
                 
 
@@ -3166,6 +3217,12 @@ renderProducts() {
                     <span class="grade-badge">
 
                         ${product.gradeLabel}
+
+                    </span>
+
+                    <span class="discount-badge">
+
+                        -${discountPct}%
 
                     </span>
 
@@ -3217,6 +3274,7 @@ renderProducts() {
                                 <button
                                     class="qty-btn decrease"
                                     data-id="${product.id}"
+                                    aria-label="Decrease quantity"
                                 >
 
                                     <i class="ri-subtract-line"></i>
@@ -3232,6 +3290,7 @@ renderProducts() {
                                 <button
                                     class="qty-btn increase"
                                     data-id="${product.id}"
+                                    aria-label="Increase quantity"
                                 >
 
                                     <i class="ri-add-line"></i>
@@ -3245,6 +3304,7 @@ renderProducts() {
                             <button
                                 class="btn-add-cart"
                                 data-id="${product.id}"
+                                aria-label="Add ${product.name} to cart"
                             >
 
                                 <i class="ri-shopping-cart-2-line"></i>
@@ -3298,8 +3358,10 @@ bindProductEvents() {
                     PRODUCTS.find(item => item.id === productId);
 
                 toastManager.show(
-                    `${product.name} added to cart`,
-                    "success"
+                    `${product.name} added to cart!`,
+                    "success",
+                    product.name,
+                    product.image
                 );
 
                 this.renderProducts();
@@ -3398,8 +3460,20 @@ renderCart() {
 
         this.cartBody.innerHTML = `
             <div class="empty-cart">
-                <i class="ri-shopping-cart-line"></i>
+                <div class="empty-cart-illustration">
+                    <div class="empty-cart-circle">
+                        <i class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="empty-cart-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
                 <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added any items yet.<br>Start shopping by grade below!</p>
+                <a href="#shop-by-grade" class="empty-cart-cta" onclick="document.getElementById('cart-overlay').click()">
+                    <i class="ri-arrow-down-line"></i>
+                    Browse Products
+                </a>
             </div>
         `;
 
@@ -3435,23 +3509,35 @@ renderCart() {
 
                     <div class="cart-qty-box">
 
-                        <button class="cart-minus"
-                                data-id="${item.product.id}">
-                            -
+                        <button class="cart-qty-btn cart-minus"
+                                data-id="${item.product.id}"
+                                title="Decrease quantity"
+                                aria-label="Decrease quantity">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         </button>
 
-                        <span>${item.qty}</span>
+                        <span class="cart-qty-val">${item.qty}</span>
 
-                        <button class="cart-plus"
-                                data-id="${item.product.id}">
-                            +
+                        <button class="cart-qty-btn cart-plus"
+                                data-id="${item.product.id}"
+                                title="Increase quantity"
+                                aria-label="Increase quantity">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         </button>
 
                     </div>
 
                     <button class="remove-cart-item"
-                            data-id="${item.product.id}">
-                        Remove
+                            data-id="${item.product.id}"
+                            title="Remove item"
+                            aria-label="Remove item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6h18"></path>
+                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
                     </button>
 
                 </div>
