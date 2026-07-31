@@ -385,7 +385,7 @@ body.dark .icon-btn {
 }
 
 
-@media (max-width: 300px) {
+@media (max-width: 360px) {
   
   .logo {
     font-size: 14px;
@@ -411,6 +411,8 @@ body.dark .icon-btn {
     font-size: 13px;
   }
 }
+
+
 
 
 .dropdown {
@@ -583,6 +585,12 @@ body.dark .dropdown-menu {
     .footer-logo{
         width: 34px;
         height: 34px;
+        
+    }
+    .footer-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .footer-brand{
@@ -784,6 +792,9 @@ body.dark .social-icon:hover {
 
 
 @media (max-width: 768px) {
+
+  
+
   .footer-social {
     justify-content: center;
   }

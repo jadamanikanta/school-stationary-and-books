@@ -6,111 +6,156 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <title>Login | SchoolBooks</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo.png">
 
-    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
-    
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    
-
+    <!-- Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- CSS -->
     <link rel="stylesheet"
-        href="login.css">
+          href="login.css">
 
 </head>
 
-<body>
+<body class="login-page">
 
-    <main class="login-page">
+<div class="login-container">
 
-        <!--==============================
-                BACKGROUND
-        ===============================-->
+    <div class="login-wrapper">
 
-        <div class="login-bg-shapes">
+        <!-- ==========================
+                LEFT HERO
+        =========================== -->
 
-            <span class="shape shape-one"></span>
+        <section class="login-hero">
 
-            <span class="shape shape-two"></span>
+            <!-- Slides -->
 
-            <span class="shape shape-three"></span>
+            <div class="hero-slider">
 
-            <span class="shape shape-four"></span>
+                <div class="hero-slide active">
 
-            <img src="../global-images/books-login.png"
-                class="floating-item float-one"
-                alt="Books">
+                    <img src="../stationary-home2.jpg"
+                         alt="Books">
 
-            <img src="../global-images/note-book.png"
-                class="floating-item float-two"
-                alt="Notebook">
+                </div>
 
-            <img src="../global-images/pencil.png"
-                class="floating-item float-three"
-                alt="Pencil">
+                <div class="hero-slide">
 
-            <img src="../global-images/scale.png"
-                class="floating-item float-four"
-                alt="Ruler">
+                    <img src="../Best-Pens.jpg"
+                         alt="Stationery">
 
-        </div>
+                </div>
 
-        <!--==============================
-                TOP CONTROLS
-        ===============================-->
+                <div class="hero-slide">
 
-        <div class="login-top-actions">
+                    <img src="../Crayon-Box.jpg"
+                         alt="Students">
 
-            <button
-                id="rtlBtn"
-                class="action-btn">
+                </div>
 
-                RTL
+            </div>
 
-            </button>
+            <!-- Overlay -->
 
-            <button
-                id="themeBtn"
-                class="action-btn">
+            <div class="hero-overlay"></div>
 
-                <i data-lucide="moon"></i>
+            <!-- Hero Content -->
 
-            </button>
+            <div class="hero-content">
 
-        </div>
+                <div>
 
-        <!--==============================
+                    <h1>
+
+                        Learn Today,
+
+                        <br>
+
+                        Lead Tomorrow.
+
+                    </h1>
+
+                    <p>
+
+                        Discover premium school books,
+                        stationery, art supplies and learning
+                        essentials for every grade.
+
+                    </p>
+
+                </div>
+
+                <!-- Slider Dots -->
+
+                <div class="hero-dots">
+
+                    <span class="hero-dot active"></span>
+
+                    <span class="hero-dot"></span>
+
+                    <span class="hero-dot"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
                 LOGIN CARD
-        ===============================-->
+        =========================== -->
 
         <section class="login-card">
 
-            <!--==========================
-                    LOGO
-            ==========================-->
+            <!-- Top Actions -->
+
+            <div class="login-actions">
+
+                <button
+                    id="rtlToggle"
+                    class="icon-btn">
+
+                   RTL
+
+                </button>
+
+                <button
+                    id="themeToggle"
+                    class="icon-btn">
+
+                    <i data-lucide="moon"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Logo -->
 
             <div class="login-page-logo">
 
                 <a href="../index.html">
 
-                    <img src="../global-images/logo.png"
-                        alt="School Stationery & Book Shop Logo">
+                    <img
+                        src="../global-images/logo.png"
+                        alt="SchoolBooks">
 
                     School<span>Books</span>
 
@@ -118,11 +163,9 @@
 
             </div>
 
-            <!--==========================
-                    HEADING
-            ==========================-->
+            <!-- Form Wrapper -->
 
-            <div class="login-header">
+            <div class="login-form-wrapper">
 
                 <h2>
 
@@ -132,59 +175,61 @@
 
                 <p>
 
-                    Sign in to continue shopping books,
-                    stationery and learning essentials.
+                    Sign in to continue your learning journey.
 
                 </p>
 
-            </div>
+                <!-- ========= FORM START ========= -->
 
-            <!--==========================
-                    FORM
-            ==========================-->
+                <form id="loginForm">
 
-            <form class="login-form">
-
-                
+                                <!-- ==========================
+                        Email
+                =========================== -->
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="email">
 
                         Email Address
 
                     </label>
 
-                    <div class="input-box">
+                    <div class="input-wrapper">
 
                         <i data-lucide="mail"></i>
 
                         <input
+                            id="email"
                             type="email"
-                            placeholder="Enter your email">
+                            placeholder="Enter your email"
+                            required>
 
                     </div>
 
                 </div>
 
-                
+                <!-- ==========================
+                        Password
+                =========================== -->
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="password">
 
                         Password
 
                     </label>
 
-                    <div class="input-box">
+                    <div class="input-wrapper password-wrapper">
 
                         <i data-lucide="lock"></i>
 
                         <input
                             id="password"
                             type="password"
-                            placeholder="Enter your password">
+                            placeholder="Enter your password"
+                            required>
 
                         <button
                             type="button"
@@ -199,13 +244,16 @@
 
                 </div>
 
-                
+                <!-- ==========================
+                    Remember / Forgot
+                =========================== -->
 
-                <div class="login-options">
+                <div class="remember-row">
 
-                    <label class="remember-me">
+                    <label class="remember-checkbox">
 
-                        <input type="checkbox">
+                        <input
+                            type="checkbox">
 
                         <span>
 
@@ -215,7 +263,7 @@
 
                     </label>
 
-                    <a href="#">
+                    <a href="forgot-password.html">
 
                         Forgot Password?
 
@@ -223,42 +271,47 @@
 
                 </div>
 
-                
+                <!-- ==========================
+                        Login Button
+                =========================== -->
 
                 <button
-                    class="login-btn"
-                    type="submit">
+                    type="submit"
+                    class="login-btn">
 
-                    Login
+                    Sign In
 
                 </button>
-                                <!--====================================
-                        SOCIAL DIVIDER
-                =====================================-->
 
-                <div class="social-divider">
+                <!-- ==========================
+                        Divider
+                =========================== -->
+
+                <div class="divider">
 
                     <span>
 
-                        Or Continue With
+                        Or continue with
 
                     </span>
 
                 </div>
 
-
-                <!--====================================
-                        SOCIAL LOGIN
-                =====================================-->
+                <!-- ==========================
+                        Social Login
+                =========================== -->
 
                 <div class="social-login">
 
-                    
+                    <!-- Google -->
 
-                    <a href="#"
-                        class="social-btn google-btn">
+                    <button
+                        type="button"
+                        class="social-btn">
 
-                        <i class="fa-brands fa-google"></i>
+                        <img
+                            src="https://www.svgrepo.com/show/475656/google-color.svg"
+                            alt="Google">
 
                         <span>
 
@@ -266,15 +319,22 @@
 
                         </span>
 
-                    </a>
+                    </button>
 
+                    <!-- Apple -->
 
-                    
+                    <button
+                        type="button"
+                        class="social-btn">
 
-                    <a href="#"
-                        class="social-btn apple-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
 
-                        <i class="fa-brands fa-apple"></i>
+                            <path d="M16.37 1.43c0 1.14-.47 2.18-1.23 2.95-.79.78-2.08 1.39-3.21 1.29-.14-1.09.39-2.25 1.14-3 .77-.77 2.1-1.33 3.3-1.24zM20.92 17.11c-.54 1.22-.79 1.76-1.48 2.84-.97 1.52-2.34 3.42-4.04 3.43-1.51.01-1.9-.99-3.95-.98-2.05.01-2.48 1-3.99.99-1.7-.02-2.99-1.74-3.96-3.26C.78 17.48-.5 12.73 1.58 9.55 3.05 7.3 5.37 5.96 7.55 5.96c1.56 0 2.54 1.03 3.83 1.03 1.25 0 2.02-1.03 3.82-1.03 1.94 0 4 .99 5.46 2.69-4.81 2.63-4.03 9.52.26 11.46z"/>
+
+                        </svg>
 
                         <span>
 
@@ -282,36 +342,15 @@
 
                         </span>
 
-                    </a>
-
-
-                    
-
-                    <a href="#"
-                        class="social-btn facebook-btn">
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                        <span>
-
-                            Facebook
-
-                        </span>
-
-                    </a>
+                    </button>
 
                 </div>
 
-            </form>
+                <!-- ==========================
+                        Bottom Link
+                =========================== -->
 
-
-            <!--====================================
-                    SIGNUP
-            =====================================-->
-
-            <div class="signup-area">
-
-                <p>
+                <div class="signup-row">
 
                     Don't have an account?
 
@@ -321,128 +360,222 @@
 
                     </a>
 
-                </p>
+                </div>
 
-            </div>
+            </form>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
-    <!--====================================
-            LUCIDE ICONS
-    =====================================-->
+</div>
 
-    <script>
+</div>
 
-        lucide.createIcons();
-
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!--====================================
-            LOGIN JS
-    =====================================-->
-
-    <script>/*=========================================
+<script>/*=========================================
             LUCIDE ICONS
 =========================================*/
 
 lucide.createIcons();
 
+/*=========================================
+            HERO SLIDER
+=========================================*/
+
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".hero-dot");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+}
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+
+        currentSlide = 0;
+
+    }
+
+    showSlide(currentSlide);
+
+}
+
+setInterval(nextSlide,5000);
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        currentSlide=index;
+
+        showSlide(index);
+
+    });
+
+});
+
+
+/*=========================================
+            PASSWORD
+=========================================*/
+
+const passwordInput=document.getElementById("password");
+
+const passwordBtn=document.getElementById("togglePassword");
+
+let passwordVisible=false;
+
+passwordBtn.addEventListener("click",()=>{
+
+    passwordVisible=!passwordVisible;
+
+    passwordInput.type=passwordVisible ? "text":"password";
+
+    passwordBtn.innerHTML=passwordVisible
+    ?'<i data-lucide="eye-off"></i>'
+    :'<i data-lucide="eye"></i>';
+
+    lucide.createIcons();
+
+});
 
 
 /*=========================================
             DARK MODE
 =========================================*/
 
-const themeBtn = document.getElementById("themeBtn");
+const themeBtn=document.getElementById("themeToggle");
 
-themeBtn.addEventListener("click", () => {
+const savedTheme=localStorage.getItem("school-theme");
+
+if(savedTheme==="dark"){
+
+    document.body.classList.add("dark");
+
+}
+
+updateThemeIcon();
+
+themeBtn.addEventListener("click",()=>{
 
     document.body.classList.toggle("dark");
 
-    const icon = themeBtn.querySelector("i");
+    if(document.body.classList.contains("dark")){
+
+        localStorage.setItem("school-theme","dark");
+
+    }else{
+
+        localStorage.setItem("school-theme","light");
+
+    }
+
+    updateThemeIcon();
+
+});
+
+function updateThemeIcon(){
 
     if(document.body.classList.contains("dark")){
 
-        icon.setAttribute("data-lucide","sun");
+        themeBtn.innerHTML='<i data-lucide="sun"></i>';
 
-    }
+    }else{
 
-    else{
-
-        icon.setAttribute("data-lucide","moon");
+        themeBtn.innerHTML='<i data-lucide="moon"></i>';
 
     }
 
     lucide.createIcons();
 
-});
-
+}
 
 
 /*=========================================
-                RTL MODE
+            RTL
 =========================================*/
 
-const rtlBtn = document.getElementById("rtlBtn");
+const rtlBtn=document.getElementById("rtlToggle");
+
+const html=document.documentElement;
+
+const savedDir=localStorage.getItem("page-direction");
+
+if(savedDir){
+
+    html.setAttribute("dir",savedDir);
+
+}
 
 rtlBtn.addEventListener("click",()=>{
 
-    const html=document.documentElement;
+    if(html.getAttribute("dir")==="rtl"){
 
-    html.dir=html.dir==="rtl" ? "ltr" : "rtl";
+        html.setAttribute("dir","ltr");
+
+        localStorage.setItem("page-direction","ltr");
+
+    }else{
+
+        html.setAttribute("dir","rtl");
+
+        localStorage.setItem("page-direction","rtl");
+
+    }
 
 });
 
 
-
 /*=========================================
-        PASSWORD VISIBILITY
+            LOGIN
 =========================================*/
 
-const password=document.getElementById("password");
-
-const togglePassword=document.getElementById("togglePassword");
-
-togglePassword.addEventListener("click",()=>{
-
-    if(password.type==="password"){
-
-        password.type="text";
-
-        togglePassword.innerHTML='<i data-lucide="eye-off"></i>';
-
-    }
-
-    else{
-
-        password.type="password";
-
-        togglePassword.innerHTML='<i data-lucide="eye"></i>';
-
-    }
-
-    lucide.createIcons();
-
-});
-
-
-
-/*=========================================
-            FORM SUBMIT
-=========================================*/
-
-const loginForm=document.querySelector(".login-form");
+const loginForm=document.getElementById("loginForm");
 
 loginForm.addEventListener("submit",(e)=>{
 
     e.preventDefault();
 
-    alert("Login Successfully!");
+    const email=document.getElementById("email").value.trim();
+
+    const password=passwordInput.value.trim();
+
+    if(email===""){
+
+        alert("Please enter your email.");
+
+        return;
+
+    }
+
+    if(password===""){
+
+        alert("Please enter your password.");
+
+        return;
+
+    }
+
+    // Replace with API call
+
+    window.location.href="../dashboard/index.html";
 
 });</script>
+
+<script>
+    lucide.createIcons();
+</script>
 
 </body>
 

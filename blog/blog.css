@@ -838,40 +838,30 @@ html[dir="rtl"] .blog-btn{
 =========================================================*/
 
 .blog-read-btn{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     width:max-content;
-
     color:var(--primary);
-
     text-decoration:none;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
-.blog-read-btn i{
-
+.blog-read-btn svg{
     width:18px;
-
     height:18px;
-
-    transition:.3s;
-
+    stroke-width:2;
+    flex-shrink:0;
+    transition:transform .3s ease;
 }
 
 .blog-read-btn:hover{
-
-    gap:14px;
     color:var(--secondary);
+}
 
+.blog-read-btn:hover svg{
+    transform:translateX(6px);
 }
 /*=========================================================
                     DARK MODE

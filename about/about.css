@@ -1244,7 +1244,26 @@ html[dir="rtl"] .school-about-story-content{
     0 0 0 8px rgba(245,158,11,.15);
 
     z-index:5;
+    animation: journeyDotScale 2s ease-in-out infinite;
+    will-change: transform;
 
+}
+@keyframes journeyDotScale {
+    0% {
+        transform:  scale(1);
+    }
+    25% {
+        transform:  scale(1.25);
+    }
+    50% {
+        transform:  scale(1);
+    }
+    75% {
+        transform:  scale(1.25);
+    }
+    100% {
+        transform:  scale(1);
+    }
 }
 
 /*=========================================================
@@ -1259,7 +1278,7 @@ html[dir="rtl"] .school-about-story-content{
 
     width:80px;
 
-    height:80px;
+    height:60px;
 
     right:calc(50% - 40px);
 
@@ -1283,7 +1302,7 @@ html[dir="rtl"] .school-about-story-content{
 
     width:80px;
 
-    height:80px;
+    height:60px;
 
     left:calc(50% - 40px);
 
@@ -1313,7 +1332,7 @@ html[dir="rtl"] .school-about-story-content{
 
     border-radius:28px;
 
-    padding:25px;
+    padding:15px;
 
     box-shadow:
 
@@ -1616,10 +1635,16 @@ html[dir="rtl"] .school-about-journey-card{
 
 
 .journey-dot{
+        width: 14px;
+        height: 14px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 5px rgba(245,158,11,.15);
 
-    grid-column:1;
-
-}
+        position: absolute;
+        left: -53px;   
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
 
 
@@ -1761,15 +1786,17 @@ html[dir="rtl"] .school-about-journey-card{
 
 }
 
-.journey-dot{
+/* .journey-dot{
+        width: 14px;
+        height: 14px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 5px rgba(245,158,11,.15);
 
-    width:18px;
-
-    height:18px;
-
-    border-width:4px;
-
-}
+        position: absolute;
+        left: -53px;   
+        top: 50%;
+        transform: translateY(-50%);
+    } */
 
 .school-about-journey-badge{
 
@@ -3570,7 +3597,7 @@ html[dir="rtl"] .school-about-feature{
 
 .school-about-cta-buttons{
 
-    flex-direction:column;
+    flex-direction:row;
 
     gap:15px;
 
@@ -3588,7 +3615,7 @@ html[dir="rtl"] .school-about-feature{
 
 .school-about-cta-features{
 
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:15px;
 
