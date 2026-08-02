@@ -120,10 +120,21 @@ body.dark .logo span {
     color: var(--secondary);
 }
 
+html[dir="rtl"] .logo,
+html[dir="rtl"] .logo a {
+    direction: ltr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    unicode-bidi: isolate;
+}
 
-/* =========================
-   Laptop (≤1024px)
-========================= */
+html[dir="rtl"] .logo img {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+
 @media (max-width: 1024px) {
 
     .logo {
@@ -579,6 +590,25 @@ body.dark .dropdown-menu {
 
 .brand-secondary{
     color: var(--secondary);
+}
+
+
+html[dir="rtl"] .footer-title{
+    direction: ltr;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .footer-brand{
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .footer-logo{
+    margin-right: 10px;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {

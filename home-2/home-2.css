@@ -3174,8 +3174,8 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 .section-title{
     margin:26px 0 18px;
-    font-size:clamp(2.3rem,5vw,3.8rem);
-    font-weight:800;
+    font-size:45px;
+    font-weight:600;
     line-height:1.1;
     color:var(--heading-color);
 }
@@ -3201,7 +3201,7 @@ body.rtl .school-home-two-best-selling-badge-sale{
     max-width:720px;
     margin:auto;
     color:var(--text-light);
-    font-size:1.05rem;
+    font-size:18px;
     line-height:1.9;
 }
 

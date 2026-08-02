@@ -3415,7 +3415,7 @@ html[dir="rtl"] .school-about-team-social{
 
     background:rgba(245,158,11,.05);
 
-    border:1px solid rgba(245,158,11,.15);
+    border:1px solid var(--primary);
 
     font-weight:500;
 

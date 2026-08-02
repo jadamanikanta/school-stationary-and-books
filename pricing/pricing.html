@@ -777,12 +777,14 @@ function initializeNavbar() {
 
     
 
-  // RTL
   const rtlToggle = document.getElementById("rtlToggle");
-  rtlToggle.addEventListener("click", () => {
+
+rtlToggle.addEventListener("click", () => {
     const isRTL = document.documentElement.dir === "rtl";
+
     document.documentElement.dir = isRTL ? "ltr" : "rtl";
-  });
+    rtlToggle.textContent = isRTL ? "RTL" : "LTR";
+});
 
   // MOBILE MENU
   const menuToggle = document.getElementById("menuToggle");

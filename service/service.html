@@ -169,11 +169,8 @@
                     <h3>School Textbooks</h3>
 
                     <p>
-
-                        Curriculum books for all grades,
-                        boards and learning levels.
-
-                    </p>
+    Curriculum books for all grades, boards, and learning levels. Explore a carefully curated collection of textbooks, reference materials, and study guides designed to support students in achieving academic excellence.
+</p>
 
                     <a href="../service/service-detail.html">
 
@@ -205,12 +202,8 @@
                     <h3>Stationery Supplies</h3>
 
                     <p>
-
-                        Pens, pencils, notebooks,
-                        files and classroom essentials.
-
-                    </p>
-
+    Pens, pencils, notebooks, files, and classroom essentials for students of all ages. Explore our premium collection of high-quality stationery and school supplies designed to support everyday learning, creativity, organization, and academic success.
+</p>
                     <a href="../service/service-detail.html">
 
                         Learn More
@@ -241,11 +234,8 @@
                     <h3>Art & Craft Materials</h3>
 
                     <p>
-
-                        Creative supplies including paints,
-                        colors and craft accessories.
-
-                    </p>
+    Creative supplies including paints, colors, sketchbooks, and craft accessories, inspiring imagination, creativity, and hands-on learning for students of all ages.
+</p>
 
                     <a href="../service/service-detail.html">
 
@@ -277,11 +267,8 @@
                     <h3>School Accessories</h3>
 
                     <p>
-
-                        School bags, bottles,
-                        lunch boxes and essentials required .
-
-                    </p>
+    School bags, water bottles, lunch boxes, and everyday essentials designed to keep students organized, comfortable, and ready for school.
+</p>
 
                    <a href="../service/service-detail.html">
 
@@ -313,11 +300,8 @@
                     <h3>Bulk School Orders</h3>
 
                     <p>
-
-                        Affordable educational supply
-                        solutions for institutions.
-
-                    </p>
+    Affordable educational supplies and bulk solutions for schools, institutions, and organizations, ensuring quality products at competitive prices.
+</p>
 
                     <a href="../service/service-detail.html">
 
@@ -348,12 +332,9 @@
 
                     <h3>Fast Home Delivery</h3>
 
-                    <p>
-
-                        Quick and reliable delivery
-                        of all educational products.
-
-                    </p>
+                   <p>
+    Fast and reliable delivery of books, stationery, and educational supplies, ensuring your orders arrive safely and on time.
+</p>
 
                     <a href="../service/service-detail.html">
 
@@ -714,12 +695,14 @@ function initializeNavbar() {
 
     
 
-  // RTL
   const rtlToggle = document.getElementById("rtlToggle");
-  rtlToggle.addEventListener("click", () => {
+
+rtlToggle.addEventListener("click", () => {
     const isRTL = document.documentElement.dir === "rtl";
+
     document.documentElement.dir = isRTL ? "ltr" : "rtl";
-  });
+    rtlToggle.textContent = isRTL ? "RTL" : "LTR";
+});
 
   // MOBILE MENU
   const menuToggle = document.getElementById("menuToggle");

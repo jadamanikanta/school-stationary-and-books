@@ -1,607 +1,564 @@
-/*========================================
- HERO SECTION
-========================================*/
 
-.hero{
-    padding:60px 8% 90px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    align-items:center;
-    gap:70px;
-    overflow:hidden;
-    position:relative;
+
+.hero {
+    padding: 60px 8% 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 70px;
+    overflow: hidden;
+    position: relative;
 
     background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.18),
-    transparent 35%),
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, .18),
+            transparent 35%),
 
-    radial-gradient(circle at bottom left,
-    rgba(251,191,36,.22),
-    transparent 45%),
+        radial-gradient(circle at bottom left,
+            rgba(251, 191, 36, .22),
+            transparent 45%),
 
-    var(--bg-color);
-}
-
-
-/*========================================
- HERO CONTENT
-========================================*/
-
-.hero-tag{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 20px;
-    border-radius:50px;
-    background:var(--primary-light);
-    color:var(--primary);
-    font-weight:600;
-    margin-bottom:25px;
-}
-
-.hero-tag i{
-    width:18px;
-    height:18px;
-    color:var(--primary);
-}
-
-.hero h1{
-    font-size:50px;
-    line-height:1.1;
-    color:var(--text-color);
-    margin-bottom:25px;
-    font-weight:800;
-}
-
-.hero h1 span{
-    color:var(--primary);
-}
-
-.hero p{
-    font-size:14px;
-    line-height:1.8;
-    color:rgba(var(--text-color-rgb),0.75);
-    margin-bottom:40px;
-    max-width:600px;
-}
-
-
-/*========================================
- BUTTONS
-========================================*/
-
-.hero-buttons{
-    display:flex;
-    gap:18px;
-    margin-bottom:45px;
-}
-
-.hero-stats{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.hero-stats div{
-    min-width:150px;
-    padding:22px 28px;
-    text-align:center;
-
-    background:var(--bg-color);
-    border:1px solid var(--primary);
-    border-radius:18px;
-
-    box-shadow:0 10px 30px rgba(37,99,235,.08);
-
-    transition:all .35s ease;
-    cursor:pointer;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero-stats div::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg,var(--primary),var(--secondary));
-}
-
-.hero-stats div:hover{
-    transform:translateY(-8px);
-    border-color:var(--secondary);
-    box-shadow:0 18px 40px rgba(37,99,235,.18);
-}
-
-.hero-stats h3{
-    font-size:34px;
-    font-weight:700;
-    color:var(--primary);
-    margin-bottom:8px;
-}
-
-.hero-stats span{
-    display:block;
-    font-size:15px;
-    color:var(--text-color);
-    opacity:.75;
-    font-weight:500;
+        var(--bg-color);
 }
 
 
 
-body.dark .hero-stats div{
-    background:#1b1b1b;
-    border-color:rgba(59,130,246,.35);
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
-body.dark .hero-stats div:hover{
-    border-color:var(--secondary);
-    box-shadow:0 18px 45px rgba(59,130,246,.25);
+.hero-tag i {
+    width: 18px;
+    height: 18px;
+    color: var(--primary);
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(var(--text-color-rgb), 0.75);
+    margin-bottom: 40px;
+    max-width: 600px;
 }
 
 
-/*========================================
- HERO IMAGE
-========================================*/
 
-.hero-image{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 45px;
 }
 
-.hero-circle{
-    position:absolute;
-    width:520px;
-    height:520px;
-    border-radius:50%;
+.hero-stats {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-stats div {
+    min-width: 150px;
+    padding: 22px 28px;
+    text-align: center;
+
+    background: var(--bg-color);
+    border: 1px solid var(--primary);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(37, 99, 235, .08);
+
+    transition: all .35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-stats div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.hero-stats div:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, .18);
+}
+
+.hero-stats h3 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.hero-stats span {
+    display: block;
+    font-size: 15px;
+    color: var(--text-color);
+    opacity: .75;
+    font-weight: 500;
+}
+
+
+
+body.dark .hero-stats div {
+    background: #1b1b1b;
+    border-color: rgba(59, 130, 246, .35);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+}
+
+body.dark .hero-stats div:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 18px 45px rgba(59, 130, 246, .25);
+}
+
+
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-circle {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
 
     background:
-    linear-gradient(135deg,
-    rgba(37,99,235,.15),
-    rgba(251,191,36,.20));
+        linear-gradient(135deg,
+            rgba(37, 99, 235, .15),
+            rgba(251, 191, 36, .20));
 
-    filter:blur(5px);
+    filter: blur(5px);
 }
 
-.hero-image img{
-    width:480px;
-    position:relative;
-    z-index:2;
-    animation:float 4s ease-in-out infinite;
-}
-
-
-/*========================================
- FLOATING CARDS
-========================================*/
-
-.floating-card{
-    position:absolute;
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    padding:14px 20px;
-
-    background:var(--card-bg);
-
-    border:1px solid var(--border-color);
-
-    border-radius:18px;
-
-    color:var(--text-color);
-
-    font-weight:600;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    animation:float 4s ease-in-out infinite;
-
-    z-index:5;
-
-    transition:.35s;
-}
-
-.floating-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--primary);
-}
-
-.floating-card i{
-    width:22px;
-    height:22px;
-    color:var(--primary);
-    flex-shrink:0;
+.hero-image img {
+    width: 480px;
+    position: relative;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
 }
 
 
 
 
-.card1{
-    top:40px;
-    left:0;
+.floating-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    color: var(--text-color);
+
+    font-weight: 600;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    animation: float 4s ease-in-out infinite;
+
+    z-index: 5;
+
+    transition: .35s;
 }
 
-.card2{
-    top:120px;
-    right:0;
+.floating-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
 }
 
-.card3{
-    bottom:120px;
-    left:30px;
-}
-
-.card4{
-    bottom:35px;
-    right:25px;
-}
-
-
-/*========================================
- ANIMATION
-========================================*/
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-15px);
-}
-
-}
-
-
-/*========================================
- RTL SUPPORT
-========================================*/
-
-body.rtl .hero{
-    direction:rtl;
-}
-
-body.rtl .hero-tag{
-    flex-direction:row-reverse;
-}
-
-body.rtl .hero-buttons{
-    justify-content:flex-start;
-}
-
-body.rtl .floating-card{
-    flex-direction:row-reverse;
-}
-
-body.rtl .card1{
-    left:auto;
-    right:0;
-}
-
-body.rtl .card2{
-    right:auto;
-    left:0;
-}
-
-body.rtl .card3{
-    left:auto;
-    right:30px;
-}
-
-body.rtl .card4{
-    right:auto;
-    left:25px;
+.floating-card i {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+    flex-shrink: 0;
 }
 
 
-/*========================================
- DARK MODE
-========================================*/
 
-body.dark-mode .floating-card{
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+.card1 {
+    top: 40px;
+    left: 0;
+}
+
+.card2 {
+    top: 120px;
+    right: 0;
+}
+
+.card3 {
+    bottom: 120px;
+    left: 30px;
+}
+
+.card4 {
+    bottom: 35px;
+    right: 25px;
 }
 
 
-/*========================================
- 1024px
-========================================*/
 
-@media(max-width:1024px){
 
-.hero{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:60px;
-}
+@keyframes float {
 
-.hero p{
-    margin:0 auto 35px;
-}
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
 
-.hero-buttons{
-    justify-content:center;
-}
-
-.hero-stats{
-    justify-content:center;
-}
-
-.hero-image img{
-    width:400px;
-}
-
-.hero-circle{
-    width:420px;
-    height:420px;
-}
+    50% {
+        transform: translateY(-15px);
+    }
 
 }
 
 
-/*========================================
- 768px
-========================================*/
 
-@media(max-width:768px){
-
-.hero{
-    padding:100px 6%;
+body.rtl .hero {
+    direction: rtl;
 }
 
-.hero h1{
-    font-size:46px;
+body.rtl .hero-tag {
+    flex-direction: row-reverse;
 }
 
-.hero p{
-    font-size:17px;
+body.rtl .hero-buttons {
+    justify-content: flex-start;
 }
 
-.hero-tag{
-    justify-content:center;
+body.rtl .floating-card {
+    flex-direction: row-reverse;
 }
 
-.hero-buttons{
-    flex-wrap:wrap;
-    justify-content:center;
+body.rtl .card1 {
+    left: auto;
+    right: 0;
 }
 
-.hero-stats{
-    gap:30px;
-    flex-wrap:wrap;
+body.rtl .card2 {
+    right: auto;
+    left: 0;
 }
 
-.hero-image img{
-    width:320px;
+body.rtl .card3 {
+    left: auto;
+    right: 30px;
 }
 
-.hero-circle{
-    width:340px;
-    height:340px;
-}
-
-.floating-card{
-    padding:12px 16px;
-    font-size:14px;
-}
-
-.floating-card i{
-    width:18px;
-    height:18px;
-}
-
+body.rtl .card4 {
+    right: auto;
+    left: 25px;
 }
 
 
-/*========================================
- 360px
-========================================*/
 
-@media(max-width:360px){
-
-.hero{
-    padding:90px 5%;
-}
-
-.hero h1{
-    font-size:34px;
-}
-
-.hero p{
-    font-size:15px;
-}
-
-.hero-buttons{
-    flex-direction:column;
+body.dark-mode .floating-card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
 }
 
 
-.btn-primary,
-.btn-secondary {
-    
-    text-align:center;
-    
+
+@media(max-width:1024px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .hero p {
+        margin: 0 auto 35px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 400px;
+    }
+
+    .hero-circle {
+        width: 420px;
+        height: 420px;
+    }
+
 }
 
 
-.hero-stats{
-    flex-direction:column;
-    gap:18px;
-    
+
+@media(max-width:768px) {
+
+    .hero {
+        padding: 100px 6%;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-tag {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .hero-image img {
+        width: 320px;
+    }
+
+    .hero-circle {
+        width: 340px;
+        height: 340px;
+    }
+
+    .floating-card {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .floating-card i {
+        width: 18px;
+        height: 18px;
+    }
+
 }
 
-.hero-image img{
-    width:250px;
+
+
+@media(max-width:360px) {
+
+    .hero {
+        padding: 90px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        text-align: center;
+
+    }
+
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 18px;
+
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .hero-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
 }
 
-.hero-circle{
-    width:270px;
-    height:270px;
-}
 
-.floating-card{
-    display:none;
-}
 
-}
+.school-home-category-section {
 
-/*=========================================================
-        SCHOOL HOME CATEGORY SECTION
-=========================================================*/
+    padding: 110px 8%;
 
-.school-home-category-section{
+    position: relative;
 
-    padding:110px 8%;
-
-    position:relative;
-
-    overflow:hidden;
+    overflow: hidden;
 
     background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.15),
-    transparent 35%),
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .15),
+            transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.18),
-    transparent 45%),
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .18),
+            transparent 45%),
 
-    #f4f8ff;
-
-}
-
-
-/*=========================================================
-CONTAINER
-=========================================================*/
-
-.school-home-category-container{
-
-    width:100%;
-    max-width:1400px;
-    margin:auto;
+        #f4f8ff;
 
 }
 
 
-/*=========================================================
-HEADER
-=========================================================*/
 
-.school-home-category-header{
+.school-home-category-container {
 
-    max-width:760px;
-    margin:0 auto 70px;
-    text-align:center;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 
 }
 
 
-.school-home-category-badge{
 
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+.school-home-category-header {
 
-    padding:10px 22px;
-
-    border-radius:50px;
-
-    background:rgba(37,99,235,.12);
-
-    color:var(--primary);
-
-    font-size:15px;
-    font-weight:600;
-
-    margin-bottom:22px;
-
-}
-
-.school-home-category-badge i{
-
-    width:18px;
-    height:18px;
+    max-width: 760px;
+    margin: 0 auto 70px;
+    text-align: center;
 
 }
 
 
-.school-home-category-heading{
+.school-home-category-badge {
 
-    font-size:44px;
-    font-weight:800;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 
-    color:var(--text-color);
+    padding: 10px 22px;
 
-    line-height:1.2;
+    border-radius: 50px;
 
-    margin-bottom:20px;
+    background: rgba(37, 99, 235, .12);
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+
+}
+
+.school-home-category-badge i {
+
+    width: 18px;
+    height: 18px;
 
 }
 
 
-.school-home-category-description{
+.school-home-category-heading {
 
-    font-size:17px;
+    font-size: 44px;
+    font-weight: 800;
 
-    line-height:1.8;
+    color: var(--text-color);
 
-    color:rgba(var(--text-color-rgb),.75);
+    line-height: 1.2;
 
-}
-
-
-/*=========================================================
-GRID
-=========================================================*/
-
-.school-home-category-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
+    margin-bottom: 20px;
 
 }
 
 
-/*=========================================================
-        CATEGORY CARD
-=========================================================*/
+.school-home-category-description {
 
-.school-home-category-card{
+    font-size: 17px;
 
-    position:relative;
-    overflow:hidden;
-    isolation:isolate;
+    line-height: 1.8;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    color: rgba(var(--text-color-rgb), .75);
 
-    padding:42px 30px;
+}
 
-    background:var(--card-bg);
 
-    border:1px solid rgba(37,99,235,.20);
 
-    border-radius:24px;
+
+.school-home-category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+
+.school-home-category-card {
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 42px 30px;
+
+    background: var(--card-bg);
+
+    border: 1px solid rgba(37, 99, 235, .20);
+
+    border-radius: 24px;
 
     box-shadow:
-        0 12px 30px rgba(37,99,235,.08);
+        0 12px 30px rgba(37, 99, 235, .08);
 
     transition:
         transform .35s ease,
@@ -613,700 +570,1438 @@ GRID
 
 
 
-.school-home-category-card::before{
+.school-home-category-card::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:5px;
+    width: 100%;
+    height: 5px;
 
-    background:linear-gradient(
-        90deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
 
-    transform:scaleX(0);
+    transform: scaleX(0);
 
-    transform-origin:left;
+    transform-origin: left;
 
-    transition:.4s;
+    transition: .4s;
 
 }
 
 
 
 
-.school-home-category-card::after{
+.school-home-category-card::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    border-radius:24px;
+    border-radius: 24px;
 
-    border:1px solid var(--primary);
+    border: 1px solid var(--primary);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
 
 
 
-.school-home-category-card:hover{
+.school-home-category-card:hover {
 
-    transform:translateY(-12px);
+    transform: translateY(-12px);
 
-    border-color:var(--primary);
+    border-color: var(--primary);
 
     box-shadow:
-        0 25px 55px rgba(37,99,235,.18);
+        0 25px 55px rgba(37, 99, 235, .18);
 
 }
 
-.school-home-category-card:hover::before{
+.school-home-category-card:hover::before {
 
-    transform:scaleX(1);
+    transform: scaleX(1);
 
 }
 
 
-/*=========================================================
-        DARK MODE
-=========================================================*/
 
-body.dark .school-home-category-card{
 
-    background:#222327;
+body.dark .school-home-category-card {
 
-    border:1px solid rgba(59,130,246,.35);
+    background: #222327;
+
+    border: 1px solid rgba(59, 130, 246, .35);
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,.45),
-        0 0 0 1px rgba(255,255,255,.03);
+        0 15px 35px rgba(0, 0, 0, .45),
+        0 0 0 1px rgba(255, 255, 255, .03);
 
 }
 
-body.dark .school-home-category-card::after{
+body.dark .school-home-category-card::after {
 
-    border:1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 
 }
 
-body.dark .school-home-category-card:hover{
+body.dark .school-home-category-card:hover {
 
-    transform:translateY(-12px);
+    transform: translateY(-12px);
 
-    border-color:var(--secondary);
+    border-color: var(--secondary);
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,.60),
-        0 0 18px rgba(59,130,246,.25);
-
-}
-
-
-/*=========================================================
-        ICON
-=========================================================*/
-
-.school-home-category-icon{
-
-    width:82px;
-    height:82px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin:0 auto 28px;
-
-    border-radius:22px;
-
-    background:rgba(37,99,235,.10);
-
-    transition:.35s;
-
-}
-
-.school-home-category-icon svg{
-
-    width:25px;
-    height:25px;
-
-    color:var(--primary);
-
-    transition:.35s;
-
-}
-
-.school-home-category-card:hover .school-home-category-icon{
-
-    background:var(--primary);
-
-}
-
-.school-home-category-card:hover .school-home-category-icon svg{
-
-    color:#ffffff;
+        0 20px 45px rgba(0, 0, 0, .60),
+        0 0 18px rgba(59, 130, 246, .25);
 
 }
 
 
 
+.school-home-category-icon {
 
-body.dark .school-home-category-icon{
+    width: 82px;
+    height: 82px;
 
-    background:rgba(59,130,246,.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 28px;
+
+    border-radius: 22px;
+
+    background: rgba(37, 99, 235, .10);
+
+    transition: .35s;
+
+}
+
+.school-home-category-icon svg {
+
+    width: 25px;
+    height: 25px;
+
+    color: var(--primary);
+
+    transition: .35s;
+
+}
+
+.school-home-category-card:hover .school-home-category-icon {
+
+    background: var(--primary);
+
+}
+
+.school-home-category-card:hover .school-home-category-icon svg {
+
+    color: #ffffff;
 
 }
 
 
-/*=========================================================
-        BADGE
-=========================================================*/
 
-body.dark .school-home-category-badge{
 
-    background:rgba(59,130,246,.18);
+body.dark .school-home-category-icon {
 
-    border:1px solid rgba(59,130,246,.30);
+    background: rgba(59, 130, 246, .18);
 
 }
 
 
-/*=========================================================
-ICON
-=========================================================*/
+body.dark .school-home-category-badge {
 
-.school-home-category-icon{
+    background: rgba(59, 130, 246, .18);
 
-    width:82px;
-
-    height:82px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:22px;
-
-    background:rgba(37,99,235,.10);
-
-    margin:0 auto 28px;
-
-    transition:.35s;
+    border: 1px solid rgba(59, 130, 246, .30);
 
 }
 
 
-.school-home-category-icon i{
 
-    width:38px;
+.school-home-category-icon {
 
-    height:38px;
+    width: 82px;
 
-    color:var(--primary);
+    height: 82px;
 
-    transition:.35s;
+    display: flex;
 
-}
+    justify-content: center;
 
+    align-items: center;
 
-.school-home-category-card:hover
-.school-home-category-icon{
+    border-radius: 22px;
 
-    background:var(--primary);
+    background: rgba(37, 99, 235, .10);
 
-}
+    margin: 0 auto 28px;
 
-
-.school-home-category-card:hover
-.school-home-category-icon i{
-
-    color:#fff;
+    transition: .35s;
 
 }
 
 
-/*=========================================================
-TEXT
-=========================================================*/
+.school-home-category-icon i {
 
-.school-home-category-card h3{
+    width: 38px;
 
-    font-size:24px;
+    height: 38px;
 
-    color:var(--text-color);
+    color: var(--primary);
 
-    margin-bottom:15px;
-
-    font-weight:700;
+    transition: .35s;
 
 }
 
 
-.school-home-category-card p{
+.school-home-category-card:hover .school-home-category-icon {
 
-    font-size:15px;
-
-    line-height:1.8;
-
-    max-width:270px;
-
-    color:rgba(var(--text-color-rgb),.75);
-
-    margin-bottom:25px;
+    background: var(--primary);
 
 }
 
 
-/*=========================================================
-BUTTON
-=========================================================*/
+.school-home-category-card:hover .school-home-category-icon i {
 
-.school-home-category-card a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    text-decoration:none;
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    transition:.35s;
+    color: #fff;
 
 }
 
 
-.school-home-category-card a i{
 
-    width:18px;
+.school-home-category-card h3 {
 
-    height:18px;
+    font-size: 24px;
 
-    transition:.35s;
+    color: var(--text-color);
 
-}
+    margin-bottom: 15px;
 
-
-.school-home-category-card:hover a{
-
-    color:var(--secondary);
+    font-weight: 700;
 
 }
 
 
-.school-home-category-card:hover a i{
+.school-home-category-card p {
 
-    transform:translateX(8px);
+    font-size: 15px;
 
-}
-/*=========================================================
-        DECORATIVE BACKGROUND SHAPES
-=========================================================*/
+    line-height: 1.8;
 
-.school-home-category-section::before{
+    max-width: 270px;
 
-    content:"";
+    color: rgba(var(--text-color-rgb), .75);
 
-    position:absolute;
-
-    width:280px;
-    height:280px;
-
-    top:-120px;
-    left:-120px;
-
-    border-radius:50%;
-
-    background:rgba(37,99,235,.08);
-
-    filter:blur(80px);
-
-    pointer-events:none;
-
-}
-
-.school-home-category-section::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-    height:260px;
-
-    bottom:-100px;
-    right:-100px;
-
-    border-radius:50%;
-
-    background:rgba(251,191,36,.12);
-
-    filter:blur(80px);
-
-    pointer-events:none;
+    margin-bottom: 25px;
 
 }
 
 
-/*=========================================================
-        DARK MODE
-=========================================================*/
 
-body.dark .school-home-category-section{
+.school-home-category-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+
+.school-home-category-card a i {
+
+    width: 18px;
+
+    height: 18px;
+
+    transition: .35s;
+
+}
+
+
+.school-home-category-card:hover a {
+
+    color: var(--secondary);
+
+}
+
+
+.school-home-category-card:hover a i {
+
+    transform: translateX(8px);
+
+}
+
+
+.school-home-category-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -120px;
+    left: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .08);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+}
+
+.school-home-category-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    bottom: -100px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(251, 191, 36, .12);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+
+body.dark .school-home-category-section {
 
     background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.15),
-    transparent 35%),
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .15),
+            transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.10),
-    transparent 45%),
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .10),
+            transparent 45%),
 
-    #18181b;
-
-}
-
-body.dark .school-home-category-card{
-
-    background:#1f1f22;
-
-    border-color:#32343a;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
+        #18181b;
 
 }
 
-body.dark .school-home-category-card:hover{
+body.dark .school-home-category-card {
 
-    border-color:var(--primary);
+    background: #1f1f22;
+
+    border-color: #32343a;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+
+}
+
+body.dark .school-home-category-card:hover {
+
+    border-color: var(--primary);
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.45);
+        0 20px 50px rgba(0, 0, 0, .45);
 
 }
 
-body.dark .school-home-category-icon{
+body.dark .school-home-category-icon {
 
-    background:rgba(59,130,246,.15);
+    background: rgba(59, 130, 246, .15);
 
 }
 
-body.dark .school-home-category-card h3{
+body.dark .school-home-category-card h3 {
 
-    color:#ffffff;
+    color: #ffffff;
 
 }
 
 body.dark .school-home-category-description,
 
-body.dark .school-home-category-card p{
+body.dark .school-home-category-card p {
 
-    color:rgba(255,255,255,.75);
-
-}
-
-body.dark .school-home-category-badge{
-
-    background:rgba(59,130,246,.15);
+    color: rgba(255, 255, 255, .75);
 
 }
 
-body.dark .school-home-category-section::before{
+body.dark .school-home-category-badge {
 
-    background:rgba(37,99,235,.10);
-
-}
-
-body.dark .school-home-category-section::after{
-
-    background:rgba(251,191,36,.08);
+    background: rgba(59, 130, 246, .15);
 
 }
 
+body.dark .school-home-category-section::before {
 
-/*=========================================================
-        RTL SUPPORT
-=========================================================*/
-
-body.rtl .school-home-category-section{
-
-    direction:rtl;
+    background: rgba(37, 99, 235, .10);
 
 }
 
-body.rtl .school-home-category-card{
+body.dark .school-home-category-section::after {
 
-    text-align:center;
-
-}
-
-body.rtl .school-home-category-card a{
-
-    flex-direction:row-reverse;
-
-}
-
-body.rtl .school-home-category-card:hover a i{
-
-    transform:translateX(-8px);
+    background: rgba(251, 191, 36, .08);
 
 }
 
 
-/*=========================================================
-        1200px
-=========================================================*/
 
-@media (max-width:1200px){
+body.rtl .school-home-category-section {
 
-.school-home-category-grid{
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
+    direction: rtl;
 
 }
 
-.school-home-category-card{
+body.rtl .school-home-category-card {
 
-    padding:35px 25px;
-
-}
+    text-align: center;
 
 }
 
+body.rtl .school-home-category-card a {
 
-/*=========================================================
-        1024px
-=========================================================*/
-
-@media (max-width:1024px){
-
-.school-home-category-section{
-
-    padding:90px 6%;
+    flex-direction: row-reverse;
 
 }
 
-.school-home-category-grid{
+body.rtl .school-home-category-card:hover a i {
 
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-.school-home-category-heading{
-
-    font-size:38px;
-
-}
+    transform: translateX(-8px);
 
 }
 
 
-/*=========================================================
-        768px
-=========================================================*/
 
-@media (max-width:768px){
+@media (max-width:1200px) {
 
-.school-home-category-section{
+    .school-home-category-grid {
 
-    padding:80px 5%;
+        grid-template-columns: repeat(3, 1fr);
 
-}
+        gap: 25px;
 
-.school-home-category-grid{
+    }
 
-    grid-template-columns:1fr;
+    .school-home-category-card {
 
-}
+        padding: 35px 25px;
 
-.school-home-category-header{
-
-    margin-bottom:55px;
-
-}
-
-.school-home-category-heading{
-
-    font-size:32px;
-
-}
-
-.school-home-category-description{
-
-    font-size:15px;
-
-}
-
-.school-home-category-card{
-
-    padding:35px 25px;
-
-}
-
-.school-home-category-icon{
-
-    width:72px;
-
-    height:72px;
-
-}
-
-.school-home-category-icon i{
-
-    width:32px;
-
-    height:32px;
-
-}
+    }
 
 }
 
 
-/*=========================================================
-        480px
-=========================================================*/
+@media (max-width:1024px) {
 
-@media (max-width:480px){
+    .school-home-category-section {
 
-.school-home-category-heading{
+        padding: 90px 6%;
 
-    font-size:28px;
+    }
 
-}
+    .school-home-category-grid {
 
-.school-home-category-badge{
+        grid-template-columns: repeat(2, 1fr);
 
-    font-size:13px;
+    }
 
-    padding:8px 16px;
+    .school-home-category-heading {
 
-}
+        font-size: 38px;
 
-.school-home-category-card{
-
-    padding:30px 22px;
-
-}
-
-.school-home-category-card h3{
-
-    font-size:22px;
-
-}
+    }
 
 }
 
 
-/*=========================================================
-        360px
-=========================================================*/
+@media (max-width:768px) {
 
-@media (max-width:360px){
+    .school-home-category-section {
 
-.school-home-category-section{
+        padding: 80px 5%;
 
-    padding:70px 5%;
+    }
 
-}
+    .school-home-category-grid {
 
-.school-home-category-heading{
+        grid-template-columns: 1fr;
 
-    font-size:24px;
+    }
 
-}
+    .school-home-category-header {
 
-.school-home-category-description{
+        margin-bottom: 55px;
 
-    font-size:14px;
+    }
 
-}
+    .school-home-category-heading {
 
-.school-home-category-card{
+        font-size: 32px;
 
-    padding:25px 20px;
+    }
 
-}
+    .school-home-category-description {
 
-.school-home-category-icon{
+        font-size: 15px;
 
-    width:65px;
+    }
 
-    height:65px;
+    .school-home-category-card {
 
-}
+        padding: 35px 25px;
 
-.school-home-category-icon i{
+    }
 
-    width:28px;
+    .school-home-category-icon {
 
-    height:28px;
+        width: 72px;
 
-}
+        height: 72px;
 
-.school-home-category-card h3{
+    }
 
-    font-size:20px;
+    .school-home-category-icon i {
 
-}
+        width: 32px;
 
-.school-home-category-card p{
+        height: 32px;
 
-    font-size:14px;
+    }
 
 }
 
-.school-home-category-card a{
 
-    font-size:14px;
+
+@media (max-width:480px) {
+
+    .school-home-category-heading {
+
+        font-size: 28px;
+
+    }
+
+    .school-home-category-badge {
+
+        font-size: 13px;
+
+        padding: 8px 16px;
+
+    }
+
+    .school-home-category-card {
+
+        padding: 30px 22px;
+
+    }
+
+    .school-home-category-card h3 {
+
+        font-size: 22px;
+
+    }
 
 }
 
+
+@media (max-width:360px) {
+
+    .school-home-category-section {
+
+        padding: 70px 5%;
+
+    }
+
+    .school-home-category-heading {
+
+        font-size: 24px;
+
+    }
+
+    .school-home-category-description {
+
+        font-size: 14px;
+
+    }
+
+    .school-home-category-card {
+
+        padding: 25px 20px;
+
+    }
+
+    .school-home-category-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .school-home-category-icon i {
+
+        width: 28px;
+
+        height: 28px;
+
+    }
+
+    .school-home-category-card h3 {
+
+        font-size: 20px;
+
+    }
+
+    .school-home-category-card p {
+
+        font-size: 14px;
+
+    }
+
+    .school-home-category-card a {
+
+        font-size: 14px;
+
+    }
+
 }
 
-/*=========================================================
-        SCHOOL HOME WHY CHOOSE US SECTION
-=========================================================*/
 
-.school-home-why-choose-section{
+.school-home-why-choose-section {
 
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
 
-    padding:110px 8%;
+    padding: 110px 8%;
 
     background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.12),
-    transparent 35%),
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .12),
+            transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.15),
-    transparent 45%),
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .15),
+            transparent 45%),
 
-    #f8fbff;
+        #f8fbff;
+
+}
+
+
+
+.school-home-why-choose-container {
+
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+
+
+.school-home-why-choose-header {
+
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 70px;
+
+}
+
+.school-home-why-choose-badge {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background: rgba(37, 99, 235, .12);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+.school-home-why-choose-badge i {
+
+    width: 18px;
+    height: 18px;
+
+}
+
+.school-home-why-choose-title {
+
+    font-size: 46px;
+    font-weight: 800;
+
+    color: var(--text-color);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+}
+
+.school-home-why-choose-title span {
+
+    color: var(--primary);
+
+}
+
+.school-home-why-choose-description {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: rgba(var(--text-color-rgb), .75);
+
+}
+
+
+
+.school-home-why-choose-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+}
+
+
+
+.school-home-why-choose-left-column,
+
+.school-home-why-choose-right-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+.school-home-why-choose-feature-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 35px 28px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--primary);
+
+    border-radius: 24px;
+
+    transition: .4s;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, .08);
+
+}
+
+.school-home-why-choose-feature-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: .4s;
+
+}
+
+.school-home-why-choose-feature-card:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+.school-home-why-choose-feature-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 22px 45px rgba(37, 99, 235, .18);
+
+}
+
+
+
+.school-home-why-choose-feature-icon {
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 20px;
+
+    background: rgba(37, 99, 235, .10);
+
+    transition: .35s;
+
+}
+
+.school-home-why-choose-feature-icon svg {
+
+    width: 36px;
+    height: 36px;
+
+    color: var(--primary);
+
+    transition: .35s;
+
+}
+
+.school-home-why-choose-feature-card:hover .school-home-why-choose-feature-icon {
+
+    background: var(--primary);
+    color: var(--text-color)
+}
+
+.school-home-why-choose-feature-card:hover .school-home-why-choose-feature-icon svg {
+
+    color: #fff;
+
+}
+
+
+
+.school-home-why-choose-feature-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+    color: var(--text-color);
+
+}
+
+.school-home-why-choose-feature-card p {
+
+    line-height: 1.8;
+
+    color: rgba(var(--text-color-rgb), .75);
+
+}
+
+
+
+.school-home-why-choose-center-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 55px 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(135deg,
+            var(--primary),
+            #4f8dff);
+
+    color: #fff;
+
+    box-shadow:
+        0 25px 60px rgba(37, 99, 235, .30);
+
+}
+
+
+
+
+.school-home-why-choose-center-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    top: -80px;
+    right: -80px;
+
+}
+
+.school-home-why-choose-center-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: rgba(251, 191, 36, .18);
+
+    bottom: -60px;
+    left: -60px;
+
+}
+
+
+
+.school-home-why-choose-center-icon {
+
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.school-home-why-choose-center-icon i {
+
+    width: 46px;
+    height: 46px;
+
+}
+
+
+
+.school-home-why-choose-center-card h3 {
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+
+}
+
+.school-home-why-choose-center-card p {
+
+    line-height: 1.9;
+
+    opacity: .95;
+
+    margin-bottom: 30px;
+
+}
+
+.school-home-why-choose-center-card .btn-primary {
+
+    background: #fff;
+
+    color: var(--primary);
+
+}
+
+.school-home-why-choose-center-card .btn-primary:hover {
+
+    background: var(--secondary);
+
+    color: #111;
+
+}
+
+
+.school-home-why-choose-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    top: -140px;
+    left: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .08);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+}
+
+.school-home-why-choose-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    bottom: -120px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(251, 191, 36, .10);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+}
+
+
+
+.school-home-why-choose-center-card {
+
+    animation: schoolHomeWhyChooseFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes schoolHomeWhyChooseFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+
+.school-home-why-choose-statistics {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 70px;
+
+}
+
+.school-home-why-choose-stat-card {
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--primary);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: .35s;
+
+}
+
+.school-home-why-choose-stat-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+    box-shadow: 0 18px 40px rgba(37, 99, 235, .15);
+
+}
+
+.school-home-why-choose-stat-card h3 {
+
+    font-size: 40px;
+
+    color: var(--primary);
+
+    margin-bottom: 10px;
+
+    font-weight: 800;
+
+}
+
+.school-home-why-choose-stat-card span {
+
+    color: rgba(var(--text-color-rgb), .75);
+
+    font-weight: 500;
+
+}
+
+
+
+body.dark .school-home-why-choose-section {
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .15),
+            transparent 35%),
+
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .08),
+            transparent 45%),
+
+        #18181b;
+
+}
+
+body.dark .school-home-why-choose-feature-card {
+
+    background: #222327;
+
+    border: 1px solid rgba(59, 130, 246, .30);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .45);
+
+}
+
+body.dark .school-home-why-choose-feature-card:hover {
+
+    border-color: var(--secondary);
+
+}
+
+body.dark .school-home-why-choose-feature-icon {
+
+    background: rgba(59, 130, 246, .18);
+
+}
+
+body.dark .school-home-why-choose-stat-card {
+
+    background: #222327;
+
+    border: 1px solid rgba(59, 130, 246, .25);
+
+}
+
+body.dark .school-home-why-choose-stat-card:hover {
+
+    border-color: var(--secondary);
+
+}
+
+body.dark .school-home-why-choose-section::before {
+
+    background: rgba(37, 99, 235, .10);
+
+}
+
+body.dark .school-home-why-choose-section::after {
+
+    background: rgba(251, 191, 36, .08);
+
+}
+
+
+
+body.rtl .school-home-why-choose-section {
+
+    direction: rtl;
+
+}
+
+body.rtl .school-home-why-choose-feature-card {
+
+    text-align: center;
+
+}
+
+
+
+@media(max-width:1200px) {
+
+    .school-home-why-choose-grid {
+
+        gap: 20px;
+
+    }
+
+    .school-home-why-choose-feature-card {
+
+        padding: 30px 22px;
+
+    }
+
+}
+
+
+@media(max-width:1024px) {
+
+    .school-home-why-choose-section {
+
+        padding: 90px 6%;
+
+    }
+
+    .school-home-why-choose-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .school-home-why-choose-center-card {
+
+        order: -1;
+
+    }
+
+    .school-home-why-choose-left-column,
+
+    .school-home-why-choose-right-column {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+
+    }
+
+    .school-home-why-choose-statistics {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:768px) {
+
+    .school-home-why-choose-section {
+
+        padding: 80px 5%;
+
+    }
+
+    .school-home-why-choose-title {
+
+        font-size: 34px;
+
+    }
+
+    .school-home-why-choose-left-column,
+
+    .school-home-why-choose-right-column {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .school-home-why-choose-center-card {
+
+        padding: 45px 30px;
+
+    }
+
+    .school-home-why-choose-statistics {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 18px;
+
+    }
+
+}
+
+
+
+@media(max-width:480px) {
+
+    .school-home-why-choose-title {
+
+        font-size: 28px;
+
+    }
+
+    .school-home-why-choose-description {
+
+        font-size: 15px;
+
+    }
+
+    .school-home-why-choose-center-card {
+
+        padding: 35px 25px;
+
+    }
+
+    .school-home-why-choose-center-card h3 {
+
+        font-size: 28px;
+
+    }
+
+    .school-home-why-choose-stat-card {
+
+        padding: 22px;
+
+    }
+
+    .school-home-why-choose-stat-card h3 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+
+@media(max-width:360px) {
+
+    .school-home-why-choose-section {
+
+        padding: 70px 5%;
+
+    }
+
+    .school-home-why-choose-title {
+
+        font-size: 24px;
+
+    }
+
+    .school-home-why-choose-statistics {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .school-home-why-choose-center-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .school-home-why-choose-feature-card {
+
+        padding: 25px 20px;
+
+    }
+
+    .school-home-why-choose-feature-icon {
+
+        width: 70px;
+
+        height: 70px;
+
+    }
+
+    .school-home-why-choose-feature-icon i {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
+}
+
+
+
+.school-home-back-to-school-offers-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 110px 8%;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, .12),
+            transparent 35%),
+
+        radial-gradient(circle at bottom left,
+            rgba(251, 191, 36, .16),
+            transparent 45%),
+
+        #f8fbff;
 
 }
 
@@ -1315,1221 +2010,343 @@ body.rtl .school-home-category-card:hover a i{
 CONTAINER
 =========================================================*/
 
-.school-home-why-choose-container{
+.school-home-back-to-school-offers-container {
 
-    max-width:1400px;
-    margin:auto;
+    max-width: 1400px;
 
-}
-
-
-/*=========================================================
-HEADER
-=========================================================*/
-
-.school-home-why-choose-header{
-
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 70px;
-
-}
-
-.school-home-why-choose-badge{
-
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:10px 22px;
-
-    border-radius:50px;
-
-    background:rgba(37,99,235,.12);
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
-}
-
-.school-home-why-choose-badge i{
-
-    width:18px;
-    height:18px;
-
-}
-
-.school-home-why-choose-title{
-
-    font-size:46px;
-    font-weight:800;
-
-    color:var(--text-color);
-
-    line-height:1.2;
-
-    margin-bottom:20px;
-
-}
-
-.school-home-why-choose-title span{
-
-    color:var(--primary);
-
-}
-
-.school-home-why-choose-description{
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    color:rgba(var(--text-color-rgb),.75);
-
-}
-
-
-/*=========================================================
-GRID
-=========================================================*/
-
-.school-home-why-choose-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1.2fr 1fr;
-
-    gap:30px;
-
-    align-items:center;
-
-}
-
-
-/*=========================================================
-LEFT / RIGHT COLUMN
-=========================================================*/
-
-.school-home-why-choose-left-column,
-
-.school-home-why-choose-right-column{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
-}
-
-
-/*=========================================================
-FEATURE CARD
-=========================================================*/
-
-.school-home-why-choose-feature-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:35px 28px;
-
-    background:var(--card-bg);
-
-    border:1px solid var(--primary);
-
-    border-radius:24px;
-
-    transition:.4s;
-
-    box-shadow:
-    0 12px 30px rgba(37,99,235,.08);
-
-}
-
-.school-home-why-choose-feature-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:100%;
-    height:5px;
-
-    background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary));
-
-    transform:scaleX(0);
-
-    transform-origin:left;
-
-    transition:.4s;
-
-}
-
-.school-home-why-choose-feature-card:hover::before{
-
-    transform:scaleX(1);
-
-}
-
-.school-home-why-choose-feature-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--primary);
-
-    box-shadow:
-    0 22px 45px rgba(37,99,235,.18);
-
-}
-
-
-/*=========================================================
-FEATURE ICON
-=========================================================*/
-
-.school-home-why-choose-feature-icon{
-
-    width:80px;
-    height:80px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin-bottom:22px;
-
-    border-radius:20px;
-
-    background:rgba(37,99,235,.10);
-
-    transition:.35s;
-
-}
-
-.school-home-why-choose-feature-icon svg{
-
-    width:36px;
-    height:36px;
-
-    color:var(--primary);
-
-    transition:.35s;
-
-}
-
-.school-home-why-choose-feature-card:hover
-.school-home-why-choose-feature-icon{
-
-    background:var(--primary);
-    color:var(--text-color)
-
-}
-
-.school-home-why-choose-feature-card:hover
-.school-home-why-choose-feature-icon svg{
-
-    color:#fff;
-
-}
-
-
-/*=========================================================
-CARD TEXT
-=========================================================*/
-
-.school-home-why-choose-feature-card h3{
-
-    font-size:22px;
-
-    margin-bottom:15px;
-
-    color:var(--text-color);
-
-}
-
-.school-home-why-choose-feature-card p{
-
-    line-height:1.8;
-
-    color:rgba(var(--text-color-rgb),.75);
-
-}
-
-
-/*=========================================================
-CENTER CARD
-=========================================================*/
-
-.school-home-why-choose-center-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    padding:55px 40px;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    background:
-    linear-gradient(
-    135deg,
-    var(--primary),
-    #4f8dff);
-
-    color:#fff;
-
-    box-shadow:
-    0 25px 60px rgba(37,99,235,.30);
-
-}
-
-
-
-
-.school-home-why-choose-center-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:220px;
-    height:220px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    top:-80px;
-    right:-80px;
-
-}
-
-.school-home-why-choose-center-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:170px;
-    height:170px;
-
-    border-radius:50%;
-
-    background:rgba(251,191,36,.18);
-
-    bottom:-60px;
-    left:-60px;
-
-}
-
-
-/*=========================================================
-CENTER CARD ICON
-=========================================================*/
-
-.school-home-why-choose-center-icon{
-
-    width:95px;
-    height:95px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin:0 auto 25px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
-
-}
-
-.school-home-why-choose-center-icon i{
-
-    width:46px;
-    height:46px;
-
-}
-
-
-/*=========================================================
-CENTER CARD TEXT
-=========================================================*/
-
-.school-home-why-choose-center-card h3{
-
-    font-size:34px;
-
-    margin-bottom:15px;
-
-}
-
-.school-home-why-choose-center-card p{
-
-    line-height:1.9;
-
-    opacity:.95;
-
-    margin-bottom:30px;
-
-}
-
-.school-home-why-choose-center-card .btn-primary{
-
-    background:#fff;
-
-    color:var(--primary);
-
-}
-
-.school-home-why-choose-center-card .btn-primary:hover{
-
-    background:var(--secondary);
-
-    color:#111;
-
-}
-/*=========================================================
-        DECORATIVE BACKGROUND SHAPES
-=========================================================*/
-
-.school-home-why-choose-section::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:320px;
-    height:320px;
-
-    top:-140px;
-    left:-120px;
-
-    border-radius:50%;
-
-    background:rgba(37,99,235,.08);
-
-    filter:blur(90px);
-
-    pointer-events:none;
-
-}
-
-.school-home-why-choose-section::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-    height:260px;
-
-    bottom:-120px;
-    right:-100px;
-
-    border-radius:50%;
-
-    background:rgba(251,191,36,.10);
-
-    filter:blur(90px);
-
-    pointer-events:none;
-
-}
-
-
-/*=========================================================
-        FLOATING CENTER CARD
-=========================================================*/
-
-.school-home-why-choose-center-card{
-
-    animation:schoolHomeWhyChooseFloat 4s ease-in-out infinite;
-
-}
+    margin: auto;
 
-@keyframes schoolHomeWhyChooseFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-}
-
-
-/*=========================================================
-        STATISTICS
-=========================================================*/
-
-.school-home-why-choose-statistics{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-    margin-top:70px;
-
-}
-
-.school-home-why-choose-stat-card{
-
-    background:var(--card-bg);
-
-    border:1px solid var(--primary);
-
-    border-radius:22px;
-
-    padding:30px;
-
-    text-align:center;
-
-    transition:.35s;
-
-}
-
-.school-home-why-choose-stat-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:var(--primary);
-
-    box-shadow:0 18px 40px rgba(37,99,235,.15);
-
-}
-
-.school-home-why-choose-stat-card h3{
-
-    font-size:40px;
-
-    color:var(--primary);
-
-    margin-bottom:10px;
-
-    font-weight:800;
-
-}
-
-.school-home-why-choose-stat-card span{
-
-    color:rgba(var(--text-color-rgb),.75);
-
-    font-weight:500;
-
-}
-
-
-/*=========================================================
-        DARK MODE
-=========================================================*/
-
-body.dark .school-home-why-choose-section{
-
-    background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.15),
-    transparent 35%),
-
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.08),
-    transparent 45%),
-
-    #18181b;
-
-}
-
-body.dark .school-home-why-choose-feature-card{
-
-    background:#222327;
-
-    border:1px solid rgba(59,130,246,.30);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.45);
-
-}
-
-body.dark .school-home-why-choose-feature-card:hover{
-
-    border-color:var(--secondary);
-
-}
-
-body.dark .school-home-why-choose-feature-icon{
-
-    background:rgba(59,130,246,.18);
-
-}
-
-body.dark .school-home-why-choose-stat-card{
-
-    background:#222327;
-
-    border:1px solid rgba(59,130,246,.25);
-
-}
-
-body.dark .school-home-why-choose-stat-card:hover{
-
-    border-color:var(--secondary);
-
-}
-
-body.dark .school-home-why-choose-section::before{
-
-    background:rgba(37,99,235,.10);
-
-}
-
-body.dark .school-home-why-choose-section::after{
-
-    background:rgba(251,191,36,.08);
-
-}
-
-
-/*=========================================================
-        RTL
-=========================================================*/
-
-body.rtl .school-home-why-choose-section{
-
-    direction:rtl;
-
-}
-
-body.rtl .school-home-why-choose-feature-card{
-
-    text-align:center;
-
-}
-
-
-/*=========================================================
-        1200px
-=========================================================*/
-
-@media(max-width:1200px){
-
-.school-home-why-choose-grid{
-
-    gap:20px;
-
-}
-
-.school-home-why-choose-feature-card{
-
-    padding:30px 22px;
-
-}
-
-}
-
-
-/*=========================================================
-        1024px
-=========================================================*/
-
-@media(max-width:1024px){
-
-.school-home-why-choose-section{
-
-    padding:90px 6%;
-
-}
-
-.school-home-why-choose-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.school-home-why-choose-center-card{
-
-    order:-1;
-
 }
 
-.school-home-why-choose-left-column,
 
-.school-home-why-choose-right-column{
 
-    display:grid;
+.school-home-back-to-school-offers-header {
 
-    grid-template-columns:repeat(3,1fr);
+    text-align: center;
 
-    gap:20px;
+    max-width: 760px;
 
-}
-
-.school-home-why-choose-statistics{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-
-/*=========================================================
-        768px
-=========================================================*/
-
-@media(max-width:768px){
-
-.school-home-why-choose-section{
-
-    padding:80px 5%;
-
-}
+    margin: 0 auto 70px;
 
-.school-home-why-choose-title{
-
-    font-size:34px;
-
 }
-
-.school-home-why-choose-left-column,
 
-.school-home-why-choose-right-column{
+.school-home-back-to-school-offers-badge {
 
-    grid-template-columns:1fr;
+    display: inline-flex;
 
-}
+    align-items: center;
 
-.school-home-why-choose-center-card{
+    gap: 10px;
 
-    padding:45px 30px;
+    padding: 10px 22px;
 
-}
+    border-radius: 50px;
 
-.school-home-why-choose-statistics{
+    background: rgba(37, 99, 235, .10);
 
-    grid-template-columns:1fr 1fr;
+    color: var(--primary);
 
-    gap:18px;
+    font-weight: 600;
 
-}
+    margin-bottom: 20px;
 
 }
-
 
-/*=========================================================
-        480px
-=========================================================*/
+.school-home-back-to-school-offers-badge i {
 
-@media(max-width:480px){
+    width: 18px;
 
-.school-home-why-choose-title{
+    height: 18px;
 
-    font-size:28px;
-
 }
 
-.school-home-why-choose-description{
+.school-home-back-to-school-offers-title {
 
-    font-size:15px;
+    font-size: 46px;
 
-}
+    font-weight: 800;
 
-.school-home-why-choose-center-card{
+    color: var(--text-color);
 
-    padding:35px 25px;
+    margin-bottom: 18px;
 
 }
 
-.school-home-why-choose-center-card h3{
+.school-home-back-to-school-offers-title span {
 
-    font-size:28px;
+    color: var(--primary);
 
 }
-
-.school-home-why-choose-stat-card{
-
-    padding:22px;
 
-}
+.school-home-back-to-school-offers-description {
 
-.school-home-why-choose-stat-card h3{
+    font-size: 17px;
 
-    font-size:32px;
+    line-height: 1.8;
 
-}
+    color: rgba(var(--text-color-rgb), .75);
 
 }
 
 
-/*=========================================================
-        360px
-=========================================================*/
 
-@media(max-width:360px){
+.school-home-back-to-school-offers-grid {
 
-.school-home-why-choose-section{
+    display: grid;
 
-    padding:70px 5%;
-
-}
+    grid-template-columns: repeat(3, 1fr);
 
-.school-home-why-choose-title{
+    gap: 28px;
 
-    font-size:24px;
+    align-items: stretch;
 
 }
 
-.school-home-why-choose-statistics{
 
-    grid-template-columns:1fr;
 
-}
-
-.school-home-why-choose-center-card{
-
-    padding:30px 20px;
+.school-home-back-to-school-offers-card {
 
-}
+    position: relative;
 
-.school-home-why-choose-feature-card{
+    overflow: hidden;
 
-    padding:25px 20px;
+    display: flex;
 
-}
+    flex-direction: column;
 
-.school-home-why-choose-feature-icon{
+    align-items: center;
 
-    width:70px;
+    text-align: center;
 
-    height:70px;
+    padding: 40px 28px;
 
-}
+    background: var(--card-bg);
 
-.school-home-why-choose-feature-icon i{
+    border: 1px solid var(--primary);
 
-    width:30px;
+    border-radius: 24px;
 
-    height:30px;
+    transition: .35s;
 
-}
+    box-shadow: 0 12px 30px rgba(37, 99, 235, .08);
 
 }
 
-/*=========================================================
-        BACK TO SCHOOL OFFERS SECTION
-=========================================================*/
+.school-home-back-to-school-offers-card:hover {
 
-.school-home-back-to-school-offers-section{
+    transform: translateY(-10px);
 
-    position:relative;
+    border-color: var(--primary);
 
-    overflow:hidden;
+    box-shadow: 0 22px 50px rgba(37, 99, 235, .18);
 
-    padding:110px 8%;
-
-    background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.12),
-    transparent 35%),
-
-    radial-gradient(circle at bottom left,
-    rgba(251,191,36,.16),
-    transparent 45%),
-
-    #f8fbff;
-
 }
-
 
-/*=========================================================
-CONTAINER
-=========================================================*/
+.school-home-back-to-school-offers-card::before {
 
-.school-home-back-to-school-offers-container{
+    content: "";
 
-    max-width:1400px;
+    position: absolute;
 
-    margin:auto;
+    left: 0;
 
-}
+    top: 0;
 
+    width: 100%;
 
-/*=========================================================
-HEADER
-=========================================================*/
+    height: 5px;
 
-.school-home-back-to-school-offers-header{
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
 
-    text-align:center;
+    transform: scaleX(0);
 
-    max-width:760px;
+    transform-origin: left;
 
-    margin:0 auto 70px;
+    transition: .35s;
 
 }
-
-.school-home-back-to-school-offers-badge{
 
-    display:inline-flex;
+.school-home-back-to-school-offers-card:hover::before {
 
-    align-items:center;
+    transform: scaleX(1);
 
-    gap:10px;
-
-    padding:10px 22px;
-
-    border-radius:50px;
-
-    background:rgba(37,99,235,.10);
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
 }
 
-.school-home-back-to-school-offers-badge i{
 
-    width:18px;
 
-    height:18px;
+.school-home-back-to-school-offers-discount {
 
-}
+    position: absolute;
 
-.school-home-back-to-school-offers-title{
+    top: 18px;
 
-    font-size:46px;
+    right: 18px;
 
-    font-weight:800;
+    padding: 7px 14px;
 
-    color:var(--text-color);
+    border-radius: 30px;
 
-    margin-bottom:18px;
+    background: var(--secondary);
 
-}
+    color: #111;
 
-.school-home-back-to-school-offers-title span{
+    font-weight: 700;
 
-    color:var(--primary);
+    font-size: 13px;
 
 }
 
-.school-home-back-to-school-offers-description{
 
-    font-size:17px;
 
-    line-height:1.8;
+.school-home-back-to-school-offers-icon {
 
-    color:rgba(var(--text-color-rgb),.75);
+    width: 80px;
 
-}
+    height: 80px;
 
+    display: flex;
 
-/*=========================================================
-GRID
-=========================================================*/
+    justify-content: center;
 
-.school-home-back-to-school-offers-grid{
+    align-items: center;
 
-    display:grid;
+    margin-bottom: 25px;
 
-    grid-template-columns:repeat(3,1fr);
+    border-radius: 20px;
 
-    gap:28px;
+    background: rgba(37, 99, 235, .10);
 
-    align-items:stretch;
+    transition: .35s;
 
 }
-
-
-/*=========================================================
-NORMAL CARD
-=========================================================*/
-
-.school-home-back-to-school-offers-card{
-
-    position:relative;
-
-    overflow:hidden;
 
-    display:flex;
+.school-home-back-to-school-offers-icon svg {
 
-    flex-direction:column;
+    width: 36px;
 
-    align-items:center;
+    height: 36px;
 
-    text-align:center;
+    color: var(--text-color);
 
-    padding:40px 28px;
+    transition: .35s;
 
-    background:var(--card-bg);
-
-    border:1px solid var(--primary);
-
-    border-radius:24px;
-
-    transition:.35s;
-
-    box-shadow:0 12px 30px rgba(37,99,235,.08);
-
-}
-
-.school-home-back-to-school-offers-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--primary);
-
-    box-shadow:0 22px 50px rgba(37,99,235,.18);
-
 }
-
-.school-home-back-to-school-offers-card::before{
-
-    content:"";
-
-    position:absolute;
 
-    left:0;
+.school-home-back-to-school-offers-card:hover .school-home-back-to-school-offers-icon {
 
-    top:0;
+    background: var(--primary);
 
-    width:100%;
 
-    height:5px;
-
-    background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary));
-
-    transform:scaleX(0);
-
-    transform-origin:left;
-
-    transition:.35s;
-
 }
 
-.school-home-back-to-school-offers-card:hover::before{
+.school-home-back-to-school-offers-card:hover .school-home-back-to-school-offers-icon svg {
 
-    transform:scaleX(1);
+    color: #fff;
 
 }
-
-
-/*=========================================================
-DISCOUNT BADGE
-=========================================================*/
 
-.school-home-back-to-school-offers-discount{
 
-    position:absolute;
 
-    top:18px;
+.school-home-back-to-school-offers-card h3 {
 
-    right:18px;
+    font-size: 24px;
 
-    padding:7px 14px;
+    color: var(--text-color);
 
-    border-radius:30px;
+    margin-bottom: 15px;
 
-    background:var(--secondary);
-
-    color:#111;
-
-    font-weight:700;
-
-    font-size:13px;
-
 }
-
-
-/*=========================================================
-ICON
-=========================================================*/
-
-.school-home-back-to-school-offers-icon{
-
-    width:80px;
 
-    height:80px;
+.school-home-back-to-school-offers-card p {
 
-    display:flex;
+    line-height: 1.8;
 
-    justify-content:center;
+    color: rgba(var(--text-color-rgb), .75);
 
-    align-items:center;
+    margin-bottom: 25px;
 
-    margin-bottom:25px;
-
-    border-radius:20px;
-
-    background:rgba(37,99,235,.10);
-
-    transition:.35s;
-
 }
-
-.school-home-back-to-school-offers-icon svg{
-
-    width:36px;
-
-    height:36px;
 
-    color:var(--text-color);
 
-    transition:.35s;
 
-}
-
-.school-home-back-to-school-offers-card:hover
-.school-home-back-to-school-offers-icon{
+.school-home-back-to-school-offers-features {
 
-    background:var(--primary);
-    
+    display: flex;
 
-}
+    flex-direction: column;
 
-.school-home-back-to-school-offers-card:hover
-.school-home-back-to-school-offers-icon svg{
+    gap: 8px;
 
-    color:#fff;
+    margin: 15px 0 20px;
 
 }
-
 
-/*=========================================================
-TEXT
-=========================================================*/
+.school-home-back-to-school-offers-features span {
 
-.school-home-back-to-school-offers-card h3{
+    display: flex;
 
-    font-size:24px;
-
-    color:var(--text-color);
-
-    margin-bottom:15px;
-
-}
+    align-items: center;
 
-.school-home-back-to-school-offers-card p{
+    gap: 8px;
 
-    line-height:1.8;
+    font-size: 14px;
 
-    color:rgba(var(--text-color-rgb),.75);
+    font-weight: 500;
 
-    margin-bottom:25px;
+    color: var(--text);
 
 }
 
+.school-home-back-to-school-offers-features svg {
 
+    width: 16px;
 
-.school-home-back-to-school-offers-features{
+    height: 16px;
 
-    display:flex;
+    color: var(--primary);
 
-    flex-direction:column;
-
-    gap:8px;
-
-    margin:15px 0 20px;
-
 }
 
-.school-home-back-to-school-offers-features span{
 
-    display:flex;
+.school-home-back-to-school-offers-card a {
 
-    align-items:center;
+    margin-top: auto;
 
-    gap:8px;
+    display: inline-flex;
 
-    font-size:14px;
-
-    font-weight:500;
-
-    color:var(--text);
-
-}
+    align-items: center;
 
-.school-home-back-to-school-offers-features svg{
+    gap: 8px;
 
-    width:16px;
+    color: var(--primary);
 
-    height:16px;
+    text-decoration: none;
 
-    color:var(--primary);
+    font-weight: 600;
 
 }
-/*=========================================================
-LINK
-=========================================================*/
 
-.school-home-back-to-school-offers-card a{
+.school-home-back-to-school-offers-card a i {
 
-    margin-top:auto;
+    width: 18px;
 
-    display:inline-flex;
+    height: 18px;
 
-    align-items:center;
+    transition: .3s;
 
-    gap:8px;
 
-    color:var(--primary);
-
-    text-decoration:none;
-
-    font-weight:600;
-
 }
-
-.school-home-back-to-school-offers-card a i{
 
-    width:18px;
-
-    height:18px;
-
-    transition:.3s;
-    
-
-}
-.school-home-back-to-school-offers-card:hover a{
-    color:var(--secondary);
+.school-home-back-to-school-offers-card:hover a {
+    color: var(--secondary);
 }
 
-.school-home-back-to-school-offers-card:hover a svg{
+.school-home-back-to-school-offers-card:hover a svg {
 
-    transform:translateX(6px);
-    color:var(--secondary);
+    transform: translateX(6px);
+    color: var(--secondary);
 
 }
 
@@ -2538,68 +2355,67 @@ LINK
 FEATURED CARD
 =========================================================*/
 
-.school-home-back-to-school-offers-featured-card{
+.school-home-back-to-school-offers-featured-card {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    padding:50px 35px;
+    padding: 50px 35px;
 
-    text-align:center;
+    text-align: center;
 
-    color:#fff;
+    color: #fff;
 
     background:
-    linear-gradient(
-    135deg,
-    var(--primary),
-    #4f8dff);
+        linear-gradient(135deg,
+            var(--primary),
+            #4f8dff);
 
     box-shadow:
-    0 25px 60px rgba(37,99,235,.30);
+        0 25px 60px rgba(37, 99, 235, .30);
 
 }
 
-.school-home-back-to-school-offers-featured-card::before{
+.school-home-back-to-school-offers-featured-card::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:220px;
+    width: 220px;
 
-    height:220px;
+    height: 220px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(255,255,255,.08);
+    background: rgba(255, 255, 255, .08);
 
-    top:-80px;
+    top: -80px;
 
-    right:-70px;
+    right: -70px;
 
 }
 
-.school-home-back-to-school-offers-featured-card::after{
+.school-home-back-to-school-offers-featured-card::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:180px;
+    width: 180px;
 
-    height:180px;
+    height: 180px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(251,191,36,.18);
+    background: rgba(251, 191, 36, .18);
 
-    bottom:-70px;
+    bottom: -70px;
 
-    left:-70px;
+    left: -70px;
 
 }
 
@@ -2608,33 +2424,33 @@ FEATURED CARD
 FEATURED ICON
 =========================================================*/
 
-.school-home-back-to-school-offers-featured-icon{
+.school-home-back-to-school-offers-featured-icon {
 
-    width:95px;
+    width: 95px;
 
-    height:95px;
+    height: 95px;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    margin:0 auto 25px;
+    margin: 0 auto 25px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter: blur(12px);
 
 }
 
-.school-home-back-to-school-offers-featured-icon i{
+.school-home-back-to-school-offers-featured-icon i {
 
-    width:46px;
+    width: 46px;
 
-    height:46px;
+    height: 46px;
 
 }
 
@@ -2643,51 +2459,51 @@ FEATURED ICON
 COUNTDOWN
 =========================================================*/
 
-.school-home-back-to-school-offers-countdown{
+.school-home-back-to-school-offers-countdown {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:18px;
+    gap: 18px;
 
-    margin:30px 0;
-
-}
-
-.school-home-back-to-school-offers-countdown div{
-
-    width:75px;
-
-    height:75px;
-
-    border-radius:18px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
+    margin: 30px 0;
 
 }
 
-.school-home-back-to-school-offers-countdown span{
+.school-home-back-to-school-offers-countdown div {
 
-    font-size:28px;
+    width: 75px;
 
-    font-weight:800;
+    height: 75px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(10px);
 
 }
 
-.school-home-back-to-school-offers-countdown small{
+.school-home-back-to-school-offers-countdown span {
 
-    font-size:13px;
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+.school-home-back-to-school-offers-countdown small {
+
+    font-size: 13px;
 
 }
 
@@ -2696,15 +2512,15 @@ COUNTDOWN
 BOTTOM BUTTONS
 =========================================================*/
 
-.school-home-back-to-school-offers-bottom-buttons{
+.school-home-back-to-school-offers-bottom-buttons {
 
-    margin-top:60px;
+    margin-top: 60px;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:20px;
+    gap: 20px;
 
 }
 
@@ -2712,47 +2528,47 @@ BOTTOM BUTTONS
         DECORATIVE BACKGROUND SHAPES
 =========================================================*/
 
-.school-home-back-to-school-offers-section::before{
+.school-home-back-to-school-offers-section::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:320px;
-    height:320px;
+    width: 320px;
+    height: 320px;
 
-    top:-140px;
-    left:-120px;
+    top: -140px;
+    left: -120px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(37,99,235,.08);
+    background: rgba(37, 99, 235, .08);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
-.school-home-back-to-school-offers-section::after{
+.school-home-back-to-school-offers-section::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:260px;
-    height:260px;
+    width: 260px;
+    height: 260px;
 
-    bottom:-100px;
-    right:-100px;
+    bottom: -100px;
+    right: -100px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(251,191,36,.10);
+    background: rgba(251, 191, 36, .10);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
@@ -2761,23 +2577,24 @@ BOTTOM BUTTONS
         FEATURED CARD ANIMATION
 =========================================================*/
 
-.school-home-back-to-school-offers-featured-card{
+.school-home-back-to-school-offers-featured-card {
 
-    animation:schoolHomeOfferFloat 4s ease-in-out infinite;
+    animation: schoolHomeOfferFloat 4s ease-in-out infinite;
 
 }
 
-@keyframes schoolHomeOfferFloat{
+@keyframes schoolHomeOfferFloat {
 
-    0%,100%{
+    0%,
+    100% {
 
-        transform:translateY(0);
+        transform: translateY(0);
 
     }
 
-    50%{
+    50% {
 
-        transform:translateY(-12px);
+        transform: translateY(-12px);
 
     }
 
@@ -2788,19 +2605,19 @@ BOTTOM BUTTONS
         FEATURED BUTTON
 =========================================================*/
 
-.school-home-back-to-school-offers-featured-card .btn-primary{
+.school-home-back-to-school-offers-featured-card .btn-primary {
 
-    background:#fff;
+    background: #fff;
 
-    color:var(--primary);
+    color: var(--primary);
 
 }
 
-.school-home-back-to-school-offers-featured-card .btn-primary:hover{
+.school-home-back-to-school-offers-featured-card .btn-primary:hover {
 
-    background:var(--secondary);
+    background: var(--secondary);
 
-    color:#111;
+    color: #111;
 
 }
 
@@ -2810,16 +2627,16 @@ BOTTOM BUTTONS
 =========================================================*/
 
 .school-home-back-to-school-offers-bottom-buttons .btn-primary,
-.school-home-back-to-school-offers-bottom-buttons .btn-secondary{
+.school-home-back-to-school-offers-bottom-buttons .btn-secondary {
 
-    transition:.35s;
+    transition: .35s;
 
 }
 
 .school-home-back-to-school-offers-bottom-buttons .btn-primary:hover,
-.school-home-back-to-school-offers-bottom-buttons .btn-secondary:hover{
+.school-home-back-to-school-offers-bottom-buttons .btn-secondary:hover {
 
-    transform:translateY(-4px);
+    transform: translateY(-4px);
 
 }
 
@@ -2828,65 +2645,65 @@ BOTTOM BUTTONS
         DARK MODE
 =========================================================*/
 
-body.dark .school-home-back-to-school-offers-section{
+body.dark .school-home-back-to-school-offers-section {
 
     background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.15),
-    transparent 35%),
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, .15),
+            transparent 35%),
 
-    radial-gradient(circle at bottom left,
-    rgba(251,191,36,.08),
-    transparent 45%),
+        radial-gradient(circle at bottom left,
+            rgba(251, 191, 36, .08),
+            transparent 45%),
 
-    #18181b;
+        #18181b;
 
 }
 
-body.dark .school-home-back-to-school-offers-card{
+body.dark .school-home-back-to-school-offers-card {
 
-    background:#222327;
+    background: #222327;
 
-    border:1px solid rgba(59,130,246,.25);
+    border: 1px solid rgba(59, 130, 246, .25);
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.45);
+        0 15px 35px rgba(0, 0, 0, .45);
 
 }
 
-body.dark .school-home-back-to-school-offers-card:hover{
+body.dark .school-home-back-to-school-offers-card:hover {
 
-    border-color:var(--secondary);
-
-}
-
-body.dark .school-home-back-to-school-offers-icon{
-
-    background:rgba(59,130,246,.18);
+    border-color: var(--secondary);
 
 }
 
-body.dark .school-home-back-to-school-offers-discount{
+body.dark .school-home-back-to-school-offers-icon {
 
-    color:#111;
-
-}
-
-body.dark .school-home-back-to-school-offers-countdown div{
-
-    background:rgba(255,255,255,.12);
+    background: rgba(59, 130, 246, .18);
 
 }
 
-body.dark .school-home-back-to-school-offers-section::before{
+body.dark .school-home-back-to-school-offers-discount {
 
-    background:rgba(37,99,235,.10);
+    color: #111;
 
 }
 
-body.dark .school-home-back-to-school-offers-section::after{
+body.dark .school-home-back-to-school-offers-countdown div {
 
-    background:rgba(251,191,36,.08);
+    background: rgba(255, 255, 255, .12);
+
+}
+
+body.dark .school-home-back-to-school-offers-section::before {
+
+    background: rgba(37, 99, 235, .10);
+
+}
+
+body.dark .school-home-back-to-school-offers-section::after {
+
+    background: rgba(251, 191, 36, .08);
 
 }
 
@@ -2895,29 +2712,29 @@ body.dark .school-home-back-to-school-offers-section::after{
         RTL SUPPORT
 =========================================================*/
 
-body.rtl .school-home-back-to-school-offers-section{
+body.rtl .school-home-back-to-school-offers-section {
 
-    direction:rtl;
-
-}
-
-body.rtl .school-home-back-to-school-offers-card a{
-
-    flex-direction:row-reverse;
+    direction: rtl;
 
 }
 
-body.rtl .school-home-back-to-school-offers-discount{
+body.rtl .school-home-back-to-school-offers-card a {
 
-    right:auto;
-
-    left:18px;
+    flex-direction: row-reverse;
 
 }
 
-body.rtl .school-home-back-to-school-offers-card:hover a i{
+body.rtl .school-home-back-to-school-offers-discount {
 
-    transform:translateX(-6px);
+    right: auto;
+
+    left: 18px;
+
+}
+
+body.rtl .school-home-back-to-school-offers-card:hover a i {
+
+    transform: translateX(-6px);
 
 }
 
@@ -2926,13 +2743,13 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
         1200px
 =========================================================*/
 
-@media(max-width:1200px){
+@media(max-width:1200px) {
 
-.school-home-back-to-school-offers-grid{
+    .school-home-back-to-school-offers-grid {
 
-    gap:22px;
+        gap: 22px;
 
-}
+    }
 
 }
 
@@ -2941,25 +2758,25 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
         1024px
 =========================================================*/
 
-@media(max-width:1024px){
+@media(max-width:1024px) {
 
-.school-home-back-to-school-offers-section{
+    .school-home-back-to-school-offers-section {
 
-    padding:90px 6%;
+        padding: 90px 6%;
 
-}
+    }
 
-.school-home-back-to-school-offers-grid{
+    .school-home-back-to-school-offers-grid {
 
-    grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-}
+    }
 
-.school-home-back-to-school-offers-featured-card{
+    .school-home-back-to-school-offers-featured-card {
 
-    grid-column:1 / -1;
+        grid-column: 1 / -1;
 
-}
+    }
 
 }
 
@@ -2968,48 +2785,48 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
         768px
 =========================================================*/
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.school-home-back-to-school-offers-section{
+    .school-home-back-to-school-offers-section {
 
-    padding:80px 5%;
+        padding: 80px 5%;
 
-}
+    }
 
-.school-home-back-to-school-offers-title{
+    .school-home-back-to-school-offers-title {
 
-    font-size:34px;
+        font-size: 34px;
 
-}
+    }
 
-.school-home-back-to-school-offers-description{
+    .school-home-back-to-school-offers-description {
 
-    font-size:16px;
+        font-size: 16px;
 
-}
+    }
 
-.school-home-back-to-school-offers-grid{
+    .school-home-back-to-school-offers-grid {
 
-    grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-}
+    }
 
-.school-home-back-to-school-offers-bottom-buttons{
+    .school-home-back-to-school-offers-bottom-buttons {
 
-    flex-direction:column;
+        flex-direction: column;
 
-    align-items:center;
+        align-items: center;
 
-}
+    }
 
-.school-home-back-to-school-offers-bottom-buttons .btn-primary,
-.school-home-back-to-school-offers-bottom-buttons .btn-secondary{
+    .school-home-back-to-school-offers-bottom-buttons .btn-primary,
+    .school-home-back-to-school-offers-bottom-buttons .btn-secondary {
 
-    width:250px;
+        width: 250px;
 
-    text-align:center;
+        text-align: center;
 
-}
+    }
 
 }
 
@@ -3018,51 +2835,51 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
         480px
 =========================================================*/
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
-.school-home-back-to-school-offers-title{
+    .school-home-back-to-school-offers-title {
 
-    font-size:28px;
+        font-size: 28px;
 
-}
+    }
 
-.school-home-back-to-school-offers-description{
+    .school-home-back-to-school-offers-description {
 
-    font-size:15px;
+        font-size: 15px;
 
-}
+    }
 
-.school-home-back-to-school-offers-card{
+    .school-home-back-to-school-offers-card {
 
-    padding:32px 22px;
+        padding: 32px 22px;
 
-}
+    }
 
-.school-home-back-to-school-offers-featured-card{
+    .school-home-back-to-school-offers-featured-card {
 
-    padding:38px 25px;
+        padding: 38px 25px;
 
-}
+    }
 
-.school-home-back-to-school-offers-countdown{
+    .school-home-back-to-school-offers-countdown {
 
-    gap:12px;
+        gap: 12px;
 
-}
+    }
 
-.school-home-back-to-school-offers-countdown div{
+    .school-home-back-to-school-offers-countdown div {
 
-    width:65px;
+        width: 65px;
 
-    height:65px;
+        height: 65px;
 
-}
+    }
 
-.school-home-back-to-school-offers-countdown span{
+    .school-home-back-to-school-offers-countdown span {
 
-    font-size:22px;
+        font-size: 22px;
 
-}
+    }
 
 }
 
@@ -3071,70 +2888,70 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
         360px
 =========================================================*/
 
-@media(max-width:360px){
+@media(max-width:360px) {
 
-.school-home-back-to-school-offers-section{
+    .school-home-back-to-school-offers-section {
 
-    padding:70px 5%;
+        padding: 70px 5%;
 
-}
+    }
 
-.school-home-back-to-school-offers-title{
+    .school-home-back-to-school-offers-title {
 
-    font-size:24px;
+        font-size: 24px;
 
-}
+    }
 
-.school-home-back-to-school-offers-badge{
+    .school-home-back-to-school-offers-badge {
 
-    font-size:13px;
+        font-size: 13px;
 
-}
+    }
 
-.school-home-back-to-school-offers-icon{
+    .school-home-back-to-school-offers-icon {
 
-    width:70px;
+        width: 70px;
 
-    height:70px;
+        height: 70px;
 
-}
+    }
 
-.school-home-back-to-school-offers-icon i{
+    .school-home-back-to-school-offers-icon i {
 
-    width:30px;
+        width: 30px;
 
-    height:30px;
+        height: 30px;
 
-}
+    }
 
-.school-home-back-to-school-offers-featured-icon{
+    .school-home-back-to-school-offers-featured-icon {
 
-    width:80px;
+        width: 80px;
 
-    height:80px;
+        height: 80px;
 
-}
+    }
 
-.school-home-back-to-school-offers-featured-icon i{
+    .school-home-back-to-school-offers-featured-icon i {
 
-    width:38px;
+        width: 38px;
 
-    height:38px;
+        height: 38px;
 
-}
+    }
 
-.school-home-back-to-school-offers-countdown{
+    .school-home-back-to-school-offers-countdown {
 
-    flex-wrap:wrap;
+        flex-wrap: wrap;
 
-}
+    }
 
-.school-home-back-to-school-offers-bottom-buttons .btn-primary,
-.school-home-back-to-school-offers-bottom-buttons .btn-secondary{
+    .school-home-back-to-school-offers-bottom-buttons .btn-primary,
+    .school-home-back-to-school-offers-bottom-buttons .btn-secondary {
 
-    width:100%;
+        width: 100%;
 
-}
+    }
 
 }
 
@@ -3142,24 +2959,24 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
                 TESTIMONIALS SECTION
 =========================================================*/
 
-.school-home-testimonials-section{
+.school-home-testimonials-section {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    padding:110px 8%;
+    padding: 110px 8%;
 
     background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.10),
-    transparent 35%),
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .10),
+            transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.12),
-    transparent 45%),
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .12),
+            transparent 45%),
 
-    var(--bg);
+        var(--bg);
 
 }
 
@@ -3168,11 +2985,11 @@ body.rtl .school-home-back-to-school-offers-card:hover a i{
 CONTAINER
 =========================================================*/
 
-.school-home-testimonials-container{
+.school-home-testimonials-container {
 
-    max-width:1400px;
+    max-width: 1400px;
 
-    margin:auto;
+    margin: auto;
 
 }
 
@@ -3181,71 +2998,71 @@ CONTAINER
 HEADER
 =========================================================*/
 
-.school-home-testimonials-header{
+.school-home-testimonials-header {
 
-    text-align:center;
+    text-align: center;
 
-    max-width:760px;
+    max-width: 760px;
 
-    margin:0 auto 70px;
-
-}
-
-.school-home-testimonials-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:10px 22px;
-
-    border-radius:50px;
-
-    background:rgba(37,99,235,.10);
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    margin-bottom:20px;
+    margin: 0 auto 70px;
 
 }
 
-.school-home-testimonials-badge i{
+.school-home-testimonials-badge {
 
-    width:18px;
+    display: inline-flex;
 
-    height:18px;
+    align-items: center;
 
-}
+    gap: 10px;
 
-.school-home-testimonials-title{
+    padding: 10px 22px;
 
-    font-size:46px;
+    border-radius: 50px;
 
-    font-weight:800;
+    background: rgba(37, 99, 235, .10);
 
-    color:var(--text);
+    color: var(--primary);
 
-    margin-bottom:18px;
+    font-weight: 600;
 
-}
-
-.school-home-testimonials-title span{
-
-    color:var(--primary);
+    margin-bottom: 20px;
 
 }
 
-.school-home-testimonials-description{
+.school-home-testimonials-badge i {
 
-    font-size:17px;
+    width: 18px;
 
-    line-height:1.8;
+    height: 18px;
 
-    color:rgba(0,0,0,.65);
+}
+
+.school-home-testimonials-title {
+
+    font-size: 46px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    margin-bottom: 18px;
+
+}
+
+.school-home-testimonials-title span {
+
+    color: var(--primary);
+
+}
+
+.school-home-testimonials-description {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: rgba(0, 0, 0, .65);
 
 }
 
@@ -3254,13 +3071,13 @@ HEADER
 GRID
 =========================================================*/
 
-.school-home-testimonials-grid{
+.school-home-testimonials-grid {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap:30px;
+    gap: 30px;
 
 }
 
@@ -3269,43 +3086,43 @@ GRID
 CARD
 =========================================================*/
 
-.school-home-testimonials-card{
+.school-home-testimonials-card {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    min-height:360px;
+    min-height: 360px;
 
-    padding:40px 35px;
+    padding: 40px 35px;
 
-    background:var(--card-bg);
+    background: var(--card-bg);
 
-    border:1px solid rgba(4, 19, 53, 0.15);
+    border: 1px solid rgba(4, 19, 53, 0.15);
 
-    border-radius:24px;
+    border-radius: 24px;
 
-    transition:.4s;
+    transition: .4s;
 
     box-shadow:
-    0 15px 40px rgba(37,99,235,.08);
+        0 15px 40px rgba(37, 99, 235, .08);
 
 }
 
-.school-home-testimonials-card:hover{
+.school-home-testimonials-card:hover {
 
-    transform:translateY(-12px);
+    transform: translateY(-12px);
 
-    border-color:var(--primary);
+    border-color: var(--primary);
 
     box-shadow:
-    0 30px 60px rgba(37,99,235,.18);
+        0 30px 60px rgba(37, 99, 235, .18);
 
 }
 
@@ -3314,37 +3131,36 @@ CARD
 TOP BORDER
 =========================================================*/
 
-.school-home-testimonials-card::before{
+.school-home-testimonials-card::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:0;
+    top: 0;
 
-    left:0;
+    left: 0;
 
-    width:100%;
+    width: 100%;
 
-    height:5px;
+    height: 5px;
 
     background:
-    linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary));
+        linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
 
-    transform:scaleX(0);
+    transform: scaleX(0);
 
-    transform-origin:left;
+    transform-origin: left;
 
-    transition:.4s;
+    transition: .4s;
 
 }
 
-.school-home-testimonials-card:hover::before{
+.school-home-testimonials-card:hover::before {
 
-    transform:scaleX(1);
+    transform: scaleX(1);
 
 }
 
@@ -3353,51 +3169,49 @@ TOP BORDER
 QUOTE
 =========================================================*/
 
-.school-home-testimonials-quote{
+.school-home-testimonials-quote {
 
-    width:70px;
+    width: 70px;
 
-    height:70px;
+    height: 70px;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
-    border-radius:18px;
+    border-radius: 18px;
 
-    background:rgba(37,99,235,.10);
+    background: rgba(37, 99, 235, .10);
 
-    transition:.35s;
-
-}
-
-.school-home-testimonials-quote svg{
-
-    width:34px;
-
-    height:34px;
-
-    color:var(--text-color);
-
-    transition:.35s;
+    transition: .35s;
 
 }
 
-.school-home-testimonials-card:hover
-.school-home-testimonials-quote{
+.school-home-testimonials-quote svg {
 
-    background:var(--primary);
+    width: 34px;
+
+    height: 34px;
+
+    color: var(--text-color);
+
+    transition: .35s;
 
 }
 
-.school-home-testimonials-card:hover
-.school-home-testimonials-quote svg{
+.school-home-testimonials-card:hover .school-home-testimonials-quote {
 
-    color:#fff;
+    background: var(--primary);
+
+}
+
+.school-home-testimonials-card:hover .school-home-testimonials-quote svg {
+
+    color: #fff;
 
 }
 
@@ -3406,31 +3220,31 @@ QUOTE
 STARS
 =========================================================*/
 
-.school-home-testimonials-stars .filled-star{
+.school-home-testimonials-stars .filled-star {
 
-    width:18px;
+    width: 18px;
 
-    height:18px;
+    height: 18px;
 
-    color:var(--secondary);
+    color: var(--secondary);
 
-    fill:currentColor;
+    fill: currentColor;
 
-    stroke-width:1.8;
+    stroke-width: 1.8;
 
 }
 
-.school-home-testimonials-stars svg{
+.school-home-testimonials-stars svg {
 
-    width:18px;
+    width: 18px;
 
-    height:18px;
+    height: 18px;
 
-    color:var(--secondary);
+    color: var(--secondary);
 
-    fill:currentColor;
+    fill: currentColor;
 
-    stroke-width:1.8;
+    stroke-width: 1.8;
 
 }
 
@@ -3439,17 +3253,17 @@ STARS
 TEXT
 =========================================================*/
 
-.school-home-testimonials-card p{
+.school-home-testimonials-card p {
 
-    flex:1;
+    flex: 1;
 
-    font-size:16px;
+    font-size: 16px;
 
-    line-height:1.9;
+    line-height: 1.9;
 
-    color:rgba(0,0,0,.72);
+    color: rgba(0, 0, 0, .72);
 
-    margin-bottom:35px;
+    margin-bottom: 35px;
 
 }
 
@@ -3458,60 +3272,59 @@ TEXT
 PROFILE
 =========================================================*/
 
-.school-home-testimonials-profile{
+.school-home-testimonials-profile {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:16px;
+    gap: 16px;
 
-    padding-top:20px;
+    padding-top: 20px;
 
-    border-top:1px solid rgba(0,0,0,.08);
-
-}
-
-.school-home-testimonials-profile img{
-
-    width:68px;
-
-    height:68px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:3px solid var(--primary);
-
-    transition:.35s;
+    border-top: 1px solid rgba(0, 0, 0, .08);
 
 }
 
-.school-home-testimonials-card:hover
-.school-home-testimonials-profile img{
+.school-home-testimonials-profile img {
 
-    transform:scale(1.08);
+    width: 68px;
+
+    height: 68px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid var(--primary);
+
+    transition: .35s;
 
 }
 
-.school-home-testimonials-profile h4{
+.school-home-testimonials-card:hover .school-home-testimonials-profile img {
 
-    font-size:20px;
-
-    color:var(--text);
-
-    margin-bottom:5px;
+    transform: scale(1.08);
 
 }
 
-.school-home-testimonials-profile span{
+.school-home-testimonials-profile h4 {
 
-    color:var(--primary);
+    font-size: 20px;
 
-    font-size:15px;
+    color: var(--text);
 
-    font-weight:600;
+    margin-bottom: 5px;
+
+}
+
+.school-home-testimonials-profile span {
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+    font-weight: 600;
 
 }
 
@@ -3519,47 +3332,47 @@ PROFILE
             DECORATIVE BACKGROUND SHAPES
 =========================================================*/
 
-.school-home-testimonials-section::before{
+.school-home-testimonials-section::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:320px;
-    height:320px;
+    width: 320px;
+    height: 320px;
 
-    top:-120px;
-    left:-120px;
+    top: -120px;
+    left: -120px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(37,99,235,.08);
+    background: rgba(37, 99, 235, .08);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
-.school-home-testimonials-section::after{
+.school-home-testimonials-section::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:280px;
-    height:280px;
+    width: 280px;
+    height: 280px;
 
-    bottom:-120px;
-    right:-120px;
+    bottom: -120px;
+    right: -120px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(251,191,36,.10);
+    background: rgba(251, 191, 36, .10);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
@@ -3568,35 +3381,36 @@ PROFILE
 CARD ANIMATION
 =========================================================*/
 
-.school-home-testimonials-card{
+.school-home-testimonials-card {
 
-    animation:schoolHomeTestimonialFloat 6s ease-in-out infinite;
-
-}
-
-.school-home-testimonials-card:nth-child(2){
-
-    animation-delay:.3s;
+    animation: schoolHomeTestimonialFloat 6s ease-in-out infinite;
 
 }
 
-.school-home-testimonials-card:nth-child(3){
+.school-home-testimonials-card:nth-child(2) {
 
-    animation-delay:.6s;
+    animation-delay: .3s;
 
 }
 
-@keyframes schoolHomeTestimonialFloat{
+.school-home-testimonials-card:nth-child(3) {
 
-    0%,100%{
+    animation-delay: .6s;
 
-        transform:translateY(0);
+}
+
+@keyframes schoolHomeTestimonialFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
 
     }
 
-    50%{
+    50% {
 
-        transform:translateY(-8px);
+        transform: translateY(-8px);
 
     }
 
@@ -3607,27 +3421,27 @@ CARD ANIMATION
 HOVER EFFECTS
 =========================================================*/
 
-.school-home-testimonials-card:hover{
+.school-home-testimonials-card:hover {
 
-    transform:translateY(-12px) scale(1.02);
-
-}
-
-.school-home-testimonials-card:hover .school-home-testimonials-quote{
-
-    transform:rotate(-10deg);
+    transform: translateY(-12px) scale(1.02);
 
 }
 
-.school-home-testimonials-card:hover .school-home-testimonials-stars{
+.school-home-testimonials-card:hover .school-home-testimonials-quote {
 
-    transform:scale(1.05);
+    transform: rotate(-10deg);
 
 }
 
-.school-home-testimonials-stars{
+.school-home-testimonials-card:hover .school-home-testimonials-stars {
 
-    transition:.35s;
+    transform: scale(1.05);
+
+}
+
+.school-home-testimonials-stars {
+
+    transition: .35s;
 
 }
 
@@ -3636,74 +3450,74 @@ HOVER EFFECTS
 DARK MODE
 =========================================================*/
 
-body.dark .school-home-testimonials-section{
+body.dark .school-home-testimonials-section {
 
     background:
-    radial-gradient(circle at top left,
-    rgba(37,99,235,.14),
-    transparent 35%),
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, .14),
+            transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(251,191,36,.08),
-    transparent 45%),
+        radial-gradient(circle at bottom right,
+            rgba(251, 191, 36, .08),
+            transparent 45%),
 
-    #18181b;
+        #18181b;
 
 }
 
-body.dark .school-home-testimonials-card{
+body.dark .school-home-testimonials-card {
 
-    background:#222327;
+    background: #222327;
 
-    border:1px solid rgba(59,130,246,.25);
+    border: 1px solid rgba(59, 130, 246, .25);
 
     box-shadow:
-    0 18px 40px rgba(0,0,0,.45);
+        0 18px 40px rgba(0, 0, 0, .45);
 
 }
 
-body.dark .school-home-testimonials-card:hover{
+body.dark .school-home-testimonials-card:hover {
 
-    border-color:var(--secondary);
+    border-color: var(--secondary);
 
     box-shadow:
-    0 25px 60px rgba(0,0,0,.55);
+        0 25px 60px rgba(0, 0, 0, .55);
 
 }
 
-body.dark .school-home-testimonials-description{
+body.dark .school-home-testimonials-description {
 
-    color:rgba(255,255,255,.70);
-
-}
-
-body.dark .school-home-testimonials-card p{
-
-    color:rgba(255,255,255,.78);
+    color: rgba(255, 255, 255, .70);
 
 }
 
-body.dark .school-home-testimonials-profile{
+body.dark .school-home-testimonials-card p {
 
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-body.dark .school-home-testimonials-quote{
-
-    background:rgba(59,130,246,.18);
+    color: rgba(255, 255, 255, .78);
 
 }
 
-body.dark .school-home-testimonials-section::before{
+body.dark .school-home-testimonials-profile {
 
-    background:rgba(37,99,235,.12);
+    border-top: 1px solid rgba(255, 255, 255, .08);
 
 }
 
-body.dark .school-home-testimonials-section::after{
+body.dark .school-home-testimonials-quote {
 
-    background:rgba(251,191,36,.08);
+    background: rgba(59, 130, 246, .18);
+
+}
+
+body.dark .school-home-testimonials-section::before {
+
+    background: rgba(37, 99, 235, .12);
+
+}
+
+body.dark .school-home-testimonials-section::after {
+
+    background: rgba(251, 191, 36, .08);
 
 }
 
@@ -3712,31 +3526,31 @@ body.dark .school-home-testimonials-section::after{
 RTL SUPPORT
 =========================================================*/
 
-body.rtl .school-home-testimonials-section{
+body.rtl .school-home-testimonials-section {
 
-    direction:rtl;
-
-}
-
-body.rtl .school-home-testimonials-profile{
-
-    flex-direction:row-reverse;
-
-    text-align:right;
+    direction: rtl;
 
 }
 
-body.rtl .school-home-testimonials-stars{
+body.rtl .school-home-testimonials-profile {
 
-    justify-content:flex-end;
+    flex-direction: row-reverse;
+
+    text-align: right;
 
 }
 
-body.rtl .school-home-testimonials-quote{
+body.rtl .school-home-testimonials-stars {
 
-    margin-left:auto;
+    justify-content: flex-end;
 
-    margin-right:0;
+}
+
+body.rtl .school-home-testimonials-quote {
+
+    margin-left: auto;
+
+    margin-right: 0;
 
 }
 
@@ -3745,13 +3559,13 @@ body.rtl .school-home-testimonials-quote{
 1200px
 =========================================================*/
 
-@media(max-width:1200px){
+@media(max-width:1200px) {
 
-.school-home-testimonials-grid{
+    .school-home-testimonials-grid {
 
-    gap:24px;
+        gap: 24px;
 
-}
+    }
 
 }
 
@@ -3760,29 +3574,29 @@ body.rtl .school-home-testimonials-quote{
 1024px
 =========================================================*/
 
-@media(max-width:1024px){
+@media(max-width:1024px) {
 
-.school-home-testimonials-section{
+    .school-home-testimonials-section {
 
-    padding:90px 6%;
+        padding: 90px 6%;
 
-}
+    }
 
-.school-home-testimonials-grid{
+    .school-home-testimonials-grid {
 
-    grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-}
+    }
 
-.school-home-testimonials-card:last-child{
+    .school-home-testimonials-card:last-child {
 
-    grid-column:1 / -1;
+        grid-column: 1 / -1;
 
-    max-width:500px;
+        max-width: 500px;
 
-    margin:auto;
+        margin: auto;
 
-}
+    }
 
 }
 
@@ -3791,37 +3605,37 @@ body.rtl .school-home-testimonials-quote{
 768px
 =========================================================*/
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.school-home-testimonials-section{
+    .school-home-testimonials-section {
 
-    padding:80px 5%;
+        padding: 80px 5%;
 
-}
+    }
 
-.school-home-testimonials-title{
+    .school-home-testimonials-title {
 
-    font-size:34px;
+        font-size: 34px;
 
-}
+    }
 
-.school-home-testimonials-description{
+    .school-home-testimonials-description {
 
-    font-size:16px;
+        font-size: 16px;
 
-}
+    }
 
-.school-home-testimonials-grid{
+    .school-home-testimonials-grid {
 
-    grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-}
+    }
 
-.school-home-testimonials-card{
+    .school-home-testimonials-card {
 
-    min-height:auto;
+        min-height: auto;
 
-}
+    }
 
 }
 
@@ -3830,39 +3644,39 @@ body.rtl .school-home-testimonials-quote{
 480px
 =========================================================*/
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
-.school-home-testimonials-title{
+    .school-home-testimonials-title {
 
-    font-size:28px;
+        font-size: 28px;
 
-}
+    }
 
-.school-home-testimonials-description{
+    .school-home-testimonials-description {
 
-    font-size:15px;
+        font-size: 15px;
 
-}
+    }
 
-.school-home-testimonials-card{
+    .school-home-testimonials-card {
 
-    padding:30px 22px;
+        padding: 30px 22px;
 
-}
+    }
 
-.school-home-testimonials-profile img{
+    .school-home-testimonials-profile img {
 
-    width:60px;
+        width: 60px;
 
-    height:60px;
+        height: 60px;
 
-}
+    }
 
-.school-home-testimonials-profile h4{
+    .school-home-testimonials-profile h4 {
 
-    font-size:18px;
+        font-size: 18px;
 
-}
+    }
 
 }
 
@@ -3871,61 +3685,61 @@ body.rtl .school-home-testimonials-quote{
 360px
 =========================================================*/
 
-@media(max-width:360px){
+@media(max-width:360px) {
 
-.school-home-testimonials-section{
+    .school-home-testimonials-section {
 
-    padding:70px 5%;
+        padding: 70px 5%;
 
-}
+    }
 
-.school-home-testimonials-title{
+    .school-home-testimonials-title {
 
-    font-size:24px;
+        font-size: 24px;
 
-}
+    }
 
-.school-home-testimonials-badge{
+    .school-home-testimonials-badge {
 
-    font-size:13px;
+        font-size: 13px;
 
-}
+    }
 
-.school-home-testimonials-quote{
+    .school-home-testimonials-quote {
 
-    width:60px;
+        width: 60px;
 
-    height:60px;
+        height: 60px;
 
-}
+    }
 
-.school-home-testimonials-quote i{
+    .school-home-testimonials-quote i {
 
-    width:28px;
+        width: 28px;
 
-    height:28px;
+        height: 28px;
 
-}
+    }
 
-.school-home-testimonials-profile{
+    .school-home-testimonials-profile {
 
-    gap:12px;
+        gap: 12px;
 
-}
+    }
 
-.school-home-testimonials-profile img{
+    .school-home-testimonials-profile img {
 
-    width:55px;
+        width: 55px;
 
-    height:55px;
+        height: 55px;
 
-}
+    }
 
-.school-home-testimonials-card{
+    .school-home-testimonials-card {
 
-    padding:25px 18px;
+        padding: 25px 18px;
 
-}
+    }
 
 }
 
@@ -3933,24 +3747,24 @@ body.rtl .school-home-testimonials-quote{
             FINAL CTA SECTION
 =========================================================*/
 
-.school-home-final-call-to-action-section{
+.school-home-final-call-to-action-section {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    padding:40px 8%;
+    padding: 40px 8%;
 
     background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.12),
-    transparent 35%),
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, .12),
+            transparent 35%),
 
-    radial-gradient(circle at bottom left,
-    rgba(251,191,36,.18),
-    transparent 45%),
+        radial-gradient(circle at bottom left,
+            rgba(251, 191, 36, .18),
+            transparent 45%),
 
-    var(--bg);
+        var(--bg);
 
 }
 
@@ -3959,38 +3773,38 @@ body.rtl .school-home-testimonials-quote{
 CONTAINER
 =========================================================*/
 
-.school-home-final-call-to-action-container{
+.school-home-final-call-to-action-container {
 
-    position:relative;
+    position: relative;
 
-    max-width:1000px;
+    max-width: 1000px;
 
-    margin:auto;
+    margin: auto;
 
-    text-align:center;
+    text-align: center;
 
-    padding:40px 50px;
+    padding: 40px 50px;
 
-    background:var(--card-bg);
+    background: var(--card-bg);
 
-    border:1px solid var(--primary);
+    border: 1px solid var(--primary);
 
-    border-radius:32px;
+    border-radius: 32px;
 
     box-shadow:
-    0 25px 60px rgba(37,99,235,.10);
+        0 25px 60px rgba(37, 99, 235, .10);
 
-    transition:.4s ease;
+    transition: .4s ease;
 
 }
 
-.school-home-final-call-to-action-container:hover{
+.school-home-final-call-to-action-container:hover {
 
-    transform:translateY(-8px);
+    transform: translateY(-8px);
 
 
     box-shadow:
-    0 35px 70px rgba(37,99,235,.18);
+        0 35px 70px rgba(37, 99, 235, .18);
 
 }
 
@@ -3999,21 +3813,21 @@ CONTAINER
 TOP BORDER
 =========================================================*/
 
-.school-home-final-call-to-action-container::before{
+.school-home-final-call-to-action-container::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:6px;
+    width: 100%;
+    height: 6px;
 
-    border-radius:32px 32px 0 0;
+    border-radius: 32px 32px 0 0;
 
-   
+
 
 }
 
@@ -4022,33 +3836,33 @@ TOP BORDER
 BADGE
 =========================================================*/
 
-.school-home-final-call-to-action-badge{
+.school-home-final-call-to-action-badge {
 
-    display:inline-flex;
+    display: inline-flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:10px;
+    gap: 10px;
 
-    padding:12px 24px;
+    padding: 12px 24px;
 
-    border-radius:50px;
+    border-radius: 50px;
 
-    background:rgba(37,99,235,.10);
+    background: rgba(37, 99, 235, .10);
 
-    color:var(--primary);
+    color: var(--primary);
 
-    font-weight:600;
+    font-weight: 600;
 
-    margin-bottom:28px;
+    margin-bottom: 28px;
 
 }
 
-.school-home-final-call-to-action-badge i{
+.school-home-final-call-to-action-badge i {
 
-    width:18px;
+    width: 18px;
 
-    height:18px;
+    height: 18px;
 
 }
 
@@ -4057,23 +3871,23 @@ BADGE
 TITLE
 =========================================================*/
 
-.school-home-final-call-to-action-title{
+.school-home-final-call-to-action-title {
 
-    font-size:40px;
+    font-size: 40px;
 
-    font-weight:800;
+    font-weight: 800;
 
-    line-height:1.2;
+    line-height: 1.2;
 
-    color:var(--text);
+    color: var(--text);
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
 }
 
-.school-home-final-call-to-action-title span{
+.school-home-final-call-to-action-title span {
 
-    color:var(--primary);
+    color: var(--primary);
 
 }
 
@@ -4082,17 +3896,17 @@ TITLE
 DESCRIPTION
 =========================================================*/
 
-.school-home-final-call-to-action-description{
+.school-home-final-call-to-action-description {
 
-    max-width:720px;
+    max-width: 720px;
 
-    margin:0 auto 40px;
+    margin: 0 auto 40px;
 
-    font-size:13px;
+    font-size: 13px;
 
-    line-height:1.9;
+    line-height: 1.9;
 
-    color:rgba(var(--text-color-rgb),0.75);
+    color: rgba(var(--text-color-rgb), 0.75);
 
 }
 
@@ -4101,37 +3915,37 @@ DESCRIPTION
 BUTTONS
 =========================================================*/
 
-.school-home-final-call-to-action-buttons{
+.school-home-final-call-to-action-buttons {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:20px;
+    gap: 20px;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
-    margin-bottom:45px;
-
-}
-
-.school-home-final-call-to-action-buttons a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
+    margin-bottom: 45px;
 
 }
 
-.school-home-final-call-to-action-buttons i{
+.school-home-final-call-to-action-buttons a {
 
-    width:20px;
+    display: inline-flex;
 
-    height:20px;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+.school-home-final-call-to-action-buttons i {
+
+    width: 20px;
+
+    height: 20px;
 
 }
 
@@ -4140,65 +3954,65 @@ BUTTONS
 FEATURES
 =========================================================*/
 
-.school-home-final-call-to-action-features{
+.school-home-final-call-to-action-features {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    gap:20px;
+    gap: 20px;
 
-    flex-wrap:wrap;
-
-}
-
-.school-home-final-call-to-action-feature{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:14px 22px;
-
-    background:var(--bg);
-
-    border:1px solid var(--primary);
-
-    border-radius:50px;
-
-    transition:.35s;
+    flex-wrap: wrap;
 
 }
 
-.school-home-final-call-to-action-feature:hover{
+.school-home-final-call-to-action-feature {
 
-    transform:translateY(-5px);
+    display: flex;
 
-    border-color:var(--primary);
+    align-items: center;
 
-    background:rgba(37,99,235,.05);
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--primary);
+
+    border-radius: 50px;
+
+    transition: .35s;
 
 }
 
-.school-home-final-call-to-action-feature svg{
+.school-home-final-call-to-action-feature:hover {
 
-    width:22px;
+    transform: translateY(-5px);
 
-    height:22px;
+    border-color: var(--primary);
 
-    color:var(--primary);
+    background: rgba(37, 99, 235, .05);
 
 }
 
-.school-home-final-call-to-action-feature span{
+.school-home-final-call-to-action-feature svg {
 
-    font-weight:600;
+    width: 22px;
 
-    color:var(--text);
+    height: 22px;
+
+    color: var(--primary);
+
+}
+
+.school-home-final-call-to-action-feature span {
+
+    font-weight: 600;
+
+    color: var(--text);
 
 }
 
@@ -4207,47 +4021,47 @@ FEATURES
 BACKGROUND GLOW
 =========================================================*/
 
-.school-home-final-call-to-action-section::before{
+.school-home-final-call-to-action-section::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:280px;
+    width: 280px;
 
-    height:280px;
+    height: 280px;
 
-    top:-120px;
+    top: -120px;
 
-    left:-120px;
+    left: -120px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(37,99,235,.10);
+    background: rgba(37, 99, 235, .10);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
 }
 
-.school-home-final-call-to-action-section::after{
+.school-home-final-call-to-action-section::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:250px;
+    width: 250px;
 
-    height:250px;
+    height: 250px;
 
-    bottom:-120px;
+    bottom: -120px;
 
-    right:-120px;
+    right: -120px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:rgba(251,191,36,.12);
+    background: rgba(251, 191, 36, .12);
 
-    filter:blur(90px);
+    filter: blur(90px);
 
 }
 
@@ -4256,43 +4070,43 @@ BACKGROUND GLOW
 DARK MODE
 =========================================================*/
 
-body.dark .school-home-final-call-to-action-section{
+body.dark .school-home-final-call-to-action-section {
 
     background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.15),
-    transparent 35%),
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, .15),
+            transparent 35%),
 
-    radial-gradient(circle at bottom left,
-    rgba(251,191,36,.08),
-    transparent 45%),
+        radial-gradient(circle at bottom left,
+            rgba(251, 191, 36, .08),
+            transparent 45%),
 
-    #18181b;
+        #18181b;
 
 }
 
-body.dark .school-home-final-call-to-action-container{
+body.dark .school-home-final-call-to-action-container {
 
-    background:#222327;
+    background: #222327;
 
-    border:1px solid rgba(59,130,246,.25);
+    border: 1px solid rgba(59, 130, 246, .25);
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.45);
+        0 20px 50px rgba(0, 0, 0, .45);
 
 }
 
-body.dark .school-home-final-call-to-action-feature{
+body.dark .school-home-final-call-to-action-feature {
 
-    background:#2b2d31;
+    background: #2b2d31;
 
-    border:1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 
 }
 
-body.dark .school-home-final-call-to-action-feature:hover{
+body.dark .school-home-final-call-to-action-feature:hover {
 
-    background:#31343a;
+    background: #31343a;
 
 }
 
@@ -4301,21 +4115,21 @@ body.dark .school-home-final-call-to-action-feature:hover{
 RTL
 =========================================================*/
 
-body.rtl .school-home-final-call-to-action-section{
+body.rtl .school-home-final-call-to-action-section {
 
-    direction:rtl;
-
-}
-
-body.rtl .school-home-final-call-to-action-buttons{
-
-    flex-direction:row-reverse;
+    direction: rtl;
 
 }
 
-body.rtl .school-home-final-call-to-action-feature{
+body.rtl .school-home-final-call-to-action-buttons {
 
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
+
+}
+
+body.rtl .school-home-final-call-to-action-feature {
+
+    flex-direction: row-reverse;
 
 }
 
@@ -4324,13 +4138,13 @@ body.rtl .school-home-final-call-to-action-feature{
 1024px
 =========================================================*/
 
-@media(max-width:1024px){
+@media(max-width:1024px) {
 
-.school-home-final-call-to-action-title{
+    .school-home-final-call-to-action-title {
 
-    font-size:42px;
+        font-size: 42px;
 
-}
+    }
 
 }
 
@@ -4339,31 +4153,31 @@ body.rtl .school-home-final-call-to-action-feature{
 768px
 =========================================================*/
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.school-home-final-call-to-action-section{
+    .school-home-final-call-to-action-section {
 
-    padding:90px 6%;
+        padding: 90px 6%;
 
-}
+    }
 
-.school-home-final-call-to-action-container{
+    .school-home-final-call-to-action-container {
 
-    padding:55px 30px;
+        padding: 55px 30px;
 
-}
+    }
 
-.school-home-final-call-to-action-title{
+    .school-home-final-call-to-action-title {
 
-    font-size:34px;
+        font-size: 34px;
 
-}
+    }
 
-.school-home-final-call-to-action-description{
+    .school-home-final-call-to-action-description {
 
-    font-size:16px;
+        font-size: 16px;
 
-}
+    }
 
 }
 
@@ -4372,37 +4186,37 @@ body.rtl .school-home-final-call-to-action-feature{
 480px
 =========================================================*/
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
-.school-home-final-call-to-action-title{
+    .school-home-final-call-to-action-title {
 
-    font-size:28px;
+        font-size: 28px;
 
-}
+    }
 
-.school-home-final-call-to-action-buttons{
+    .school-home-final-call-to-action-buttons {
 
-    flex-direction:column;
+        flex-direction: column;
 
-}
+    }
 
-.school-home-final-call-to-action-buttons .btn-primary,
+    .school-home-final-call-to-action-buttons .btn-primary,
 
-.school-home-final-call-to-action-buttons .btn-secondary{
+    .school-home-final-call-to-action-buttons .btn-secondary {
 
-    width:100%;
+        width: 100%;
 
-    justify-content:center;
+        justify-content: center;
 
-}
+    }
 
-.school-home-final-call-to-action-feature{
+    .school-home-final-call-to-action-feature {
 
-    width:100%;
+        width: 100%;
 
-    justify-content:center;
+        justify-content: center;
 
-}
+    }
 
 }
 
@@ -4411,37 +4225,37 @@ body.rtl .school-home-final-call-to-action-feature{
 360px
 =========================================================*/
 
-@media(max-width:360px){
+@media(max-width:360px) {
 
-.school-home-final-call-to-action-section{
+    .school-home-final-call-to-action-section {
 
-    padding:70px 5%;
+        padding: 70px 5%;
 
-}
+    }
 
-.school-home-final-call-to-action-container{
+    .school-home-final-call-to-action-container {
 
-    padding:45px 20px;
+        padding: 45px 20px;
 
-}
+    }
 
-.school-home-final-call-to-action-title{
+    .school-home-final-call-to-action-title {
 
-    font-size:24px;
+        font-size: 24px;
 
-}
+    }
 
-.school-home-final-call-to-action-description{
+    .school-home-final-call-to-action-description {
 
-    font-size:15px;
+        font-size: 15px;
 
-}
+    }
 
-.school-home-final-call-to-action-badge{
+    .school-home-final-call-to-action-badge {
 
-    font-size:13px;
+        font-size: 13px;
 
-    padding:10px 18px;
+        padding: 10px 18px;
 
-}
+    }
 }

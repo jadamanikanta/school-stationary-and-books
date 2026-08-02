@@ -27,6 +27,7 @@ url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fi
     background-position: center;
 
     background-repeat: no-repeat;
+    
 
 }
 
@@ -48,40 +49,52 @@ url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fi
     z-index:1;
 
 }
-
 .services-hero-container{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:1200px;
-
-    width:100%;
-
-    margin:auto;
-
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .services-hero-content{
-
-    max-width:760px;
-
+    max-width: 760px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.services-hero-content p{
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba(255,255,255,.88);
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.services-hero-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+}
 .services-hero-badge{
-
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 20px;
-    border-radius:50px;
-    background:var(--primary-light);
-    color:var(--primary);
-    font-weight:600;
-    margin-bottom:25px;
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0 auto 25px;
 }
 
 .services-hero-badge svg{
@@ -116,19 +129,7 @@ url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fi
 
 }
 
-.services-hero-content p{
 
-    font-size:16px;
-
-    line-height:1.9;
-
-    color:rgba(255,255,255,.88);
-
-    max-width:700px;
-
-    margin-bottom:45px;
-
-}
 
 
 
@@ -137,19 +138,6 @@ url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fi
 /*=========================================================
                     BUTTONS
 =========================================================*/
-
-.services-hero-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-
-    margin-bottom:55px;
-
-}
-
 .services-btn-primary,
 
 .services-btn-outline{
