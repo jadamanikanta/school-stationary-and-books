@@ -95,44 +95,40 @@ body {
     align-items: center;
 }
 
-.logo a {
+.logo a{
     display: flex;
     align-items: center;
-    
+    gap: 3px;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     color: var(--primary);
 }
 
-.logo img {
+.logo-text{
+    order: 2;
+}
+
+.logo img{
     width: 50px;
     height: 50px;
     object-fit: contain;
+    order: 1;
 }
 
-.logo span {
+.logo-text span{
     color: var(--secondary);
 }
+
 
 
 body.dark .logo span {
     color: var(--secondary);
 }
 
-html[dir="rtl"] .logo,
-html[dir="rtl"] .logo a {
-    direction: ltr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    unicode-bidi: isolate;
-}
 
-html[dir="rtl"] .logo img {
-    margin-right: 10px;
-    margin-left: 0;
-}
+
+
 
 
 @media (max-width: 1024px) {
@@ -154,9 +150,7 @@ html[dir="rtl"] .logo img {
 }
 
 
-/* =========================
-   Tablet (≤768px)
-========================= */
+
 @media (max-width: 768px) {
 
     .logo {
@@ -176,9 +170,7 @@ html[dir="rtl"] .logo img {
 }
 
 
-/* =========================
-   Mobile (≤360px)
-========================= */
+
 @media (max-width: 360px) {
 
     .logo {
@@ -565,6 +557,8 @@ body.dark .dropdown-menu {
     
     margin: 0;
     cursor: pointer;
+    gap:3px;
+    
 }
 
 .footer-logo{
@@ -573,6 +567,7 @@ body.dark .dropdown-menu {
     object-fit: contain;
     display: block;
     flex-shrink: 0;
+    order:1;
 }
 
 .footer-brand{
@@ -582,6 +577,7 @@ body.dark .dropdown-menu {
     font-weight: 700;
     font-family: "Playfair Display", serif;
     line-height: 1;
+    order:2;
 }
 
 .brand-primary{
@@ -591,25 +587,12 @@ body.dark .dropdown-menu {
 .brand-secondary{
     color: var(--secondary);
 }
-
-
-html[dir="rtl"] .footer-title{
-    direction: ltr;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    unicode-bidi: isolate;
-}
-
 html[dir="rtl"] .footer-brand{
     direction: ltr;
     unicode-bidi: isolate;
+    display: inline-flex;
 }
 
-html[dir="rtl"] .footer-logo{
-    margin-right: 10px;
-    margin-left: 0;
-}
 
 @media (max-width: 768px) {
     .footer-logo{
