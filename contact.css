@@ -1,6 +1,4 @@
-/*=========================================================
-                CONTACT PAGE HERO
-=========================================================*/
+
 
 .contact-page-hero{
 
@@ -26,11 +24,6 @@
 
 }
 
-
-/*=========================================================
-                    OVERLAY
-=========================================================*/
-
 .contact-page-overlay{
 
     position: absolute;
@@ -42,7 +35,7 @@
     135deg,
     rgba(0,0,0,.72),
     rgba(0,0,0,.55),
-    rgba(245,158,11,.25)),url("../global-images/contact-form.jpeg");
+    rgba(245,158,11,.25)),url("contact-form.jpeg");
 
     background-size: cover;
     background-position: center;
@@ -51,9 +44,7 @@
 }
 
 
-/*=========================================================
-                    CONTAINER
-=========================================================*/
+
 
 .contact-page-container{
 
@@ -68,9 +59,6 @@
 }
 
 
-/*=========================================================
-                    BADGE
-=========================================================*/
 
 .contact-page-badge{
 
@@ -97,9 +85,6 @@
 }
 
 
-/*=========================================================
-                    TITLE
-=========================================================*/
 
 .contact-page-content h1{
 
@@ -122,10 +107,6 @@
 }
 
 
-/*=========================================================
-                    DESCRIPTION
-=========================================================*/
-
 .contact-page-content p{
 
     max-width: 720px;
@@ -141,9 +122,6 @@
 }
 
 
-/*=========================================================
-                    BUTTONS
-=========================================================*/
 
 .contact-page-actions{
 
@@ -235,10 +213,6 @@
 }
 
 
-/*=========================================================
-                    FEATURES
-=========================================================*/
-
 .contact-page-highlights{
 
     display: flex;
@@ -278,9 +252,6 @@
 }
 
 
-/*=========================================================
-                    ICON ANIMATION
-=========================================================*/
 
 .contact-page-btn-primary i,
 .contact-page-btn-secondary i{
@@ -297,9 +268,7 @@
 }
 
 
-/*=========================================================
-                    DARK MODE
-=========================================================*/
+
 
 .dark .contact-page-overlay{
 
@@ -308,7 +277,7 @@
     135deg,
     rgba(0,0,0,.82),
     rgba(0,0,0,.70),
-    rgba(245,158,11,.22)),url("../global-images/contact-form.jpeg");
+    rgba(245,158,11,.22)),url("contact-form.jpeg");
     
     background-size: cover;
     background-position: center;
@@ -345,9 +314,6 @@
 }
 
 
-/*=========================================================
-                        RTL
-=========================================================*/
 
 html[dir="rtl"] .contact-page-badge,
 html[dir="rtl"] .contact-page-btn-primary,
@@ -372,9 +338,7 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-/*=========================================================
-                    1024px
-=========================================================*/
+
 
 @media(max-width:1024px){
 
@@ -406,10 +370,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 
 }
 
-
-/*=========================================================
-                    768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -459,9 +419,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-/*=========================================================
-                    360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -522,9 +479,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 
 }
 
-/*=========================================================
-                CONTACT INFORMATION
-=========================================================*/
 
 .contact-info-section{
 
@@ -544,11 +498,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-
-/*=========================================================
-                    CONTAINER
-=========================================================*/
-
 .contact-info-container{
 
     max-width:1400px;
@@ -557,11 +506,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 
 }
 
-
-
-/*=========================================================
-                    HEADING
-=========================================================*/
 
 .contact-info-heading{
 
@@ -618,11 +562,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-
-/*=========================================================
-                        GRID
-=========================================================*/
-
 .contact-info-grid{
 
     display:grid;
@@ -634,10 +573,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-
-/*=========================================================
-                        CARD
-=========================================================*/
 
 .contact-info-card{
 
@@ -678,10 +613,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-
-/*=========================================================
-                        ICON
-=========================================================*/
 
 .contact-info-icon{
 
@@ -733,10 +664,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 
 
 
-/*=========================================================
-                    TEXT
-=========================================================*/
-
 .contact-info-card h3{
 
     font-size:24px;
@@ -760,10 +687,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
 }
 
 
-
-/*=========================================================
-                    LINK
-=========================================================*/
 
 .contact-info-card a{
 
@@ -801,15 +724,6 @@ html[dir="rtl"] .contact-page-btn-secondary:hover i{
     transform:translateX(6px);
 
 }
-/*=========================================================
-        CONTACT INFORMATION
-DARK MODE + RTL + RESPONSIVE
-=========================================================*/
-
-
-/*=========================================================
-                    DARK MODE
-=========================================================*/
 
 .dark .contact-info-section{
 
@@ -866,10 +780,6 @@ DARK MODE + RTL + RESPONSIVE
 
 
 
-/*=========================================================
-                        RTL
-=========================================================*/
-
 html[dir="rtl"] .contact-info-badge,
 
 html[dir="rtl"] .contact-info-card a{
@@ -885,10 +795,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-
-/*=========================================================
-                    1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -927,10 +833,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-
-/*=========================================================
-                    768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -992,11 +894,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 
 }
 
-
-
-/*=========================================================
-                    360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -1088,10 +985,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 
 }
 
-/*=========================================================
-                    CONTACT FORM (PREMIUM)
-=========================================================*/
-
 .contact-form-section{
     position: relative;
     padding: 110px 8%;
@@ -1099,7 +992,7 @@ html[dir="rtl"] .contact-info-card:hover a i{
     overflow: hidden;
 }
 
-/* Ambient Background Glow Orbs */
+
 .contact-form-glow{
     position: absolute;
     border-radius: 50%;
@@ -1133,9 +1026,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                    CONTAINER & HEADING
-=========================================================*/
 
 .contact-form-container{
     position: relative;
@@ -1193,10 +1083,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                    SPLIT WRAPPER
-=========================================================*/
-
 .contact-form-wrapper{
     display: grid;
     grid-template-columns: 380px 1fr;
@@ -1204,10 +1090,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
     align-items: stretch;
 }
 
-
-/*=========================================================
-                SIDEBAR (LEFT PANEL)
-=========================================================*/
 
 .contact-form-sidebar{
     background: var(--card-bg);
@@ -1365,9 +1247,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                MAIN FORM CONTAINER (RIGHT PANEL)
-=========================================================*/
 
 .contact-form-main{
     position: relative;
@@ -1379,9 +1258,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                TOPIC CHIP SELECTOR
-=========================================================*/
 
 .contact-topic-selector{
     margin-bottom: 30px;
@@ -1442,10 +1318,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                    FORM GRID & INPUTS
-=========================================================*/
-
 .contact-form-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1495,8 +1367,8 @@ html[dir="rtl"] .contact-info-card:hover a i{
     transition: all 0.3s ease;
 }
 
-.contact-input-wrapper i,
-.contact-textarea-wrapper i{
+.contact-input-wrapper svg,
+.contact-textarea-wrapper svg{
     width: 20px;
     height: 20px;
     color: #94a3b8;
@@ -1504,7 +1376,7 @@ html[dir="rtl"] .contact-info-card:hover a i{
     transition: color 0.3s, transform 0.3s;
 }
 
-.contact-textarea-wrapper i{
+.contact-textarea-wrapper svg{
     margin-top: 3px;
 }
 
@@ -1526,7 +1398,7 @@ html[dir="rtl"] .contact-info-card:hover a i{
     line-height: 1.7;
 }
 
-/* Input Focus Rings */
+
 .contact-input-wrapper:focus-within,
 .contact-textarea-wrapper:focus-within{
     border-color: var(--primary);
@@ -1534,16 +1406,12 @@ html[dir="rtl"] .contact-info-card:hover a i{
     background: var(--bg-color);
 }
 
-.contact-input-wrapper:focus-within i,
-.contact-textarea-wrapper:focus-within i{
+.contact-input-wrapper:focus-within svg,
+.contact-textarea-wrapper:focus-within svg{
     color: var(--primary);
     transform: scale(1.08);
 }
 
-
-/*=========================================================
-                FORM FOOTER & SUBMIT BUTTON
-=========================================================*/
 
 .contact-form-footer{
     grid-column: 1 / -1;
@@ -1616,9 +1484,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                SUCCESS TOAST OVERLAY
-=========================================================*/
 
 .contact-success-toast{
     position: absolute;
@@ -1693,9 +1558,6 @@ html[dir="rtl"] .contact-info-card:hover a i{
 }
 
 
-/*=========================================================
-                    DARK MODE OVERRIDES
-=========================================================*/
 
 body.dark .contact-form-section{
     background: var(--bg-color);
@@ -1780,9 +1642,6 @@ body.dark .btn-toast-close:hover{
 }
 
 
-/*=========================================================
-                    RTL SUPPORT
-=========================================================*/
 
 html[dir="rtl"] .contact-form-badge,
 html[dir="rtl"] .topic-chip,
@@ -1804,9 +1663,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-/*=========================================================
-                    RESPONSIVE BREAKPOINTS
-=========================================================*/
 
 @media (max-width: 1200px){
     .contact-form-wrapper{
@@ -1916,9 +1772,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 
 }
 
-/*=========================================================
-                    STORE MAP
-=========================================================*/
 
 .store-map-section{
 
@@ -1937,10 +1790,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-
-/*=========================================================
-                    HEADER
-=========================================================*/
 
 .store-map-header{
 
@@ -1996,10 +1845,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 
 
 
-/*=========================================================
-                    MAP WRAPPER
-=========================================================*/
-
 .store-map-wrapper{
 
     position:relative;
@@ -2010,11 +1855,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 
 }
 
-
-
-/*=========================================================
-                    MAP
-=========================================================*/
 
 .store-map-box{
 
@@ -2040,10 +1880,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 
 }
 
-
-/*=========================================================
-                    STORE MAP CARD
-=========================================================*/
 
 .store-map-card{
 
@@ -2080,11 +1916,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-
-/*=========================================================
-                    BADGE
-=========================================================*/
-
 .store-map-card-badge{
 
     display:inline-flex;
@@ -2118,11 +1949,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-
-/*=========================================================
-                    TITLE
-=========================================================*/
-
 .store-map-card h3{
 
     margin:12px 0 18px;
@@ -2136,22 +1962,12 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-
-/*=========================================================
-        REMOVE DESCRIPTION
-=========================================================*/
-
 .store-map-card p{
 
     display:none;
 
 }
 
-
-
-/*=========================================================
-                    INFO
-=========================================================*/
 
 .store-map-info{
 
@@ -2203,11 +2019,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 
 }
 
-
-
-/*=========================================================
-                    BUTTON
-=========================================================*/
 
 .store-map-actions{
 
@@ -2271,10 +2082,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-/*=========================================================
-                    DARK MODE
-=========================================================*/
-
 .dark .store-map-card{
 
     background:rgba(15,15,15,.88);
@@ -2308,11 +2115,6 @@ html[dir="rtl"] .contact-form-btn:hover i{
 }
 
 
-
-/*=========================================================
-                        RTL
-=========================================================*/
-
 html[dir="rtl"] .store-map-card{
 
     left:auto;
@@ -2339,11 +2141,6 @@ html[dir="rtl"] .store-map-btn:hover i{
 
 }
 
-
-
-/*=========================================================
-                    1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -2374,11 +2171,6 @@ html[dir="rtl"] .store-map-btn:hover i{
 }
 
 
-
-/*=========================================================
-                    768px
-=========================================================*/
-
 @media(max-width:768px){
 
 .store-map-section{
@@ -2401,11 +2193,6 @@ html[dir="rtl"] .store-map-btn:hover i{
 
 }
 
-
-
-/*=========================================================
-                    360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -2454,10 +2241,6 @@ html[dir="rtl"] .store-map-btn:hover i{
 }
 
 }
-
-/*=========================================================
-                    CONTACT CTA
-=========================================================*/
 
 .contact-cta-section{
 

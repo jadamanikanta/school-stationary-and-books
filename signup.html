@@ -9,12 +9,12 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>Login | SchoolBooks</title>
-    <link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo.png">
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
 
-    <!-- Tailwind CSS -->
+  
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Font -->
+    
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -25,10 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- Lucide -->
+  
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- CSS -->
+    
     <link rel="stylesheet"
           href="signup.css">
 
@@ -40,44 +40,42 @@
 
     <div class="login-wrapper">
 
-        <!-- ==========================
-                LEFT HERO
-        =========================== -->
+       
 
         <section class="login-hero">
 
-            <!-- Slides -->
+            
 
             <div class="hero-slider">
 
                 <div class="hero-slide active">
 
-                    <img src="../global-images/school-bag.jpeg"
+                    <img src="school-bag.jpeg"
                          alt="Books">
 
                 </div>
 
                 <div class="hero-slide">
 
-                    <img src="../spiral-book.jpg"
+                    <img src="spiral-book.jpg"
                          alt="Stationery">
 
                 </div>
 
                 <div class="hero-slide">
 
-                    <img src="../Geometry-box.jpg"
+                    <img src="Geometry-box.jpg"
                          alt="Students">
 
                 </div>
 
             </div>
 
-            <!-- Overlay -->
+           
 
             <div class="hero-overlay"></div>
 
-            <!-- Hero Content -->
+         
 
             <div class="hero-content">
 
@@ -103,7 +101,7 @@
 
                 </div>
 
-                <!-- Slider Dots -->
+                
 
                 <div class="hero-dots">
 
@@ -119,13 +117,11 @@
 
         </section>
 
-        <!-- ==========================
-                LOGIN CARD
-        =========================== -->
+        
 
         <section class="login-card">
 
-            <!-- Top Actions -->
+            
 
             <div class="login-actions">
 
@@ -147,14 +143,14 @@
 
             </div>
 
-            <!-- Logo -->
+           
 
             <div class="login-page-logo">
 
-                <a href="../index.html">
+                <a href="index.html">
 
                     <img
-                        src="../global-images/logo.png"
+                        src="logo.png"
                         alt="SchoolBooks">
 
                     School<span>Books</span>
@@ -163,7 +159,7 @@
 
             </div>
 
-            <!-- Form Wrapper -->
+            
 
             <div class="login-form-wrapper">
 
@@ -179,11 +175,11 @@
 
                 </p>
 
-                <!-- ========= FORM START ========= -->
+             
 
                 <form id="signupForm">
 
-    <!-- Full Name -->
+   
 
     <div class="form-group">
 
@@ -205,7 +201,7 @@
 
     </div>
 
-    <!-- Email -->
+  
 
     <div class="form-group">
 
@@ -227,7 +223,7 @@
 
     </div>
 
-    <!-- Mobile -->
+   
 
     <!-- <div class="form-group">
 
@@ -249,7 +245,7 @@
 
     </div> -->
 
-    <!-- Password -->
+    
 
     <div class="form-group">
 
@@ -280,7 +276,7 @@
 
     </div>
 
-    <!-- Confirm Password -->
+    
 
     <div class="form-group">
 
@@ -311,7 +307,6 @@
 
     </div>
 
-    <!-- Terms -->
 
     <div class="remember-row">
 
@@ -327,7 +322,7 @@
 
     </div>
 
-    <!-- Button -->
+    
 
     <button
         type="submit"
@@ -337,7 +332,7 @@
 
     </button>
 
-    <!-- Divider -->
+   
 
     <div class="divider">
 
@@ -349,7 +344,7 @@
 
     </div>
 
-    <!-- Social Login -->
+   
 
     <div class="social-login">
 
@@ -405,15 +400,11 @@
 
 </div>
 
-<script>/*=========================================
-            LUCIDE ICONS
-=========================================*/
+<script>
 
 lucide.createIcons();
 
-/*=========================================
-            HERO SLIDER
-=========================================*/
+
 
 const slides = document.querySelectorAll(".hero-slide");
 const dots = document.querySelectorAll(".hero-dot");
@@ -459,9 +450,6 @@ dots.forEach((dot,index)=>{
 });
 
 
-/*=========================================
-            PASSWORD
-=========================================*/
 
 const passwordInput=document.getElementById("password");
 
@@ -484,9 +472,7 @@ passwordBtn.addEventListener("click",()=>{
 });
 
 
-/*=========================================
-            DARK MODE
-=========================================*/
+
 
 const themeBtn=document.getElementById("themeToggle");
 
@@ -535,9 +521,6 @@ function updateThemeIcon(){
 }
 
 
-/*=========================================
-            RTL
-=========================================*/
 
 const rtlBtn=document.getElementById("rtlToggle");
 
@@ -570,9 +553,6 @@ rtlBtn.addEventListener("click",()=>{
 });
 
 
-/*=========================================
-            LOGIN
-=========================================*/
 
 const loginForm=document.getElementById("loginForm");
 
@@ -600,9 +580,9 @@ loginForm.addEventListener("submit",(e)=>{
 
     }
 
-    // Replace with API call
+   
 
-    window.location.href="../dashboard/index.html";
+    window.location.href="index.html";
 
 });</script>
 

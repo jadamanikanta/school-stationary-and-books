@@ -1,6 +1,4 @@
-/*=========================================================
-        HOME-2 PREMIUM HERO
-=========================================================*/
+
 
 .school-home-two-premium-hero-section{
 
@@ -32,9 +30,7 @@
     background-repeat:no-repeat;
 
 }
-/*========================================
-RTL HERO
-========================================*/
+
 
 html[dir="rtl"] .school-home-two-premium-hero-section{
 
@@ -101,7 +97,7 @@ html[dir="rtl"] .school-home-two-premium-hero-section{
 
     height:18px;
 
-    color:var(--secondary);
+    color:var(--primary);
 
 }
 
@@ -131,9 +127,7 @@ html[dir="rtl"] .school-home-two-premium-hero-section{
 }
 
 
-/*=========================================================
-DESCRIPTION
-=========================================================*/
+
 
 .school-home-two-premium-hero-description{
 
@@ -150,9 +144,7 @@ DESCRIPTION
 }
 
 
-/*=========================================================
-BUTTONS
-=========================================================*/
+
 
 .school-home-two-premium-hero-buttons{
 
@@ -185,9 +177,6 @@ BUTTONS
 }
 
 
-/*=========================================================
-STATS
-=========================================================*/
 
 .school-home-two-premium-hero-stats{
 
@@ -258,9 +247,6 @@ STATS
 }
 
 
-/*=========================================================
-RTL
-=========================================================*/
 
 body.rtl .school-home-two-premium-hero-section{
 
@@ -313,9 +299,6 @@ body.rtl .school-home-two-premium-hero-stat-card{
 }
 
 
-/*=========================================================
-1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -328,9 +311,6 @@ body.rtl .school-home-two-premium-hero-stat-card{
 }
 
 
-/*=========================================================
-768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -375,9 +355,6 @@ body.rtl .school-home-two-premium-hero-stat-card{
 }
 
 
-/*=========================================================
-360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -423,9 +400,6 @@ body.rtl .school-home-two-premium-hero-stat-card{
 
 }
 
-/*=========================================================
-        HOME-2 PREMIUM CATEGORY SECTION
-=========================================================*/
 
 .school-home-two-premium-category-section{
 
@@ -449,9 +423,6 @@ body.rtl .school-home-two-premium-hero-stat-card{
 }
 
 
-/*=========================================================
-CONTAINER
-=========================================================*/
 
 .school-home-two-premium-category-container{
 
@@ -462,9 +433,6 @@ CONTAINER
 }
 
 
-/*=========================================================
-HEADING
-=========================================================*/
 
 .school-home-two-premium-category-heading{
 
@@ -534,9 +502,6 @@ HEADING
 }
 
 
-/*=========================================================
-GRID
-=========================================================*/
 
 .school-home-two-premium-category-grid{
 
@@ -549,9 +514,6 @@ GRID
 }
 
 
-/*=========================================================
-CARD
-=========================================================*/
 
 .school-home-two-premium-category-card{
 
@@ -582,9 +544,6 @@ CARD
 }
 
 
-/*=========================================================
-IMAGE
-=========================================================*/
 
 .school-home-two-premium-category-card img{
 
@@ -605,9 +564,6 @@ IMAGE
 }
 
 
-/*=========================================================
-OVERLAY
-=========================================================*/
 
 .school-home-two-premium-category-overlay{
 
@@ -645,9 +601,6 @@ OVERLAY
 }
 
 
-/*=========================================================
-ICON
-=========================================================*/
 
 .school-home-two-premium-category-icon{
 
@@ -684,9 +637,6 @@ ICON
 }
 
 
-/*=========================================================
-TEXT
-=========================================================*/
 
 .school-home-two-premium-category-overlay h3{
 
@@ -709,9 +659,6 @@ TEXT
 }
 
 
-/*=========================================================
-BUTTON
-=========================================================*/
 
 .school-home-two-premium-category-overlay a{
 
@@ -768,9 +715,6 @@ BUTTON
 }
 
 
-/*=========================================================
-TOP ACCENT
-=========================================================*/
 
 .school-home-two-premium-category-card::before{
 
@@ -809,9 +753,6 @@ TOP ACCENT
 }
 
 
-/*=========================================================
-BACKGROUND GLOW
-=========================================================*/
 
 .school-home-two-premium-category-section::before{
 
@@ -857,9 +798,6 @@ BACKGROUND GLOW
 
 }
 
-/*=========================================================
-            DARK MODE
-=========================================================*/
 
 body.dark .school-home-two-premium-category-section{
 
@@ -945,10 +883,6 @@ body.dark .school-home-two-premium-category-heading p{
 
 
 
-/*=========================================================
-            RTL SUPPORT
-=========================================================*/
-
 body.rtl .school-home-two-premium-category-section{
 
     direction:rtl;
@@ -997,9 +931,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 
 
-/*=========================================================
-            1200px
-=========================================================*/
 
 @media(max-width:1200px){
 
@@ -1019,9 +950,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 
 
-/*=========================================================
-            1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -1075,9 +1003,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 
 
-/*=========================================================
-            768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -1133,9 +1058,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 
 
-/*=========================================================
-            480px
-=========================================================*/
 
 @media(max-width:480px){
 
@@ -1191,9 +1113,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 
 
-/*=========================================================
-            360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -1245,9 +1164,6 @@ body.rtl .school-home-two-premium-category-card::before{
 
 }
 
-/*=========================================================
-            TIMELINE SECTION
-=========================================================*/
 
 .school-home-two-premium-timeline-section{
 
@@ -1279,9 +1195,6 @@ body.rtl .school-home-two-premium-category-card::before{
 }
 
 
-/*=========================================================
-HEADING
-=========================================================*/
 
 .school-home-two-premium-timeline-heading{
 
@@ -1344,9 +1257,6 @@ HEADING
 }
 
 
-/*=========================================================
-TIMELINE
-=========================================================*/
 
 .school-home-two-premium-timeline{
 
@@ -1383,9 +1293,6 @@ TIMELINE
 }
 
 
-/*=========================================================
-ITEM
-=========================================================*/
 
 .school-home-two-premium-timeline-item{
 
@@ -1426,9 +1333,6 @@ ITEM
 }
 
 
-/*=========================================================
-CARD
-=========================================================*/
 
 .school-home-two-premium-timeline-card{
 
@@ -1547,9 +1451,6 @@ CARD
 }
 
 
-/*=========================================================
-TEXT
-=========================================================*/
 .school-home-two-premium-timeline-card h3{
 
     font-size:28px;
@@ -1617,9 +1518,6 @@ TEXT
 }
 
 
-/*=========================================================
-NUMBER CIRCLE
-=========================================================*/
 
 .school-home-two-premium-timeline-circle{
 
@@ -1675,9 +1573,6 @@ NUMBER CIRCLE
 }
 
 
-/*=========================================================
-DECORATION
-=========================================================*/
 
 .school-home-two-premium-timeline-section::before{
 
@@ -1722,9 +1617,6 @@ DECORATION
     filter:blur(90px);
 
 }
-/*=========================================================
-                DARK MODE
-=========================================================*/
 
 body.dark .school-home-two-premium-timeline-section{
 
@@ -1779,9 +1671,6 @@ body.dark .school-home-two-premium-timeline-card-icon{
 
 
 
-/*=========================================================
-                    RTL
-=========================================================*/
 
 body.rtl .school-home-two-premium-timeline{
 
@@ -1833,9 +1722,6 @@ body.rtl .school-home-two-premium-timeline-card::before{
 
 
 
-/*=========================================================
-            SCROLL REVEAL
-=========================================================*/
 
 .school-home-two-premium-timeline-item{
 
@@ -1881,9 +1767,6 @@ body.rtl .school-home-two-premium-timeline-card::before{
 
 
 
-/*=========================================================
-                1200px
-=========================================================*/
 
 @media(max-width:1200px){
 
@@ -1903,9 +1786,6 @@ body.rtl .school-home-two-premium-timeline-card::before{
 
 
 
-/*=========================================================
-                1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -1933,9 +1813,6 @@ body.rtl .school-home-two-premium-timeline-card::before{
 
 
 
-/*=========================================================
-                768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -2015,10 +1892,6 @@ body.rtl .school-home-two-premium-timeline-card{
 
 
 
-/*=========================================================
-                480px
-=========================================================*/
-
 @media(max-width:480px){
 
 .school-home-two-premium-timeline-heading h2{
@@ -2069,9 +1942,6 @@ body.rtl .school-home-two-premium-timeline-card{
 
 
 
-/*=========================================================
-                360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -2143,9 +2013,6 @@ body.rtl .school-home-two-premium-timeline-item{
 
 }
 
-/*=========================================================
-            BEST SELLING PRODUCTS
-=========================================================*/
 
 .school-home-two-best-selling-section{
 
@@ -2247,9 +2114,6 @@ body.rtl .school-home-two-premium-timeline-item{
 
 
 
-/*=========================================================
-FILTER
-=========================================================*/
 
 .school-home-two-best-selling-filter{
 
@@ -2297,9 +2161,6 @@ FILTER
 
 
 
-/*=========================================================
-GRID
-=========================================================*/
 
 .school-home-two-best-selling-grid{
 
@@ -2313,9 +2174,6 @@ GRID
 
 
 
-/*=========================================================
-CARD
-=========================================================*/
 
 .school-home-two-best-selling-card{
 
@@ -2395,10 +2253,6 @@ CARD
 
 
 
-/*=========================================================
-SALE BADGE
-=========================================================*/
-
 .school-home-two-best-selling-badge-sale{
 
     position:absolute;
@@ -2444,9 +2298,6 @@ SALE BADGE
 
 
 
-/*=========================================================
-HEART
-=========================================================*/
 
 .school-home-two-best-selling-heart{
 
@@ -2492,10 +2343,6 @@ HEART
 
 
 
-/*=========================================================
-IMAGE
-=========================================================*/
-
 .school-home-two-best-selling-image{
 
     height:200px;
@@ -2529,9 +2376,6 @@ IMAGE
 
 
 
-/*=========================================================
-RATING
-=========================================================*/
 
 .school-home-two-best-selling-rating{
 
@@ -2544,10 +2388,6 @@ RATING
 }
 
 
-
-/*=========================================================
-TEXT
-=========================================================*/
 
 .school-home-two-best-selling-card h3{
 
@@ -2591,9 +2431,6 @@ TEXT
 
 
 
-/*=========================================================
-BUTTON
-=========================================================*/
 
 .school-home-two-best-selling-card .btn-primary{
 
@@ -2610,10 +2447,6 @@ BUTTON
 }
 
 
-
-/*=========================================================
-VIEW ALL
-=========================================================*/
 
 .school-home-two-best-selling-btn{
 
@@ -2646,10 +2479,6 @@ VIEW ALL
 }
 
 
-
-/*=========================================================
-BACKGROUND DECORATION
-=========================================================*/
 
 .school-home-two-best-selling-section::before{
 
@@ -2694,9 +2523,6 @@ BACKGROUND DECORATION
     filter:blur(100px);
 
 }
-/*=========================================================
-                DARK MODE
-=========================================================*/
 
 body.dark .school-home-two-best-selling-section{
 
@@ -2763,10 +2589,6 @@ body.dark .school-home-two-best-selling-price del{
 
 
 
-/*=========================================================
-                    RTL
-=========================================================*/
-
 body.rtl .school-home-two-best-selling-heading,
 
 body.rtl .school-home-two-best-selling-card{
@@ -2823,9 +2645,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                SCROLL REVEAL
-=========================================================*/
 
 .school-home-two-best-selling-heading,
 
@@ -2859,10 +2678,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                1200px
-=========================================================*/
-
 @media(max-width:1200px){
 
 .school-home-two-best-selling-grid{
@@ -2883,9 +2698,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -2910,12 +2722,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 }
-
-
-
-/*=========================================================
-                768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -2962,10 +2768,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                480px
-=========================================================*/
 
 @media(max-width:480px){
 
@@ -3028,10 +2830,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                360px
-=========================================================*/
 
 @media(max-width:360px){
 
@@ -3102,10 +2900,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-/*=========================================================
-            SHOP BY GRADE SECTION
-=========================================================*/
-
 .shop-grade-section{
     position:relative;
     padding:110px 8%;
@@ -3145,10 +2939,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                    SECTION HEADER
-=========================================================*/
 
 .section-header{
     max-width:820px;
@@ -3207,10 +2997,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                DISCOUNT SAVE BADGE
-=========================================================*/
-
 .discount-badge{
     position:absolute;
     top:18px;
@@ -3227,9 +3013,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                    FILTER TABS
-=========================================================*/
 
 .filter-tabs-wrapper{
     display:flex;
@@ -3288,11 +3071,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                    PRODUCTS GRID
-=========================================================*/
-
 .products-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -3327,9 +3105,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
     margin:auto;
     line-height:1.8;
 }
-/*=========================================================
-                PREMIUM PRODUCT CARD
-=========================================================*/
 
 .product-card{
     position:relative;
@@ -3368,11 +3143,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                    PRODUCT IMAGE
-=========================================================*/
-
 .product-image{
     position:relative;
     overflow:hidden;
@@ -3393,9 +3163,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                    GRADE BADGE
-=========================================================*/
 
 .grade-badge{
     position:absolute;
@@ -3412,10 +3179,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 }
 
 
-
-/*=========================================================
-                    PRODUCT CONTENT
-=========================================================*/
 
 .product-content{
     display:flex;
@@ -3441,10 +3204,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                    PRICE
-=========================================================*/
-
 .product-pricing{
     display:flex;
     align-items:center;
@@ -3466,19 +3225,11 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                    CARD FOOTER
-=========================================================*/
-
 .product-footer{
     margin-top:auto;
 }
 
 
-
-/*=========================================================
-                    ADD TO CART
-=========================================================*/
 
 .btn-add-cart{
     width:100%;
@@ -3512,9 +3263,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                QUANTITY SELECTOR
-=========================================================*/
 
 .quantity-box{
     display:flex;
@@ -3552,10 +3300,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                PRODUCT CARD ANIMATIONS
-=========================================================*/
-
 .product-card:hover .product-title{
     color:var(--primary);
 }
@@ -3572,9 +3316,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
     background:var(--secondary);
     color:#111827;
 }
-/*=========================================================
-                    CART OVERLAY
-=========================================================*/
 
 .cart-overlay{
     position:fixed;
@@ -3595,9 +3336,6 @@ body.rtl .school-home-two-best-selling-badge-sale{
 
 
 
-/*=========================================================
-                    CART DRAWER
-=========================================================*/
 
 .cart-drawer{
     position:fixed;
@@ -3635,10 +3373,6 @@ html[dir="rtl"] .cart-drawer.active{
 }
 
 
-
-/*=========================================================
-                    CART HEADER
-=========================================================*/
 
 .cart-header{
     display:flex;
@@ -3683,9 +3417,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                    CART BODY
-=========================================================*/
 
 .cart-body{
     flex:1;
@@ -3703,10 +3434,6 @@ html[dir="rtl"] .cart-drawer.active{
 }
 
 
-
-/*=========================================================
-                    CART ITEM
-=========================================================*/
 
 .cart-item{
     display:flex;
@@ -3744,10 +3471,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                CART DETAILS
-=========================================================*/
-
 .cart-item-details{
     flex:1;
     display:flex;
@@ -3779,9 +3502,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                    CART ACTIONS
-=========================================================*/
 
 .cart-actions{
     margin-top:8px;
@@ -3869,10 +3589,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                    CART FOOTER
-=========================================================*/
-
 .cart-footer{
     padding:24px;
     border-top:1px solid var(--border-color);
@@ -3881,9 +3597,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                BILLING SUMMARY
-=========================================================*/
 
 .billing-summary{
     display:flex;
@@ -3919,9 +3632,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                CHECKOUT BUTTON
-=========================================================*/
 
 .btn-checkout{
     width:100%;
@@ -3955,10 +3665,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                    EMPTY CART
-=========================================================*/
-
 .empty-cart{
     display:flex;
     flex-direction:column;
@@ -3969,7 +3675,7 @@ html[dir="rtl"] .cart-drawer.active{
     gap:12px;
 }
 
-/* Deprecated direct icon - kept for backward compat */
+
 .empty-cart > i{
     font-size:4rem;
     color:var(--primary);
@@ -3993,9 +3699,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                EMPTY CART ILLUSTRATION
-=========================================================*/
 
 .empty-cart-illustration{
     position:relative;
@@ -4049,9 +3752,6 @@ html[dir="rtl"] .cart-drawer.active{
 
 
 
-/*=========================================================
-                EMPTY CART CTA BUTTON
-=========================================================*/
 
 .empty-cart-cta{
     display:inline-flex;
@@ -4083,9 +3783,7 @@ html[dir="rtl"] .cart-drawer.active{
     transform:translateY(-3px);
     box-shadow:0 15px 35px rgba(37,99,235,.30);
 }
-/*=========================================================
-                TOAST NOTIFICATIONS
-=========================================================*/
+
 
 .toast-container{
     position:fixed;
@@ -4179,9 +3877,6 @@ html[dir="rtl"] .toast{
 
 
 
-/*=========================================================
-            TOAST — VIEW CART BUTTON
-=========================================================*/
 
 .toast-view-cart-btn{
     display:inline-flex;
@@ -4210,10 +3905,6 @@ html[dir="rtl"] .toast{
 }
 
 
-
-/*=========================================================
-            TOAST — PRODUCT PREVIEW IMAGE
-=========================================================*/
 
 .toast-product-preview{
     width:54px;
@@ -4249,10 +3940,6 @@ html[dir="rtl"] .toast{
 }
 
 
-
-/*=========================================================
-                PREMIUM ANIMATIONS
-=========================================================*/
 
 .product-card,
 .cart-item,
@@ -4318,11 +4005,6 @@ html[dir="rtl"] .toast{
 
 
 
-/*=========================================================
-                DARK MODE — SHOP BY GRADE
-=========================================================*/
-
-/* ── Section background glows ── */
 body.dark .shop-grade-section::before{
     background:rgba(59,130,246,.15);
 }
@@ -4332,7 +4014,7 @@ body.dark .shop-grade-section::after{
 }
 
 
-/* ── Section header text ── */
+
 body.dark .section-badge{
     background:rgba(59,130,246,.15);
     border-color:rgba(59,130,246,.25);
@@ -4356,7 +4038,7 @@ body.dark .section-description{
 }
 
 
-/* ── Filter tabs ── */
+
 body.dark .filter-tabs{
     background:#1b1b1b;
     border-color:#2d2d2d;
@@ -4379,7 +4061,7 @@ body.dark .tab-btn.active{
 }
 
 
-/* ── Product cards ── */
+
 body.dark .product-card{
     background:#1e1e1e;
     border-color:#2d2d2d;
@@ -4400,13 +4082,13 @@ body.dark .product-card::before{
 }
 
 
-/* ── Product image area ── */
+
 body.dark .product-image{
     background:#111827;
 }
 
 
-/* ── Grade badge ── */
+
 body.dark .grade-badge{
     background:#2563eb;
     color:#fff;
@@ -4419,7 +4101,7 @@ body.dark .product-card:hover .grade-badge{
 }
 
 
-/* ── Discount badge ── */
+
 body.dark .discount-badge{
     background:#fbbf24;
     color:#1a1a1a;
@@ -4427,7 +4109,7 @@ body.dark .discount-badge{
 }
 
 
-/* ── Product content ── */
+
 body.dark .product-content{
     background:#1e1e1e;
 }
@@ -4445,7 +4127,7 @@ body.dark .product-description{
 }
 
 
-/* ── Pricing ── */
+
 body.dark .current-price{
     color:#60a5fa;
 }
@@ -4455,7 +4137,7 @@ body.dark .old-price{
 }
 
 
-/* ── Add to Cart button ── */
+
 body.dark .btn-add-cart{
     background:linear-gradient(135deg,#2563eb,#3b82f6);
     color:#fff;
@@ -4466,7 +4148,7 @@ body.dark .btn-add-cart:hover{
 }
 
 
-/* ── Quantity selector ── */
+
 body.dark .quantity-box{
     background:#121212;
     border-color:#374151;
@@ -4487,7 +4169,7 @@ body.dark .qty-value{
 }
 
 
-/* ── Empty products ── */
+
 body.dark .empty-products{
     background:#1e1e1e;
     border-color:#2d2d2d;
@@ -4502,13 +4184,13 @@ body.dark .empty-products p{
 }
 
 
-/* ── Cart overlay ── */
+
 body.dark .cart-overlay{
     background:rgba(0,0,0,.70);
 }
 
 
-/* ── Cart drawer ── */
+
 body.dark .cart-drawer{
     background:#1b1b1b;
     border-color:#2d2d2d;
@@ -4516,7 +4198,7 @@ body.dark .cart-drawer{
 }
 
 
-/* ── Cart header ── */
+
 body.dark .cart-header{
     border-color:#2d2d2d;
 }
@@ -4536,7 +4218,7 @@ body.dark .btn-close-cart:hover{
 }
 
 
-/* ── Cart items ── */
+
 body.dark .cart-item{
     background:#1e1e1e;
     border-color:#2d2d2d;
@@ -4561,7 +4243,7 @@ body.dark .cart-price{
 }
 
 
-/* ── Cart qty ── */
+
 body.dark .cart-qty-box{
     background:#0f172a;
     border-color:#334155;
@@ -4588,7 +4270,7 @@ body.dark .cart-qty-val{
 }
 
 
-/* ── Remove button ── */
+
 body.dark .remove-cart-item{
     background:rgba(239,68,68,.15);
     color:#f87171;
@@ -4600,7 +4282,7 @@ body.dark .remove-cart-item:hover{
 }
 
 
-/* ── Cart footer & billing ── */
+
 body.dark .cart-footer{
     background:#1b1b1b;
     border-color:#2d2d2d;
@@ -4627,14 +4309,14 @@ body.dark .total-row span{
 }
 
 
-/* ── Checkout button ── */
+
 body.dark .btn-checkout{
     background:linear-gradient(135deg,#2563eb,#3b82f6);
     color:#fff;
 }
 
 
-/* ── Empty cart ── */
+
 body.dark .empty-cart h3{
     color:#f1f5f9;
 }
@@ -4657,7 +4339,7 @@ body.dark .empty-cart-dots span{
 }
 
 
-/* ── Toast ── */
+
 body.dark .toast{
     background:#1e1e1e;
     border-color:#2d2d2d;
@@ -4683,10 +4365,6 @@ body.dark .toast-product-preview{
 }
 
 
-
-/*=========================================================
-                    RTL SUPPORT
-=========================================================*/
 
 html[dir="rtl"] .grade-badge{
 
@@ -4747,10 +4425,6 @@ html[dir="rtl"] .cart-actions{
 }
 
 
-
-/*=========================================================
-                    RESPONSIVE
-=========================================================*/
 
 @media(max-width:1400px){
 
@@ -4977,13 +4651,6 @@ height:75px;
 
 
 
-
-
-
-/*=========================================================
-            CUSTOMER TESTIMONIALS
-=========================================================*/
-
 .school-home-two-testimonial-section{
 
     position:relative;
@@ -5020,10 +4687,6 @@ height:75px;
 }
 
 
-
-/*=========================================================
-                    HEADING
-=========================================================*/
 
 .school-home-two-testimonial-heading{
 
@@ -5096,11 +4759,6 @@ height:75px;
 }
 
 
-
-/*=========================================================
-                    GRID
-=========================================================*/
-
 .school-home-two-testimonial-grid{
 
     display:grid;
@@ -5115,9 +4773,6 @@ height:75px;
 
 
 
-/*=========================================================
-                    CARD
-=========================================================*/
 
 .school-home-two-testimonial-card{
 
@@ -5187,10 +4842,6 @@ height:75px;
 
 
 
-/*=========================================================
-                BACKGROUND GLOW
-=========================================================*/
-
 .school-home-two-testimonial-section::before{
 
     content:"";
@@ -5234,9 +4885,6 @@ height:75px;
     filter:blur(120px);
 
 }
-/*=========================================================
-                FEATURED CARD
-=========================================================*/
 
 .school-home-two-testimonial-card.featured{
 
@@ -5293,10 +4941,6 @@ height:75px;
 
 
 
-/*=========================================================
-                    QUOTE ICON
-=========================================================*/
-
 .school-home-two-testimonial-quote{
 
     position:absolute;
@@ -5321,9 +4965,6 @@ height:75px;
 
 
 
-/*=========================================================
-                    PROFILE
-=========================================================*/
 
 .school-home-two-testimonial-profile{
 
@@ -5361,7 +5002,7 @@ height:75px;
 
 }
 
-.school-home-two-testimonial-avatar i{
+.school-home-two-testimonial-avatar svg{
 
     width:30px;
 
@@ -5409,10 +5050,6 @@ height:75px;
 
 
 
-/*=========================================================
-                FILLED STAR RATING
-=========================================================*/
-
 .school-home-two-testimonial-rating{
 
     display:flex;
@@ -5441,10 +5078,6 @@ height:75px;
 
 
 
-/*=========================================================
-                    REVIEW
-=========================================================*/
-
 .school-home-two-testimonial-card p{
 
     color:rgba(var(--text-color-rgb),.78);
@@ -5461,9 +5094,6 @@ height:75px;
 
 
 
-/*=========================================================
-                READ MORE BUTTON
-=========================================================*/
 
 .school-home-two-testimonial-card a{
 
@@ -5499,10 +5129,6 @@ height:75px;
 
 
 
-/*=========================================================
-            CARD DIVIDER
-=========================================================*/
-
 .school-home-two-testimonial-card a::before{
 
     content:"";
@@ -5523,9 +5149,6 @@ height:75px;
 
 
 
-/*=========================================================
-                DARK MODE
-=========================================================*/
 
 body.dark-mode .school-home-two-testimonial-card{
 
@@ -5554,9 +5177,7 @@ body.dark-mode .school-home-two-testimonial-card a::before{
     background:rgba(255,255,255,.08);
 
 }
-/*=========================================================
-                    BOTTOM STATS
-=========================================================*/
+
 
 .school-home-two-testimonial-stats{
 
@@ -5628,9 +5249,6 @@ body.dark-mode .school-home-two-testimonial-card a::before{
 
 
 
-/*=========================================================
-                DARK MODE
-=========================================================*/
 
 body.dark-mode .school-home-two-testimonial-stat{
 
@@ -5648,9 +5266,6 @@ body.dark-mode .school-home-two-testimonial-stat span{
 
 
 
-/*=========================================================
-                    RTL SUPPORT
-=========================================================*/
 
 body.rtl .school-home-two-testimonial-heading{
 
@@ -5702,10 +5317,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    1200px
-=========================================================*/
-
 @media(max-width:1200px){
 
 .school-home-two-testimonial-grid{
@@ -5724,9 +5335,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -5766,9 +5374,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -5844,10 +5449,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    480px
-=========================================================*/
-
 @media(max-width:480px){
 
 .school-home-two-testimonial-section{
@@ -5882,7 +5483,7 @@ body.rtl .school-home-two-testimonial-quote{
 
 }
 
-.school-home-two-testimonial-avatar i{
+.school-home-two-testimonial-avatar svg{
 
     width:24px;
 
@@ -5930,10 +5531,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    360px
-=========================================================*/
-
 @media(max-width:360px){
 
 .school-home-two-testimonial-section{
@@ -5972,7 +5569,7 @@ body.rtl .school-home-two-testimonial-quote{
 
 }
 
-.school-home-two-testimonial-avatar i{
+.school-home-two-testimonial-avatar svg{
 
     width:20px;
 
@@ -6031,9 +5628,6 @@ body.rtl .school-home-two-testimonial-quote{
 }
 
 
-/*=========================================================
-                    PREMIUM CTA SECTION
-=========================================================*/
 
 .school-home-two-cta-section{
 
@@ -6065,10 +5659,6 @@ body.rtl .school-home-two-testimonial-quote{
 }
 
 
-
-/*=========================================================
-                BACKGROUND GLOW
-=========================================================*/
 
 .school-home-two-cta-section::before{
 
@@ -6115,11 +5705,6 @@ body.rtl .school-home-two-testimonial-quote{
 }
 
 
-
-/*=========================================================
-                    CONTAINER
-=========================================================*/
-
 .school-home-two-cta-container{
 
     position:relative;
@@ -6149,9 +5734,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    BADGE
-=========================================================*/
 
 .school-home-two-cta-badge{
 
@@ -6185,9 +5767,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                    CONTENT
-=========================================================*/
 
 .school-home-two-cta-content h2{
 
@@ -6222,10 +5801,6 @@ body.rtl .school-home-two-testimonial-quote{
 }
 
 
-
-/*=========================================================
-                    FEATURES
-=========================================================*/
 
 .school-home-two-cta-features{
 
@@ -6288,10 +5863,6 @@ body.rtl .school-home-two-testimonial-quote{
 }
 
 
-
-/*=========================================================
-                    BUTTONS
-=========================================================*/
 
 .school-home-two-cta-buttons{
 
@@ -6371,10 +5942,6 @@ body.rtl .school-home-two-testimonial-quote{
 
 
 
-/*=========================================================
-                BOTTOM HIGHLIGHTS
-=========================================================*/
-
 .school-home-two-cta-bottom{
 
     margin-top:60px;
@@ -6421,9 +5988,7 @@ body.rtl .school-home-two-testimonial-quote{
 
 }
 
-/*=========================================================
-                    DARK MODE
-=========================================================*/
+
 
 body.dark-mode .school-home-two-cta-section{
 
@@ -6496,9 +6061,6 @@ body.dark-mode .school-home-two-cta-bottom span{
 
 
 
-/*=========================================================
-                    RTL
-=========================================================*/
 
 body.rtl .school-home-two-cta-content{
 
@@ -6534,9 +6096,7 @@ body.rtl .school-home-two-cta-badge{
 
 
 
-/*=========================================================
-                    1200px
-=========================================================*/
+
 
 @media(max-width:1200px){
 
@@ -6555,10 +6115,6 @@ body.rtl .school-home-two-cta-badge{
 }
 
 
-
-/*=========================================================
-                    1024px
-=========================================================*/
 
 @media(max-width:1024px){
 
@@ -6600,9 +6156,6 @@ body.rtl .school-home-two-cta-badge{
 
 
 
-/*=========================================================
-                    768px
-=========================================================*/
 
 @media(max-width:768px){
 
@@ -6669,11 +6222,6 @@ body.rtl .school-home-two-cta-badge{
 }
 
 
-
-/*=========================================================
-                    480px
-=========================================================*/
-
 @media(max-width:480px){
 
 .school-home-two-cta-section{
@@ -6735,10 +6283,6 @@ body.rtl .school-home-two-cta-badge{
 }
 
 
-
-/*=========================================================
-                    360px
-=========================================================*/
 
 @media(max-width:360px){
 
