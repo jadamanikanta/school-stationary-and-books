@@ -116,15 +116,11 @@ body {
     order: 1;
 }
 
-.logo-text span{
-    color: var(--secondary);
+.logo-header-secondary{
+  color:var(--secondary);
 }
 
 
-
-body.dark .logo span {
-    color: var(--secondary);
-}
 
 
 
