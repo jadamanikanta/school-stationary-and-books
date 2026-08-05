@@ -943,11 +943,11 @@ height:42px;
 
 <div class="top-actions">
 
-<button class="action-btn" id="rtlBtn">
+<button class="action-btn" id="rtlToggle">
 RTL
 </button>
 
-<button class="action-btn" id="themeBtn">
+<button class="action-btn" id="themeToggle">
 <i data-lucide="moon"></i>
 </button>
 
@@ -1039,19 +1039,14 @@ Back to Home
 
 <script>
 
-    //=========================================================
-//              LUCIDE ICONS
-//=========================================================
+    
 
 lucide.createIcons();
 
 
 
-//=========================================================
-//                  COUNTDOWN TIMER
-//=========================================================
 
-// Set Launch Date (Year, Month-1, Day, Hour, Minute, Second)
+
 const launchDate = new Date("December 31, 2026 23:59:59").getTime();
 
 const countdown = setInterval(() => {
@@ -1109,53 +1104,65 @@ const countdown = setInterval(() => {
 
 
 
-//=========================================================
-//                  DARK MODE
-//=========================================================
+const themeToggle = document.getElementById("themeToggle");
 
-const themeBtn = document.getElementById("themeBtn");
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
 
-themeBtn.addEventListener("click", () => {
+if (themeToggle) {
 
-    document.body.classList.toggle("dark");
-
-    const icon = themeBtn.querySelector("i");
-
-    if (document.body.classList.contains("dark")) {
-
-        icon.setAttribute("data-lucide", "sun");
-
-    } else {
-
-        icon.setAttribute("data-lucide", "moon");
-
-    }
+    themeToggle.innerHTML = document.body.classList.contains("dark")
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
 
     lucide.createIcons();
 
-});
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            themeToggle.innerHTML = '<i data-lucide="sun"></i>';
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggle.innerHTML = '<i data-lucide="moon"></i>';
+        }
+
+        lucide.createIcons();
+
+    });
+}
+const rtlToggle = document.getElementById("rtlToggle");
+
+const savedDir = localStorage.getItem("direction") || "ltr";
+document.documentElement.setAttribute("dir", savedDir);
+
+if (rtlToggle) {
+
+    rtlToggle.textContent = savedDir === "rtl" ? "LTR" : "RTL";
+
+    rtlToggle.addEventListener("click", () => {
+
+        const currentDir = document.documentElement.getAttribute("dir");
+
+        if (currentDir === "rtl") {
+            document.documentElement.setAttribute("dir", "ltr");
+            localStorage.setItem("direction", "ltr");
+            rtlToggle.textContent = "RTL";
+        } else {
+            document.documentElement.setAttribute("dir", "rtl");
+            localStorage.setItem("direction", "rtl");
+            rtlToggle.textContent = "LTR";
+        }
+
+    });
+
+}
 
 
 
-//=========================================================
-//                      RTL
-//=========================================================
-
-const rtlBtn = document.getElementById("rtlBtn");
-
-rtlBtn.addEventListener("click", () => {
-
-    const html = document.documentElement;
-
-    html.dir = html.dir === "rtl" ? "ltr" : "rtl";
-
-});
-
-
-
-//=========================================================
-//          NEWSLETTER FORM
-//=========================================================
 
 const form = document.querySelector(".subscribe-form");
 

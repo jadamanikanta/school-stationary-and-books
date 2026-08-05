@@ -425,47 +425,42 @@ passwordBtn.addEventListener("click",()=>{
 });
 
 
+const themeBtn = document.getElementById("themeToggle");
 
-const themeBtn=document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("school-theme") || "light";
 
-const savedTheme=localStorage.getItem("school-theme");
-
-if(savedTheme==="dark"){
-
+if (savedTheme === "dark") {
     document.body.classList.add("dark");
-
 }
 
-updateThemeIcon();
-
-themeBtn.addEventListener("click",()=>{
-
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-
-        localStorage.setItem("school-theme","dark");
-
-    }else{
-
-        localStorage.setItem("school-theme","light");
-
-    }
+if (themeBtn) {
 
     updateThemeIcon();
 
-});
+    themeBtn.addEventListener("click", () => {
 
-function updateThemeIcon(){
+        document.body.classList.toggle("dark");
 
-    if(document.body.classList.contains("dark")){
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("school-theme", "dark");
+        } else {
+            localStorage.setItem("school-theme", "light");
+        }
 
-        themeBtn.innerHTML='<i data-lucide="sun"></i>';
+        updateThemeIcon();
 
-    }else{
+    });
 
-        themeBtn.innerHTML='<i data-lucide="moon"></i>';
+}
 
+function updateThemeIcon() {
+
+    if (!themeBtn) return;
+
+    if (document.body.classList.contains("dark")) {
+        themeBtn.innerHTML = '<i data-lucide="sun"></i>';
+    } else {
+        themeBtn.innerHTML = '<i data-lucide="moon"></i>';
     }
 
     lucide.createIcons();
@@ -473,36 +468,37 @@ function updateThemeIcon(){
 }
 
 
+const rtlBtn = document.getElementById("rtlToggle");
 
-const rtlBtn=document.getElementById("rtlToggle");
+const html = document.documentElement;
 
-const html=document.documentElement;
+const savedDir = localStorage.getItem("direction") || "ltr";
 
-const savedDir=localStorage.getItem("page-direction");
+html.setAttribute("dir", savedDir);
 
-if(savedDir){
+if (rtlBtn) {
 
-    html.setAttribute("dir",savedDir);
+    rtlBtn.textContent = savedDir === "rtl" ? "LTR" : "RTL";
+
+    rtlBtn.addEventListener("click", () => {
+
+        if (html.getAttribute("dir") === "rtl") {
+
+            html.setAttribute("dir", "ltr");
+            localStorage.setItem("direction", "ltr");
+            rtlBtn.textContent = "RTL";
+
+        } else {
+
+            html.setAttribute("dir", "rtl");
+            localStorage.setItem("direction", "rtl");
+            rtlBtn.textContent = "LTR";
+
+        }
+
+    });
 
 }
-
-rtlBtn.addEventListener("click",()=>{
-
-    if(html.getAttribute("dir")==="rtl"){
-
-        html.setAttribute("dir","ltr");
-
-        localStorage.setItem("page-direction","ltr");
-
-    }else{
-
-        html.setAttribute("dir","rtl");
-
-        localStorage.setItem("page-direction","rtl");
-
-    }
-
-});
 
 
 const loginForm=document.getElementById("loginForm");

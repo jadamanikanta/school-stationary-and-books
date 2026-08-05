@@ -17,15 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
         <style>
-            /*=========================================
-    GOOGLE FONT
-=========================================*/
+            
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/*=========================================
-    RESET
-=========================================*/
+
 
 *{
     margin:0;
@@ -1435,15 +1431,15 @@ body{
 
     <div class="top-controls">
 
-        <button id="rtlToggle" class="icon-btn" title="RTL">
-            RTL
-        </button>
+    <button id="rtlToggle" class="icon-btn" title="RTL">
+        RTL
+    </button>
 
-        <button id="themeToggle" class="icon-btn" title="Dark Mode">
-            <i class="fa-solid fa-moon"></i>
-        </button>
+    <button id="themeToggle" class="icon-btn" title="Theme">
+        <i data-lucide="moon"></i>
+    </button>
 
-    </div>
+</div>
 
     
     
@@ -1902,163 +1898,137 @@ body{
         </div>
 
     </section>
+   
 
-    <script >// =========================================
-// ELEMENTS
-// =========================================
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
 
-const body = document.body;
-const html = document.documentElement;
+    const body = document.body;
+    const html = document.documentElement;
 
-const themeToggle = document.getElementById("themeToggle");
-const rtlToggle = document.getElementById("rtlToggle");
+    const themeToggle = document.getElementById("themeToggle");
+    const rtlToggle = document.getElementById("rtlToggle");
 
-const themeIcon = themeToggle.querySelector("i");
-const agree = document.getElementById("agree");
-const acceptBtn = document.getElementById("acceptBtn");
+    const agree = document.getElementById("agree");
+    const acceptBtn = document.getElementById("acceptBtn");
 
-const dateInput = document.querySelector('input[type="date"]');
-const nameInput = document.querySelector('input[type="text"]');
+    const dateInput = document.querySelector('input[type="date"]');
+    const nameInput = document.querySelector('input[type="text"]');
 
-// =========================================
-// SET TODAY'S DATE
-// =========================================
+    // =========================================
+    // SET TODAY'S DATE
+    // =========================================
 
-if (dateInput) {
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.value = today;
-}
-
-// =========================================
-// THEME FUNCTIONS
-// =========================================
-
-function updateThemeIcon() {
-    if (body.classList.contains("dark")) {
-        themeIcon.className = "fa-solid fa-sun";
-        themeToggle.title = "Light Mode";
-    } else {
-        themeIcon.className = "fa-solid fa-moon";
-        themeToggle.title = "Dark Mode";
+    if (dateInput) {
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.value = today;
     }
-}
 
-function loadTheme() {
+    // =========================================
+    // THEME MODE
+    // =========================================
 
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("school-theme") || "light";
 
     if (savedTheme === "dark") {
         body.classList.add("dark");
     }
 
-    updateThemeIcon();
-}
+    function updateThemeIcon() {
 
-themeToggle.addEventListener("click", () => {
+        if (!themeToggle) return;
 
-    body.classList.toggle("dark");
+        themeToggle.innerHTML = body.classList.contains("dark")
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
 
-    const currentTheme = body.classList.contains("dark")
-        ? "dark"
-        : "light";
-
-    localStorage.setItem("theme", currentTheme);
-
-    updateThemeIcon();
-
-});
-
-// =========================================
-// RTL FUNCTIONS
-// =========================================
-
-function updateRTLButton() {
-
-    if (html.getAttribute("dir") === "rtl") {
-        rtlToggle.innerHTML =
-            '<i class="fa-solid fa-language"></i> LTR';
-    } else {
-        rtlToggle.innerHTML =
-            '<i class="fa-solid fa-language"></i> RTL';
+        lucide.createIcons();
     }
 
-}
+    if (themeToggle) {
 
-function loadDirection() {
+        updateThemeIcon();
 
-    const savedDir = localStorage.getItem("direction");
+        themeToggle.addEventListener("click", () => {
 
-    if (savedDir === "rtl") {
-        html.setAttribute("dir", "rtl");
-        html.setAttribute("lang", "ar");
-    }
+            body.classList.toggle("dark");
 
-    updateRTLButton();
+            localStorage.setItem(
+                "school-theme",
+                body.classList.contains("dark") ? "dark" : "light"
+            );
 
-}
+            updateThemeIcon();
 
-rtlToggle.addEventListener("click", () => {
-
-    if (html.getAttribute("dir") === "rtl") {
-
-        html.setAttribute("dir", "ltr");
-        html.setAttribute("lang", "en");
-
-        localStorage.setItem("direction", "ltr");
-
-    } else {
-
-        html.setAttribute("dir", "rtl");
-        html.setAttribute("lang", "ar");
-
-        localStorage.setItem("direction", "rtl");
+        });
 
     }
 
-    updateRTLButton();
+    // =========================================
+    // RTL MODE
+    // =========================================
 
-});
+    const savedDir = localStorage.getItem("page-direction") || "ltr";
 
-// =========================================
-// AGREEMENT VALIDATION
-// =========================================
+    html.setAttribute("dir", savedDir);
 
-acceptBtn.addEventListener("click", (e) => {
+    if (rtlToggle) {
 
-    e.preventDefault();
+        rtlToggle.textContent = savedDir === "rtl" ? "LTR" : "RTL";
 
-    if (!agree.checked) {
+        rtlToggle.addEventListener("click", () => {
 
-        alert("Please accept the Terms & Conditions before continuing.");
+            if (html.getAttribute("dir") === "rtl") {
 
-        agree.focus();
+                html.setAttribute("dir", "ltr");
+                localStorage.setItem("page-direction", "ltr");
+                rtlToggle.textContent = "RTL";
 
-        return;
+            } else {
+
+                html.setAttribute("dir", "rtl");
+                localStorage.setItem("page-direction", "rtl");
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
 
     }
 
-    if (nameInput.value.trim() === "") {
+    // =========================================
+    // AGREEMENT VALIDATION
+    // =========================================
 
-        alert("Please enter your full name.");
+    if (acceptBtn) {
 
-        nameInput.focus();
+        acceptBtn.addEventListener("click", (e) => {
 
-        return;
+            e.preventDefault();
+
+            if (!agree.checked) {
+                alert("Please accept the Terms & Conditions before continuing.");
+                agree.focus();
+                return;
+            }
+
+            if (nameInput.value.trim() === "") {
+                alert("Please enter your full name.");
+                nameInput.focus();
+                return;
+            }
+
+            alert("Thank you! Terms & Conditions accepted successfully.");
+
+            // window.location.href = "../dashboard/dashboard.html";
+
+        });
 
     }
 
-    alert("Thank you! Terms & Conditions accepted successfully.");
-
-    // Redirect Example
-    // window.location.href = "../dashboard/dashboard.html";
-
-});
-
-// =========================================
-// SIMPLE FADE-IN ANIMATION
-// =========================================
-
-window.addEventListener("load", () => {
+    // =========================================
+    // FADE-IN ANIMATION
+    // =========================================
 
     document.querySelectorAll(".term-card").forEach((card, index) => {
 
@@ -2068,7 +2038,6 @@ window.addEventListener("load", () => {
         setTimeout(() => {
 
             card.style.transition = "all .5s ease";
-
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
 
@@ -2076,33 +2045,33 @@ window.addEventListener("load", () => {
 
     });
 
-});
+    // =========================================
+    // AGREEMENT BUTTON
+    // =========================================
 
-// =========================================
-// AUTO HIGHLIGHT AGREEMENT
-// =========================================
+    if (agree) {
 
-agree.addEventListener("change", () => {
+        agree.addEventListener("change", () => {
 
-    if (agree.checked) {
+            if (agree.checked) {
+                acceptBtn.style.opacity = "1";
+                acceptBtn.style.cursor = "pointer";
+            } else {
+                acceptBtn.style.opacity = ".85";
+            }
 
-        acceptBtn.style.opacity = "1";
-        acceptBtn.style.cursor = "pointer";
-
-    } else {
-
-        acceptBtn.style.opacity = ".85";
+        });
 
     }
 
 });
+</script>
+ <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
 
-// =========================================
-// INITIALIZE
-// =========================================
 
-loadTheme();
-loadDirection();</script>
 
 </body>
 

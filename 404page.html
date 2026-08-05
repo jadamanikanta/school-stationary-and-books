@@ -797,13 +797,13 @@ height:36px;
 
 <div class="top-actions">
 
-<button class="action-btn" id="rtlBtn">
+<button class="action-btn" id="rtlToggle">
 
 RTL
 
 </button>
 
-<button class="action-btn" id="themeBtn">
+<button class="action-btn" id="themeToggle">
 
 <i data-lucide="moon"></i>
 
@@ -863,57 +863,69 @@ Go Back
 </div>
 
 <script>
-    //=========================================================
-//              INITIALIZE LUCIDE ICONS
-//=========================================================
+    
 
 lucide.createIcons();
 
 
 
-//=========================================================
-//                  DARK MODE
-//=========================================================
+const themeToggle = document.getElementById("themeToggle");
 
-const themeBtn = document.getElementById("themeBtn");
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
 
-themeBtn.addEventListener("click",()=>{
+if (themeToggle) {
 
-    document.body.classList.toggle("dark");
-
-    const icon = themeBtn.querySelector("i");
-
-    if(document.body.classList.contains("dark")){
-
-        icon.setAttribute("data-lucide","sun");
-
-    }
-
-    else{
-
-        icon.setAttribute("data-lucide","moon");
-
-    }
+    themeToggle.innerHTML = document.body.classList.contains("dark")
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
 
     lucide.createIcons();
 
-});
+    themeToggle.addEventListener("click", () => {
 
+        document.body.classList.toggle("dark");
 
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            themeToggle.innerHTML = '<i data-lucide="sun"></i>';
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggle.innerHTML = '<i data-lucide="moon"></i>';
+        }
 
-//=========================================================
-//                  RTL MODE
-//=========================================================
+        lucide.createIcons();
 
-const rtlBtn = document.getElementById("rtlBtn");
+    });
+}
+const rtlToggle = document.getElementById("rtlToggle");
 
-rtlBtn.addEventListener("click",()=>{
+const savedDir = localStorage.getItem("direction") || "ltr";
+document.documentElement.setAttribute("dir", savedDir);
 
-    const html = document.documentElement;
+if (rtlToggle) {
 
-    html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+    rtlToggle.textContent = savedDir === "rtl" ? "LTR" : "RTL";
 
-});
+    rtlToggle.addEventListener("click", () => {
+
+        const currentDir = document.documentElement.getAttribute("dir");
+
+        if (currentDir === "rtl") {
+            document.documentElement.setAttribute("dir", "ltr");
+            localStorage.setItem("direction", "ltr");
+            rtlToggle.textContent = "RTL";
+        } else {
+            document.documentElement.setAttribute("dir", "rtl");
+            localStorage.setItem("direction", "rtl");
+            rtlToggle.textContent = "LTR";
+        }
+
+    });
+
+}
+
 
 
 
