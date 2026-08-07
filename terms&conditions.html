@@ -1,2078 +1,757 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Conditions | SchoolBooks</title>
 
-    
-    <link rel="stylesheet" href="terms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-        <style>
-            
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:var(--bg-color);
-    color:var(--text-color);
-    transition:.35s ease;
-    overflow-x:hidden;
-    line-height:1.7;
-}
-
-/*=========================================
-    VARIABLES
-=========================================*/
-
-:root{
-
-    --primary:#2563EB;
-    --secondary:#FBBF24;
-
-    --bg-color:#ffffff;
-    --text-color:#111111;
-
-    --card-bg:#ffffff;
-
-    --border-color:#e5e7eb;
-
-    --primary-light:rgba(37,99,235,.12);
-    --secondary-light:rgba(251,191,36,.18);
-
-    --text-color-rgb:17,17,17;
-
-    --shadow:
-        0 10px 35px rgba(0,0,0,.08);
-
-    --radius:20px;
-
-}
-
-body.dark{
-
-    --bg-color:#121212;
-
-    --text-color:#f5f5f5;
-
-    --card-bg:#1b1b1b;
-
-    --border-color:#2d2d2d;
-
-    --primary:#3B82F6;
-
-    --secondary:#FBBF24;
-
-    --primary-light:rgba(59,130,246,.18);
-
-    --secondary-light:rgba(251,191,36,.15);
-
-    --text-color-rgb:245,245,245;
-
-    --shadow:
-        0 15px 40px rgba(0,0,0,.45);
-
-}
-
-/*=========================================
-    RTL
-=========================================*/
-
-html[dir="rtl"] body{
-    direction:rtl;
-}
-
-html[dir="rtl"] .term-card{
-
-    flex-direction:row-reverse;
-
-}
-
-html[dir="rtl"] .contact-item{
-
-    flex-direction:row-reverse;
-
-}
-
-html[dir="rtl"] .checkbox-wrap{
-
-    flex-direction:row-reverse;
-
-}
-
-html[dir="rtl"] .top-controls{
-
-    left:25px;
-    right:auto;
-
-}
-
-/*=========================================
-    SCROLLBAR
-=========================================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--primary);
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:transparent;
-
-}
-
-/*=========================================
-    TOP CONTROLS
-=========================================*/
-
-.top-controls{
-
-    position:fixed;
-
-    top:20px;
-    right:20px;
-
-    display:flex;
-
-    gap:12px;
-
-    z-index:999;
-
-}
-
-.icon-btn{
-
-    width:48px;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    background:var(--card-bg);
-
-    color:var(--primary);
-
-    box-shadow:var(--shadow);
-
-    border:1px solid var(--border-color);
-
-    transition:.3s;
-
-}
-
-.icon-btn:hover{
-
-    background:var(--primary);
-
-    color:#fff;
-
-    transform:translateY(-3px);
-
-}
-
-/*=========================================
-    PAGE
-=========================================*/
-
-.terms-page{
-
-    padding:90px 20px;
-
-    min-height:100vh;
-
-}
-
-.container{
-
-    max-width:1150px;
-
-    margin:auto;
-
-}
-
-/*=========================================
-    HEADER
-=========================================*/
-
-.page-header{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-.header-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:auto;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:34px;
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-    margin-bottom:20px;
-
-}
-
-.badge{
-
-    display:inline-block;
-
-    padding:8px 20px;
-
-    border-radius:50px;
-
-    background:var(--secondary-light);
-
-    color:#9a6700;
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
-}
-
-body.dark .badge{
-
-    color:#ffd45b;
-
-}
-
-.page-header h1{
-
-    font-size:42px;
-
-    margin-bottom:18px;
-
-    font-weight:700;
-
-}
-
-.page-header p{
-
-    max-width:760px;
-
-    margin:auto;
-
-    color:rgba(var(--text-color-rgb),.75);
-
-    font-size:17px;
-
-}
-
-.last-updated{
-
-    margin-top:25px;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:12px 20px;
-
-    border-radius:50px;
-
-    background:var(--card-bg);
-
-    border:1px solid var(--border-color);
-
-    box-shadow:var(--shadow);
-
-    font-weight:500;
-
-}
-
-/*=========================================
-    WRAPPER
-=========================================*/
-
-.terms-wrapper{
-
-    display:grid;
-
-    gap:30px;
-
-}
-
-/*=========================================
-    TERM CARD
-=========================================*/
-
-.term-card{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:28px;
-
-    padding:30px;
-
-    border-radius:var(--radius);
-
-    background:var(--card-bg);
-
-    border:1px solid var(--border-color);
-
-    box-shadow:var(--shadow);
-
-    transition:.35s;
-
-}
-
-.term-card:hover{
-
-    transform:translateY(-6px);
-
-    border-color:var(--primary);
-
-}
-
-.term-number{
-
-    min-width:72px;
-
-    height:72px;
-
-    border-radius:50%;
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:22px;
-
-    font-weight:700;
-
-}
-
-.term-content{
-
-    flex:1;
-
-}
-
-.term-content h2{
-
-    font-size:24px;
-
-    margin-bottom:15px;
-
-}
-
-.term-content p{
-
-    color:rgba(var(--text-color-rgb),.75);
-
-}
-
-.term-content ul{
-
-    padding-left:22px;
-
-}
-
-.term-content li{
-
-    margin-bottom:12px;
-
-    color:rgba(var(--text-color-rgb),.75);
-
-}
-
-html[dir="rtl"] .term-content ul{
-
-    padding-right:22px;
-    padding-left:0;
-
-}
-/*=========================================
-    TAG LIST
-=========================================*/
-
-.tag-list{
-
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-
-    margin-top:18px;
-
-}
-
-.tag-list span{
-
-    padding:10px 18px;
-
-    border-radius:50px;
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-    font-size:14px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.tag-list span:hover{
-
-    background:var(--primary);
-
-    color:#fff;
-
-    transform:translateY(-3px);
-
-}
-
-/*=========================================
-    CONTACT CARD
-=========================================*/
-
-.contact-card{
-
-    background:var(--card-bg);
-
-    border:1px solid var(--border-color);
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    padding:35px;
-
-}
-
-.contact-card h2{
-
-    font-size:28px;
-
-    margin-bottom:28px;
-
-}
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:20px;
-
-}
-
-.contact-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    background:var(--bg-color);
-
-    border:1px solid var(--border-color);
-
-    transition:.3s;
-
-}
-
-.contact-item:hover{
-
-    border-color:var(--primary);
-
-    transform:translateY(-4px);
-
-}
-
-.contact-item i{
-
-    width:52px;
-    height:52px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-    font-size:20px;
-
-}
-
-.contact-item span{
-
-    font-size:16px;
-
-    font-weight:500;
-
-    word-break:break-word;
-
-}
-
-/*=========================================
-    AGREEMENT CARD
-=========================================*/
-
-.agreement-card{
-
-    margin-top:10px;
-
-    background:var(--card-bg);
-
-    border:1px solid var(--border-color);
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    padding:40px;
-
-}
-
-.agreement-card h2{
-
-    font-size:30px;
-
-    margin-bottom:28px;
-
-}
-
-/*=========================================
-    CUSTOM CHECKBOX
-=========================================*/
-
-.checkbox-wrap{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:15px;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    font-weight:500;
-
-    margin-bottom:35px;
-
-    position:relative;
-
-}
-
-.checkbox-wrap input{
-
-    display:none;
-
-}
-
-.checkmark{
-
-    width:26px;
-    height:26px;
-
-    border-radius:8px;
-
-    border:2px solid var(--primary);
-
-    flex-shrink:0;
-
-    margin-top:2px;
-
-    position:relative;
-
-    transition:.3s;
-
-}
-
-.checkbox-wrap input:checked + .checkmark{
-
-    background:var(--primary);
-
-}
-
-.checkbox-wrap input:checked + .checkmark::after{
-
-    content:"✓";
-
-    position:absolute;
-
-    color:#fff;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-55%);
-
-    font-size:15px;
-
-    font-weight:700;
-
-}
-
-/*=========================================
-    FORM GRID
-=========================================*/
-
-.form-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
-    margin-bottom:30px;
-
-}
-
-.field{
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.field label{
-
-    margin-bottom:10px;
-
-    font-weight:600;
-
-}
-
-.field input{
-
-    height:56px;
-
-    border-radius:14px;
-
-    border:1px solid var(--border-color);
-
-    background:var(--bg-color);
-
-    color:var(--text-color);
-
-    padding:0 18px;
-
-    font-size:15px;
-
-    outline:none;
-
-    transition:.3s;
-
-}
-
-.field input:focus{
-
-    border-color:var(--primary);
-
-    box-shadow:0 0 0 4px var(--primary-light);
-
-}
-
-/*=========================================
-    SIGNATURE
-=========================================*/
-
-.signature{
-
-    margin-bottom:35px;
-
-}
-
-.signature label{
-
-    display:block;
-
-    margin-bottom:12px;
-
-    font-weight:600;
-
-}
-
-.signature-box{
-
-    width:100%;
-
-    height:180px;
-
-    border-radius:18px;
-
-    border:2px dashed var(--border-color);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(37,99,235,.03),
-            rgba(251,191,36,.05)
-        );
-
-    transition:.35s;
-
-}
-
-body.dark .signature-box{
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(59,130,246,.08),
-            rgba(251,191,36,.05)
-        );
-
-}
-
-.signature-box:hover{
-
-    border-color:var(--primary);
-
-}
-
-/*=========================================
-    ACCEPT BUTTON
-=========================================*/
-
-.accept-btn{
-
-    width:100%;
-
-    height:60px;
-
-    border:none;
-
-    border-radius:16px;
-
-    cursor:pointer;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    color:#fff;
-
-    background:var(--primary);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:12px;
-
-    transition:.3s;
-
-}
-
-.accept-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 18px 35px rgba(37,99,235,.30);
-
-}
-
-.accept-btn:active{
-
-    transform:scale(.98);
-
-}
-.login-page-logo{
-
-    display:flex;
-
-    justify-content:center;
-
-   
-
-}
-
-.login-page-logo a{
-
-    display:flex;
-
-    align-items:center;
-
-    text-decoration:none;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    color:var(--primary);
-
-}
-
-.login-page-logo img{
-
-    width:50px;
-    height:50px;
-
-    object-fit:contain;
-    transition:.35s;
-
-}
-
-.login-page-logo span{
-
-    color:var(--secondary);
-
-}
-
-.login-page-logo a:hover img{
-
-    transform:rotate(-8deg);
-
-}
-
-/*=========================================
-    UTILITIES
-=========================================*/
-
-.mt20{
-
-    margin-top:20px;
-
-}
-
-.text-center{
-
-    text-align:center;
-
-}
-
-.hidden{
-
-    display:none;
-
-}
-/*=========================================
-    ANIMATIONS
-=========================================*/
-
-@keyframes fadeUp {
-
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-8px);
-    }
-
-}
-
-.page-header{
-
-    animation:fadeUp .8s ease;
-
-}
-
-.term-card,
-.contact-card,
-.agreement-card{
-
-    animation:fadeUp .7s ease forwards;
-
-}
-
-.header-icon{
-
-    animation:float 4s ease-in-out infinite;
-
-}
-
-/*=========================================
-    HOVER EFFECTS
-=========================================*/
-
-.term-card:hover .term-number{
-
-    background:var(--primary);
-    color:#fff;
-    transform:scale(1.05);
-
-}
-
-.term-number{
-
-    transition:.35s ease;
-
-}
-
-.contact-item:hover i{
-
-    transform:rotate(-8deg) scale(1.08);
-
-}
-
-.contact-item i{
-
-    transition:.3s;
-
-}
-
-.field input::placeholder{
-
-    color:rgba(var(--text-color-rgb),.45);
-
-}
-
-.accept-btn i{
-
-    transition:.3s;
-
-}
-
-.accept-btn:hover i{
-
-    transform:translateX(4px);
-
-}
-
-html[dir="rtl"] .accept-btn:hover i{
-
-    transform:translateX(-4px);
-
-}
-
-/*=========================================
-    1024px
-=========================================*/
-
-@media(max-width:1024px){
-
-.container{
-
-    max-width:92%;
-
-}
-
-.page-header h1{
-
-    font-size:36px;
-
-}
-
-.term-card{
-
-    gap:22px;
-
-    padding:28px;
-
-}
-
-.contact-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-/*=========================================
-    768px
-=========================================*/
-
-@media(max-width:768px){
-
-.terms-page{
-
-    padding:80px 18px;
-
-}
-
-.top-controls{
-
-    top:15px;
-    right:15px;
-
-}
-
-.icon-btn{
-
-    width:44px;
-    height:44px;
-
-}
-
-.page-header h1{
-
-    font-size:32px;
-
-}
-
-.page-header p{
-
-    font-size:15px;
-
-}
-
-.term-card{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    align-items:center;
-
-}
-
-.term-content ul{
-
-    text-align:left;
-
-}
-
-html[dir="rtl"] .term-content ul{
-
-    text-align:right;
-
-}
-
-.term-number{
-
-    width:70px;
-    height:70px;
-
-}
-
-.contact-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.contact-item{
-
-    padding:16px;
-
-}
-
-.form-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.agreement-card{
-
-    padding:30px;
-
-}
-
-.signature-box{
-
-    height:160px;
-
-}
-
-}
-
-/*=========================================
-    480px
-=========================================*/
-
-@media(max-width:480px){
-
-.page-header h1{
-
-    font-size:28px;
-
-}
-
-.page-header p{
-
-    font-size:14px;
-
-}
-
-.badge{
-
-    font-size:13px;
-
-}
-
-.last-updated{
-
-    width:100%;
-
-    justify-content:center;
-
-    font-size:14px;
-
-}
-
-.term-card{
-
-    padding:22px;
-
-}
-
-.term-content h2{
-
-    font-size:21px;
-
-}
-
-.contact-card{
-
-    padding:24px;
-
-}
-
-.agreement-card{
-
-    padding:24px;
-
-}
-
-.contact-item{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-html[dir="rtl"] .contact-item{
-
-    flex-direction:column;
-
-}
-
-.contact-item span{
-
-    font-size:15px;
-
-}
-
-.signature-box{
-
-    height:140px;
-
-}
-
-.accept-btn{
-
-    height:56px;
-
-    font-size:16px;
-
-}
-
-}
-
-/*=========================================
-    360px
-=========================================*/
-
-@media(max-width:360px){
-
-body{
-
-    font-size:14px;
-
-}
-
-.terms-page{
-
-    padding:70px 14px;
-
-}
-
-.top-controls{
-
-    gap:8px;
-
-}
-
-.icon-btn{
-
-    width:40px;
-    height:40px;
-
-    font-size:14px;
-
-}
-
-.page-header h1{
-
-    font-size:24px;
-
-}
-
-.header-icon{
-
-    width:72px;
-    height:72px;
-
-    font-size:28px;
-
-}
-
-.term-card{
-
-    padding:18px;
-
-    gap:18px;
-
-}
-
-.term-number{
-
-    width:60px;
-    height:60px;
-
-    min-width:60px;
-
-    font-size:18px;
-
-}
-
-.term-content h2{
-
-    font-size:19px;
-
-}
-
-.term-content p,
-.term-content li{
-
-    font-size:14px;
-
-}
-
-.contact-card h2,
-.agreement-card h2{
-
-    font-size:24px;
-
-}
-
-.contact-item{
-
-    padding:14px;
-
-}
-
-.contact-item i{
-
-    width:46px;
-    height:46px;
-
-    font-size:18px;
-
-}
-
-.field input{
-
-    height:52px;
-
-    font-size:14px;
-
-}
-
-.signature-box{
-
-    height:120px;
-
-}
-
-.accept-btn{
-
-    height:54px;
-
-    font-size:15px;
-
-}
-
-}
-
-/*=========================================
-    PRINT
-=========================================*/
-
-@media print{
-
-.top-controls,
-.accept-btn{
-
-    display:none;
-
-}
-
-body{
-
-    background:#fff;
-    color:#000;
-
-}
-
-.term-card,
-.contact-card,
-.agreement-card{
-
-    box-shadow:none;
-
-    border:1px solid #ccc;
-
-    break-inside:avoid;
-
-}
-
-}
-
-/*=========================================
-    SELECTION
-=========================================*/
-
-::selection{
-
-    background:var(--primary);
-
-    color:#fff;
-
-}
-        </style>
+    <link rel="stylesheet" href="terms&conditions.css">
 </head>
 
 <body>
 
-    
-    
-    
+<section class="terms-hero">
 
-    <div class="top-controls">
+    <div class="hero-circle hero-circle-one"></div>
+    <div class="hero-circle hero-circle-two"></div>
+    <div class="hero-dots hero-dots-one"></div>
+    <div class="hero-dots hero-dots-two"></div>
+    <div class="hero-small-dot hero-small-dot-blue"></div>
+    <div class="hero-small-dot hero-small-dot-yellow"></div>
 
-    <button id="rtlToggle" class="icon-btn" title="RTL">
-        RTL
-    </button>
+    <div class="hero-controls">
 
-    <button id="themeToggle" class="icon-btn" title="Theme">
-        <i data-lucide="moon"></i>
-    </button>
+        <button id="rtlToggle" class="rtl-btn" type="button">
+            RTL
+        </button>
 
-</div>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+        </button>
 
-    
-    
-    
+    </div>
 
-    <section class="terms-page">
+    <div class="hero-content">
 
-        <div class="container">
-
-           <div class="login-page-logo">
-
+        <div class="logo">
             <a href="index.html">
-
-                <img src="logo.png"
-                     alt="SchoolBooks">
-
-                School<span>Books</span>
-
-            </a>
-
-        </div>
-
-            <div class="page-header">
-
-                <div class="header-icon">
-                    <i class="fa-solid fa-file-contract"></i>
-                </div>
-
-                <span class="badge">
-                    Legal Information
+                <img src="logo.png" alt="School Stationery & Book Shop Logo">
+                <span class="logo-text">
+                    <span class="logo-primary">School</span><span class="logo-header-secondary">Books</span>
                 </span>
+            </a>
+        </div>
 
-                <h1>
-                    Terms & Conditions
-                </h1>
+        <h1>Terms &amp; Conditions</h1>
 
-                <p>
-                    Please read these Terms & Conditions carefully before using
-                    <strong>SchoolBooks</strong>. By accessing this website,
-                    placing an order or creating an account, you agree to comply
-                    with the following terms.
-                </p>
+        <p class="hero-description">
+            Please read these terms carefully before
+            <br class="desktop-break">
+            using our website and services.
+        </p>
 
-                <div class="last-updated">
-                    <i class="fa-regular fa-calendar"></i>
-                    Last Updated : July 2026
-                </div>
 
-            </div>
+    </div>
 
-            
+</section>
 
-            <div class="terms-wrapper">
 
-                
+<section class="updated-wrapper">
 
-                <div class="term-card">
+    <div class="updated-card">
 
-                    <div class="term-number">
-                        01
-                    </div>
+        <div class="updated-icon">
+            <i data-lucide="calendar-days"></i>
+        </div>
 
-                    <div class="term-content">
+        <div class="updated-text">
+            <span>Last Updated</span>
+            <strong>August 07, 2026</strong>
+        </div>
 
-                        <h2>Acceptance of Terms</h2>
+    </div>
 
-                        <p>
-                            By accessing or using SchoolBooks, you agree to these
-                            Terms & Conditions. If you do not agree with any part,
-                            please discontinue using our website and services.
-                        </p>
+</section>
 
-                    </div>
 
-                </div>
+<main class="terms-container">
 
-                
+    <aside class="terms-sidebar">
 
-                <div class="term-card">
+        <div class="sidebar-inner">
 
-                    <div class="term-number">
-                        02
-                    </div>
+            <h2>Contents</h2>
 
-                    <div class="term-content">
+            <div class="sidebar-line"></div>
 
-                        <h2>User Accounts</h2>
+            <nav id="termsNavigation">
 
-                        <ul>
+                <a href="#introduction" class="sidebar-link active">
+                    <i data-lucide="file-text"></i>
+                    <span>01. Introduction</span>
+                </a>
 
-                            <li>
-                                Maintain your account securely.
-                            </li>
+                <a href="#acceptance" class="sidebar-link">
+                    <i data-lucide="clipboard-check"></i>
+                    <span>02. Acceptance of Terms</span>
+                </a>
 
-                            <li>
-                                Keep your password confidential.
-                            </li>
+                <a href="#accounts" class="sidebar-link">
+                    <i data-lucide="user"></i>
+                    <span>03. User Accounts</span>
+                </a>
 
-                            <li>
-                                Notify us immediately of unauthorized access.
-                            </li>
+                <a href="#orders" class="sidebar-link">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>04. Orders &amp; Payments</span>
+                </a>
 
-                            <li>
-                                Provide accurate personal information.
-                            </li>
+                <a href="#shipping" class="sidebar-link">
+                    <i data-lucide="truck"></i>
+                    <span>05. Shipping &amp; Delivery</span>
+                </a>
 
-                        </ul>
+                <a href="#returns" class="sidebar-link">
+                    <i data-lucide="rotate-ccw"></i>
+                    <span>06. Returns &amp; Refunds</span>
+                </a>
 
-                    </div>
+                <a href="#intellectual" class="sidebar-link">
+                    <i data-lucide="shield"></i>
+                    <span>07. Intellectual Property</span>
+                </a>
 
-                </div>
+                <a href="#responsibilities" class="sidebar-link">
+                    <i data-lucide="circle-check"></i>
+                    <span>08. User Responsibilities</span>
+                </a>
 
-                
+                <a href="#prohibited" class="sidebar-link">
+                    <i data-lucide="ban"></i>
+                    <span>09. Prohibited Activities</span>
+                </a>
 
-                <div class="term-card">
+                <a href="#privacy" class="sidebar-link">
+                    <i data-lucide="lock"></i>
+                    <span>10. Privacy Policy</span>
+                </a>
 
-                    <div class="term-number">
-                        03
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Products & Availability</h2>
-
-                        <ul>
-
-                            <li>Products are subject to availability.</li>
-
-                            <li>Images are for illustration purposes only.</li>
-
-                            <li>Prices and stock may change without notice.</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        04
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Orders</h2>
-
-                        <p>
-                            Orders are confirmed only after successful payment.
-                            SchoolBooks reserves the right to reject or cancel any
-                            order due to pricing errors, stock availability or
-                            suspicious activity.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        05
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Payments</h2>
-
-                        <ul>
-
-                            <li>Secure online payment methods.</li>
-
-                            <li>Encrypted transactions.</li>
-
-                            <li>Taxes calculated during checkout.</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        06
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Shipping & Delivery</h2>
-
-                        <p>
-                            Delivery estimates are provided for convenience.
-                            Delays caused by courier services, weather conditions,
-                            or holidays are beyond our control.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        07
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Returns & Refunds</h2>
-
-                        <p>
-                            Products may be returned according to our Return
-                            Policy. Refunds are processed after successful
-                            inspection of returned products.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        08
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Intellectual Property</h2>
-
-                        <p>
-                            The following content belongs exclusively to
-                            SchoolBooks:
-                        </p>
-
-                        <div class="tag-list">
-
-                            <span>Logo</span>
-
-                            <span>Images</span>
-
-                            <span>Graphics</span>
-
-                            <span>Website Design</span>
-
-                            <span>Product Descriptions</span>
-
-                        </div>
-
-                        <p class="mt20">
-                            No content may be copied or reused without written
-                            permission.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        09
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Privacy Policy</h2>
-
-                        <p>
-                            Personal information collected through our website
-                            is protected and processed according to our Privacy
-                            Policy.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        10
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Limitation of Liability</h2>
-
-                        <p>
-                            SchoolBooks shall not be responsible for indirect,
-                            incidental or consequential damages arising from
-                            website usage or purchased products.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="term-card">
-
-                    <div class="term-number">
-                        11
-                    </div>
-
-                    <div class="term-content">
-
-                        <h2>Changes to Terms</h2>
-
-                        <p>
-                            These Terms & Conditions may be updated from time
-                            to time. Continued use of the website indicates your
-                            acceptance of the latest version.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="contact-card">
-
-                    <h2>Contact Information</h2>
-
-                    <div class="contact-grid">
-
-                        <div class="contact-item">
-
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            <span>SchoolBooks</span>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                            <span>support@schoolbooks.com</span>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <i class="fa-solid fa-phone"></i>
-
-                            <span>+91 98765 43210</span>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <i class="fa-solid fa-globe"></i>
-
-                            <span>www.schoolbooks.com</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-
-                <div class="agreement-card">
-
-                    <h2>
-                        Agreement
-                    </h2>
-
-                    <label class="checkbox-wrap">
-
-                        <input
-                            type="checkbox"
-                            id="agree">
-
-                        <span class="checkmark"></span>
-
-                        I have read and understood the Terms &
-                        Conditions and agree to comply with them.
-
-                    </label>
-
-                    <div class="form-grid">
-
-                        <div class="field">
-
-                            <label>
-                                Date
-                            </label>
-
-                            <input
-                                type="date">
-
-                        </div>
-
-                        <div class="field">
-
-                            <label>
-                                Name
-                            </label>
-
-                            <input
-                                type="text"
-                                placeholder="Enter your full name">
-
-                        </div>
-
-                    </div>
-
-                    <div class="signature">
-
-                        <label>
-                            Signature
-                        </label>
-
-                        <div class="signature-box">
-
-                        </div>
-
-                    </div>
-
-                    <button
-                        id="acceptBtn"
-                        class="accept-btn">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        Accept & Continue
-
-                    </button>
-
-                </div>
-
-            </div>
+                <a href="#third-party" class="sidebar-link">
+                    <i data-lucide="link"></i>
+                    <span>11. Third-Party Links</span>
+                </a>
+
+                <a href="#disclaimer" class="sidebar-link">
+                    <i data-lucide="circle-alert"></i>
+                    <span>12. Disclaimer</span>
+                </a>
+
+                <a href="#liability" class="sidebar-link">
+                    <i data-lucide="scale"></i>
+                    <span>13. Limitation of Liability</span>
+                </a>
+
+                <a href="#indemnification" class="sidebar-link">
+                    <i data-lucide="shield-check"></i>
+                    <span>14. Indemnification</span>
+                </a>
+
+                <a href="#termination" class="sidebar-link">
+                    <i data-lucide="power"></i>
+                    <span>15. Termination</span>
+                </a>
+
+                <a href="#changes" class="sidebar-link">
+                    <i data-lucide="pencil"></i>
+                    <span>16. Changes to Terms</span>
+                </a>
+
+                <a href="#governing-law" class="sidebar-link">
+                    <i data-lucide="gavel"></i>
+                    <span>17. Governing Law</span>
+                </a>
+
+                <a href="#contact" class="sidebar-link">
+                    <i data-lucide="mail"></i>
+                    <span>18. Contact Information</span>
+                </a>
+
+            </nav>
 
         </div>
 
-    </section>
-   
+    </aside>
 
-  <script>
+
+    <section class="terms-content">
+
+    <article class="term-card" id="introduction">
+        <div class="term-number">01</div>
+
+        <div class="term-body">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to SchoolBooks. By accessing or using our website
+                and services, you agree to be bound by these Terms &amp; Conditions
+                and our Privacy Policy.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="clipboard-list"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card" id="acceptance">
+        <div class="term-number">02</div>
+
+        <div class="term-body">
+            <h2>Acceptance of Terms</h2>
+            <p>
+                By accessing or using our website, you confirm that you have
+                read, understood, and agree to be bound by these Terms &amp; Conditions.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="clipboard-check"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card" id="accounts">
+        <div class="term-number">03</div>
+
+        <div class="term-body">
+            <h2>User Accounts</h2>
+            <p>
+                To access certain features, you may be required to create an account.
+                You agree to provide accurate information and keep your login details confidential.
+            </p>
+        </div>
+
+        <div class="term-icon yellow-icon">
+            <i data-lucide="user-cog"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card" id="orders">
+        <div class="term-number">04</div>
+
+        <div class="term-body">
+            <h2>Orders &amp; Payments</h2>
+            <p>
+                All orders are subject to availability and acceptance.
+                Prices are listed on our website and may change without notice.
+            </p>
+        </div>
+
+        <div class="term-icon green-icon">
+            <i data-lucide="shopping-cart"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card" id="shipping">
+        <div class="term-number">05</div>
+
+        <div class="term-body">
+            <h2>Shipping &amp; Delivery</h2>
+            <p>
+                We aim to deliver your orders within the estimated time.
+                Delivery times may vary due to external factors.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="truck"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="returns">
+        <div class="term-number">06</div>
+
+        <div class="term-body">
+            <h2>Returns &amp; Refunds</h2>
+            <p>
+                Products may be eligible for return or replacement according
+                to our return policy.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="rotate-ccw"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="intellectual">
+        <div class="term-number">07</div>
+
+        <div class="term-body">
+            <h2>Intellectual Property</h2>
+            <p>
+                All website content, including text, graphics, logos and images,
+                belongs to SchoolBooks or its respective content providers.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="shield"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="responsibilities">
+        <div class="term-number">08</div>
+
+        <div class="term-body">
+            <h2>User Responsibilities</h2>
+            <p>
+                Users are expected to provide accurate information,
+                maintain account security and use the website responsibly.
+            </p>
+        </div>
+
+        <div class="term-icon green-icon">
+            <i data-lucide="circle-check"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="prohibited">
+        <div class="term-number">09</div>
+
+        <div class="term-body">
+            <h2>Prohibited Activities</h2>
+            <p>
+                You may not use our website for unlawful purposes or
+                attempt unauthorized access to our systems.
+            </p>
+        </div>
+
+        <div class="term-icon yellow-icon">
+            <i data-lucide="ban"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="privacy">
+        <div class="term-number">10</div>
+
+        <div class="term-body">
+            <h2>Privacy Policy</h2>
+            <p>
+                Please review our Privacy Policy to understand how we
+                collect, use and protect your information.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="lock"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="third-party">
+        <div class="term-number">11</div>
+
+        <div class="term-body">
+            <h2>Third-Party Links</h2>
+            <p>
+                Our website may contain links to third-party websites.
+                SchoolBooks is not responsible for external websites.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="link"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="disclaimer">
+        <div class="term-number">12</div>
+
+        <div class="term-body">
+            <h2>Disclaimer</h2>
+            <p>
+                Website information is provided for general purposes.
+                We do not guarantee that all information will always be error-free.
+            </p>
+        </div>
+
+        <div class="term-icon yellow-icon">
+            <i data-lucide="circle-alert"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="liability">
+        <div class="term-number">13</div>
+
+        <div class="term-body">
+            <h2>Limitation of Liability</h2>
+            <p>
+                To the extent permitted by law, SchoolBooks shall not be liable
+                for indirect, incidental or consequential damages.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="scale"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="indemnification">
+        <div class="term-number">14</div>
+
+        <div class="term-body">
+            <h2>Indemnification</h2>
+            <p>
+                You agree to indemnify and hold SchoolBooks harmless from
+                claims resulting from your misuse of the website.
+            </p>
+        </div>
+
+        <div class="term-icon green-icon">
+            <i data-lucide="shield-check"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="termination">
+        <div class="term-number">15</div>
+
+        <div class="term-body">
+            <h2>Termination</h2>
+            <p>
+                We reserve the right to suspend or terminate access to our
+                website if users violate these Terms.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="power"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="changes">
+        <div class="term-number">16</div>
+
+        <div class="term-body">
+            <h2>Changes to Terms</h2>
+            <p>
+                SchoolBooks may update these Terms from time to time.
+                Updated terms will be posted on this page.
+            </p>
+        </div>
+
+        <div class="term-icon yellow-icon">
+            <i data-lucide="pencil"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="governing-law">
+        <div class="term-number">17</div>
+
+        <div class="term-body">
+            <h2>Governing Law</h2>
+            <p>
+                These Terms shall be governed by and interpreted according
+                to the applicable laws and regulations.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="gavel"></i>
+        </div>
+    </article>
+
+
+    <article class="term-card extra-section" id="contact">
+        <div class="term-number">18</div>
+
+        <div class="term-body">
+            <h2>Contact Information</h2>
+            <p>
+                If you have questions regarding these Terms &amp; Conditions,
+                please contact our support team.
+            </p>
+        </div>
+
+        <div class="term-icon blue-icon">
+            <i data-lucide="mail"></i>
+        </div>
+    </article>
+
+
+    <div class="read-more-wrapper">
+
+        <button
+            id="readMoreBtn"
+            class="read-more-btn"
+            type="button"
+        >
+            <i data-lucide="arrow-down"></i>
+            <span>Read More</span>
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const body = document.body;
-    const html = document.documentElement;
+    lucide.createIcons();
 
-    const themeToggle = document.getElementById("themeToggle");
-    const rtlToggle = document.getElementById("rtlToggle");
+    const themeToggle =
+        document.getElementById("themeToggle");
 
-    const agree = document.getElementById("agree");
-    const acceptBtn = document.getElementById("acceptBtn");
+    const rtlToggle =
+        document.getElementById("rtlToggle");
 
-    const dateInput = document.querySelector('input[type="date"]');
-    const nameInput = document.querySelector('input[type="text"]');
+    const html =
+        document.documentElement;
 
-    // =========================================
-    // SET TODAY'S DATE
-    // =========================================
+    const savedTheme =
+        localStorage.getItem("theme") || "light";
 
-    if (dateInput) {
-        const today = new Date().toISOString().split("T")[0];
-        dateInput.value = today;
-    }
-
-    // =========================================
-    // THEME MODE
-    // =========================================
-
-    const savedTheme = localStorage.getItem("school-theme") || "light";
+    const savedDir =
+        localStorage.getItem("direction") || "ltr";
 
     if (savedTheme === "dark") {
-        body.classList.add("dark");
+        document.body.classList.add("dark");
+    } else {
+        document.body.classList.remove("dark");
     }
+
+    html.setAttribute("dir", savedDir);
 
     function updateThemeIcon() {
 
         if (!themeToggle) return;
 
-        themeToggle.innerHTML = body.classList.contains("dark")
+        const isDark =
+            document.body.classList.contains("dark");
+
+        themeToggle.innerHTML = isDark
             ? '<i data-lucide="sun"></i>'
             : '<i data-lucide="moon"></i>';
 
         lucide.createIcons();
     }
 
-    if (themeToggle) {
+    updateThemeIcon();
 
-        updateThemeIcon();
+    if (themeToggle) {
 
         themeToggle.addEventListener("click", () => {
 
-            body.classList.toggle("dark");
+            document.body.classList.toggle("dark");
+
+            const isDark =
+                document.body.classList.contains("dark");
 
             localStorage.setItem(
-                "school-theme",
-                body.classList.contains("dark") ? "dark" : "light"
+                "theme",
+                isDark ? "dark" : "light"
             );
 
             updateThemeIcon();
-
         });
-
     }
-
-    // =========================================
-    // RTL MODE
-    // =========================================
-
-    const savedDir = localStorage.getItem("page-direction") || "ltr";
-
-    html.setAttribute("dir", savedDir);
 
     if (rtlToggle) {
 
-        rtlToggle.textContent = savedDir === "rtl" ? "LTR" : "RTL";
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
 
         rtlToggle.addEventListener("click", () => {
 
-            if (html.getAttribute("dir") === "rtl") {
+            const currentDir =
+                html.getAttribute("dir");
+
+            if (currentDir === "rtl") {
 
                 html.setAttribute("dir", "ltr");
-                localStorage.setItem("page-direction", "ltr");
+
+                localStorage.setItem(
+                    "direction",
+                    "ltr"
+                );
+
                 rtlToggle.textContent = "RTL";
 
             } else {
 
                 html.setAttribute("dir", "rtl");
-                localStorage.setItem("page-direction", "rtl");
+
+                localStorage.setItem(
+                    "direction",
+                    "rtl"
+                );
+
                 rtlToggle.textContent = "LTR";
-
             }
-
         });
-
     }
 
-    // =========================================
-    // AGREEMENT VALIDATION
-    // =========================================
+    const readMoreBtn =
+        document.getElementById("readMoreBtn");
 
-    if (acceptBtn) {
+    const extraSections =
+        document.querySelectorAll(".extra-section");
 
-        acceptBtn.addEventListener("click", (e) => {
+    if (readMoreBtn) {
 
-            e.preventDefault();
+        readMoreBtn.addEventListener("click", () => {
 
-            if (!agree.checked) {
-                alert("Please accept the Terms & Conditions before continuing.");
-                agree.focus();
-                return;
+            const isExpanded =
+                readMoreBtn.classList.contains("expanded");
+
+            extraSections.forEach(section => {
+
+                section.style.display =
+                    isExpanded ? "none" : "flex";
+
+            });
+
+            readMoreBtn.classList.toggle(
+                "expanded",
+                !isExpanded
+            );
+
+            const buttonText =
+                readMoreBtn.querySelector("span");
+
+            if (buttonText) {
+
+                buttonText.textContent =
+                    isExpanded
+                        ? "Read More"
+                        : "Show Less";
             }
 
-            if (nameInput.value.trim() === "") {
-                alert("Please enter your full name.");
-                nameInput.focus();
-                return;
-            }
-
-            alert("Thank you! Terms & Conditions accepted successfully.");
-
-            // window.location.href = "../dashboard/dashboard.html";
-
+            lucide.createIcons();
         });
-
     }
 
-    // =========================================
-    // FADE-IN ANIMATION
-    // =========================================
+    const sections =
+        document.querySelectorAll(".term-card");
 
-    document.querySelectorAll(".term-card").forEach((card, index) => {
+    const sidebarLinks =
+        document.querySelectorAll(".sidebar-link");
 
-        card.style.opacity = "0";
-        card.style.transform = "translateY(25px)";
+    if (sections.length && sidebarLinks.length) {
 
-        setTimeout(() => {
+        const observer =
+            new IntersectionObserver(
+                entries => {
 
-            card.style.transition = "all .5s ease";
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
+                    entries.forEach(entry => {
 
-        }, index * 120);
+                        if (entry.isIntersecting) {
 
+                            const id =
+                                entry.target.getAttribute("id");
+
+                            sidebarLinks.forEach(link => {
+                                link.classList.remove("active");
+                            });
+
+                            const activeLink =
+                                document.querySelector(
+                                    `.sidebar-link[href="#${id}"]`
+                                );
+
+                            if (activeLink) {
+                                activeLink.classList.add("active");
+                            }
+                        }
+                    });
+
+                },
+                {
+                    rootMargin: "-15% 0px -70% 0px"
+                }
+            );
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    sidebarLinks.forEach(link => {
+
+        link.addEventListener("click", function(event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+            const target =
+                document.querySelector(targetId);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            if (
+                target.classList.contains(
+                    "extra-section"
+                )
+            ) {
+
+                extraSections.forEach(section => {
+                    section.style.display = "flex";
+                });
+
+                if (readMoreBtn) {
+
+                    readMoreBtn.classList.add("expanded");
+
+                    const buttonText =
+                        readMoreBtn.querySelector("span");
+
+                    if (buttonText) {
+                        buttonText.textContent =
+                            "Show Less";
+                    }
+                }
+            }
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            sidebarLinks.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
     });
-
-    // =========================================
-    // AGREEMENT BUTTON
-    // =========================================
-
-    if (agree) {
-
-        agree.addEventListener("change", () => {
-
-            if (agree.checked) {
-                acceptBtn.style.opacity = "1";
-                acceptBtn.style.cursor = "pointer";
-            } else {
-                acceptBtn.style.opacity = ".85";
-            }
-
-        });
-
-    }
 
 });
 </script>
- <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    lucide.createIcons();
-</script>
-
-
 
 </body>
-
 </html>

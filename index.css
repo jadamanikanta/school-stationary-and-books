@@ -1,23 +1,32 @@
 
 
 .hero {
-    padding: 60px 8% 90px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 60px 50px 90px;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 70px;
+    gap: 50px;
+
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 
     background:
-        radial-gradient(circle at top right,
+        radial-gradient(
+            circle at top right,
             rgba(37, 99, 235, .18),
-            transparent 35%),
-
-        radial-gradient(circle at bottom left,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
             rgba(251, 191, 36, .22),
-            transparent 45%),
-
+            transparent 45%
+        ),
         var(--bg-color);
 }
 
@@ -3502,7 +3511,7 @@ body.rtl .school-home-testimonials-quote {
 
         grid-column: 1 / -1;
 
-        max-width: 500px;
+      
 
         margin: auto;
 
