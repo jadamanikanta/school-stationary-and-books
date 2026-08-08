@@ -315,7 +315,7 @@
             <input type="checkbox" required>
 
             <span>
-                I agree to the Terms & Conditions
+                I agree to the <a href="terms&conditions.html">Terms & Conditions</a>
             </span>
 
         </label>
@@ -450,28 +450,49 @@ dots.forEach((dot,index)=>{
 });
 
 
+// Password
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
 
-const passwordInput=document.getElementById("password");
+if (togglePassword && password) {
+    togglePassword.addEventListener("click", () => {
 
-const passwordBtn=document.getElementById("togglePassword");
+        const isHidden = password.type === "password";
 
-let passwordVisible=false;
+        password.type = isHidden ? "text" : "password";
 
-passwordBtn.addEventListener("click",()=>{
+        togglePassword.innerHTML = isHidden
+            ? '<i data-lucide="eye-off"></i>'
+            : '<i data-lucide="eye"></i>';
 
-    passwordVisible=!passwordVisible;
-
-    passwordInput.type=passwordVisible ? "text":"password";
-
-    passwordBtn.innerHTML=passwordVisible
-    ?'<i data-lucide="eye-off"></i>'
-    :'<i data-lucide="eye"></i>';
-
-    lucide.createIcons();
-
-});
+        lucide.createIcons();
+    });
+}
 
 
+// Confirm Password
+const confirmPassword = document.getElementById("confirmPassword");
+const toggleConfirmPassword =
+    document.getElementById("toggleConfirmPassword");
+
+if (toggleConfirmPassword && confirmPassword) {
+    toggleConfirmPassword.addEventListener("click", () => {
+
+        const isHidden = confirmPassword.type === "password";
+
+        confirmPassword.type = isHidden ? "text" : "password";
+
+        toggleConfirmPassword.innerHTML = isHidden
+            ? '<i data-lucide="eye-off"></i>'
+            : '<i data-lucide="eye"></i>';
+
+        lucide.createIcons();
+    });
+}
+
+
+
+lucide.createIcons();
 
 const themeBtn = document.getElementById("themeToggle");
 

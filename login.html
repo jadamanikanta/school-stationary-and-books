@@ -206,32 +206,28 @@
 
                 <div class="form-group">
 
-                    <label for="password">
+                    <label for="password">Password</label>
 
-                        Password
+<div class="input-wrapper password-wrapper">
 
-                    </label>
+    <i data-lucide="lock"></i>
 
-                    <div class="input-wrapper password-wrapper">
+    <input
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+        required
+    >
 
-                        <i data-lucide="lock"></i>
+    <button
+        type="button"
+        id="togglePassword"
+        class="password-toggle"
+        aria-label="Show password">
+        <i data-lucide="eye"></i>
+    </button>
 
-                        <input
-                            id="password"
-                            type="password"
-                            placeholder="Enter your password"
-                            required>
-
-                        <button
-                            type="button"
-                            id="togglePassword"
-                            class="password-toggle">
-
-                            <i data-lucide="eye"></i>
-
-                        </button>
-
-                    </div>
+</div>
 
                 </div>
 
@@ -404,25 +400,22 @@ dots.forEach((dot,index)=>{
 
 
 
-const passwordInput=document.getElementById("password");
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
 
-const passwordBtn=document.getElementById("togglePassword");
+togglePassword.addEventListener("click", () => {
+    const showPassword = password.type === "password";
 
-let passwordVisible=false;
+    password.type = showPassword ? "text" : "password";
 
-passwordBtn.addEventListener("click",()=>{
-
-    passwordVisible=!passwordVisible;
-
-    passwordInput.type=passwordVisible ? "text":"password";
-
-    passwordBtn.innerHTML=passwordVisible
-    ?'<i data-lucide="eye-off"></i>'
-    :'<i data-lucide="eye"></i>';
+    togglePassword.innerHTML = showPassword
+        ? '<i data-lucide="eye-off"></i>'
+        : '<i data-lucide="eye"></i>';
 
     lucide.createIcons();
-
 });
+
+lucide.createIcons();
 
 
 const themeBtn = document.getElementById("themeToggle");

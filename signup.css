@@ -551,6 +551,10 @@ body{
     color:#9ca3af;
 
 }
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
 
 .password-toggle:hover{
 
