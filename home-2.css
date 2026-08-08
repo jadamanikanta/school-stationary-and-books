@@ -4952,7 +4952,7 @@ height:75px;
 
 }
 
-.school-home-two-testimonial-quote i{
+.school-home-two-testimonial-quote svg{
 
     width:36px;
 
@@ -4960,7 +4960,7 @@ height:75px;
 
     color:var(--primary);
 
-    opacity:.18;
+    opacity:.78;
 
 }
 
@@ -5218,7 +5218,7 @@ body.dark-mode .school-home-two-testimonial-card a::before{
 
 }
 
-.school-home-two-testimonial-stat i{
+.school-home-two-testimonial-stat svg{
 
     width:38px;
 
