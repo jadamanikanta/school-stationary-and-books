@@ -1276,17 +1276,31 @@
 
     
     const links = document.querySelectorAll(".nav-link");
-    const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-    links.forEach(link => {
-        const href = link.getAttribute("href");
-        if (!href) return;
+links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href) return;
 
-        const page = href.split("/").pop();
-        if (page === currentPage) {
-            link.classList.add("active");
-        }
-    });
+    const page = href.split("/").pop();
+
+    
+    if (page === currentPage) {
+        link.classList.add("active");
+    }
+});
+
+
+
+const homePages = ["index.html", "home-1.html", "home-2.html"];
+
+if (homePages.includes(currentPage)) {
+    const homeLink = document.querySelector('.nav-link[href="index.html"]');
+
+    if (homeLink) {
+        homeLink.classList.add("active");
+    }
+}
 
     
     const themeToggle = document.getElementById("themeToggle");
